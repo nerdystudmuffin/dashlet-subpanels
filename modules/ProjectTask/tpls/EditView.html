@@ -1,0 +1,240 @@
+<!--
+/*
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ */
+-->
+
+<!-- BEGIN: main -->
+<script type="text/javascript" src="include/javascript/popup_parent_helper.js?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td>
+<form id="EditView" name="EditView" method="post" action="index.php">
+<input type="hidden" name="module" value="ProjectTask" />
+<input type="hidden" name="record" value="{RETURN_ID}" />
+<input type="hidden" name="action" value="Save" />
+<input type="hidden" name="id" value="{id}" />
+<input type="hidden" name="return_module" value="{RETURN_MODULE}" />
+<input type="hidden" name="return_id" value="{RETURN_ID}" />
+<input type="hidden" name="return_action" value="{RETURN_ACTION}" />
+<input type="hidden" name="email_id" value="{EMAIL_ID}" />
+<input title="{APP.LBL_SAVE_BUTTON_TITLE}"
+	accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" tabindex="22"
+	onclick="this.form.action.value='Save'; return check_form('EditView');"
+	type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  "
+/>
+<input title="{APP.LBL_CANCEL_BUTTON_TITLE}" tabindex="23"
+	accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button"
+	onclick="location='index.php?module={RETURN_MODULE}&action={RETURN_ACTION}&record={RETURN_ID}';"
+	type="button" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "
+/></td>
+
+<td align="right" nowrap><span class="required">{APP.LBL_REQUIRED_SYMBOL}</span>
+{APP.NTC_REQUIRED}</td>
+<td align="right">{ADMIN_EDIT}</td>
+</tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="edit view">
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="2" cellpadding="0">
+
+<tr>
+<td width="10%" scope="row"><span sugar='slot1'>{MOD.LBL_NAME}
+	<span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+<td width="35%" ><span sugar='slot1b'><input name="name" tabindex="1"
+	size="35" maxlength="50" type="text" value="{name}"></span sugar='slot'></td>
+<td scope="row"><span sugar='slot2'>{MOD.LBL_ASSIGNED_USER_ID}</span sugar='slot'></td>
+<td ><span sugar='slot2b'><input class="sqsEnabled" tabindex="2" autocomplete="off" id="assigned_user_name" name='assigned_user_name' type="text" value="{ASSIGNED_USER_NAME}"><input id='assigned_user_id' name='assigned_user_id' type="hidden" value="{ASSIGNED_USER_ID}" />
+<input title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" tabindex='2' class="button" value='{APP.LBL_SELECT_BUTTON_LABEL}' name=btn1
+		onclick='open_popup("Users", 600, 400, "", true, false, {encoded_users_popup_request_data});' /></span sugar='slot'>
+</td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot3'>{MOD.LBL_STATUS}</span sugar='slot'></td>
+<td ><span sugar='slot3b'><select name="status" tabindex="1">{status_options}
+</select></span sugar='slot'></td>
+
+
+
+
+
+
+
+
+
+<!-- BEGIN: open_source -->
+<td  scope="row"><span sugar='slot5'>&nbsp;</span sugar='slot'></td>
+<td ><span sugar='slot5b'>&nbsp;</span sugar='slot'></td>
+<!-- END: open_source -->
+</tr>
+
+<tr>
+<td width="15%" scope="row"><span sugar='slot6'>{MOD.LBL_TASK_NUMBER}</span sugar='slot'></td>
+<td width="35%" ><span sugar='slot6b'><input name="task_number" type="text"
+	value="{task_number}" size="5" maxlength="4" tabindex="1" /></span sugar='slot'></td>
+<td scope="row"><span sugar='slot7'>{MOD.LBL_DEPENDS_ON_ID}</span sugar='slot'></td>
+<td ><span sugar='slot7b'><input readonly="readonly" name="depends_on_name" id="depends_on_name"
+	type="text" value="{depends_on_name}" tabindex="2" />
+	<input type="hidden" name="depends_on_id" id="depends_on_id"
+	value="{depends_on_id}"><input
+	title="{APP.LBL_SELECT_BUTTON_TITLE}" accessKey="{APP.LBL_SELECT_BUTTON_KEY}"
+	type="button" tabindex="2" class="button"
+	value="{APP.LBL_SELECT_BUTTON_LABEL}" name="change_project"
+	onclick='open_popup("ProjectTask", 600, 400, "&project_id={parent_id}", true, false, {encoded_depends_on_popup_request_data});'
+	/></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot8'>{MOD.LBL_PRIORITY}</span sugar='slot'></td>
+<td ><span sugar='slot8b'><select name="priority" tabindex="1">
+	{priority_options}</select></span sugar='slot'></td>
+<td scope="row"><span sugar='slot9'>{MOD.LBL_MILESTONE_FLAG}</span sugar='slot'></td>
+<td ><span sugar='slot9b'><input name="milestone_flag" type="checkbox"
+	class="checkbox" value="on" {milestone_checked} tabindex="2" /></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot10'>{MOD.LBL_ORDER_NUMBER}</span sugar='slot'></td>
+<td ><span sugar='slot10b'><input name="order_number" type="text"
+	value="{order_number}" tabindex="1" size="5" maxlength="4" /></span sugar='slot'></td>
+<td scope="row"><span sugar='slot11'>{MOD.LBL_PARENT_ID}
+	<span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></span sugar='slot'></td>
+<td ><span sugar='slot11b'><input type="text" class="sqsEnabled" tabindex="2" autocomplete="off" name="parent_name" id="parent_name"
+	value="{parent_name}" tabindex="16" /><input type="hidden" name="parent_id" id="parent_id"
+	value="{parent_id}" />&nbsp;<input
+	title="{APP.LBL_SELECT_BUTTON_TITLE}"
+	accessKey="{APP.LBL_SELECT_BUTTON_KEY}" type="button" class="button"
+	value="{APP.LBL_SELECT_BUTTON_LABEL}" name="change_parent" tabindex="2"
+	onclick='open_popup("Project", 600, 400, "", true, false, {encoded_parent_popup_request_data});'
+	/></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot12'>{MOD.LBL_PERCENT_COMPLETE}</span sugar='slot'></td>
+<td ><span sugar='slot12b'><input name="percent_complete" type="text"
+	tabindex="1" value="{percent_complete}" size="4" maxlength="3"
+	/></span sugar='slot'></td>
+<td scope="row"><span sugar='slot13'>{MOD.LBL_UTILIZATION}</span sugar='slot'></td>
+<td ><span sugar='slot13b'><select name="utilization" tabindex="2">
+	{utilization_options}</select></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot14'>{MOD.LBL_DATE_START}</span sugar='slot'></td>
+<td >
+<span sugar='slot14b'>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td nowrap="nowrap"><input name="date_start" onblur="parseDate(this, '{CALENDAR_DATEFORMAT}');" id="date_start_field" tabindex="1"
+	size="11" maxlength="10" type="text" value="{date_start}" />
+<img src="index.php?entryPoint=getImage&themeName={THEME}&imageName=jscalendar.gif" alt="{APP.LBL_ENTER_DATE}"
+	id="date_start_picker" align="absmiddle" />&nbsp;&nbsp;</td>
+<td nowrap="nowrap"><input name="time_start" id="time_start" tabindex="1" size="5"
+	maxlength="5" type="text" value="{time_start}" />{time_start_meridian}</td>
+</tr>
+<tr>
+<td nowrap="nowrap"><span class="dateFormat">{user_dateformat}</span></td>
+<td nowrap="nowrap"><span class="dateFormat">{time_format}</span></td>
+</tr>
+</table>
+</span sugar='slot'></td>
+<td scope="row"><span sugar='slot15'>{MOD.LBL_ESTIMATED_EFFORT}</span sugar='slot'></td>
+<td ><span sugar='slot15b'><input name="estimated_effort" type="text"
+	value="{estimated_effort}" size="5" maxlength="4" tabindex="2"
+	/></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td scope="row"><span sugar='slot16'>{MOD.LBL_DATE_DUE}</span sugar='slot'></td>
+<td >
+<span sugar='slot16b'>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td nowrap><input name="date_due" onblur="parseDate(this, '{CALENDAR_DATEFORMAT}');" id="date_due_field" size="11" maxlength="10"
+	type="text" value="{date_due}" tabindex="1" />
+<img src="index.php?entryPoint=getImage&themeName={THEME}&imageName=jscalendar.gif" alt="{APP.LBL_ENTER_DATE}"
+	id="date_due_picker" align="absmiddle" />&nbsp;&nbsp;</td>
+<td nowrap><input name="time_due" id="time_due" tabindex="1" size="5" maxlength="5"
+	type="text" value="{time_due}" />{time_due_meridian}</td>
+</tr>
+<tr>
+<td nowrap><span class="dateFormat">{user_dateformat}</span></td>
+<td nowrap><span class="dateFormat">{time_format}</span></td>
+</tr>
+</table>
+</span sugar='slot'></td>
+<td scope="row"><span sugar='slot17'>{MOD.LBL_ACTUAL_EFFORT}</span sugar='slot'></td>
+<td ><span sugar='slot17b'><input name="actual_effort" type="text"
+	value="{actual_effort}" size="5" maxlength="4" tabindex="2" /></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td valign="top" scope="row"><span sugar='slot18'>{MOD.LBL_DESCRIPTION}</span sugar='slot'></td>
+<td colspan="3" ><span sugar='slot18b'><textarea name="description"
+	cols="60" rows="8" tabindex="3">{description}</textarea></span sugar='slot'></td>
+</tr>
+
+</table>
+</td></tr></table>
+</form>
+<script type="text/javascript">
+Calendar.setup ({
+   inputField : "date_due_field", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "date_due_picker", singleClick : true, step : 1
+});
+Calendar.setup ({
+   inputField : "date_start_field", ifFormat : "{CALENDAR_DATEFORMAT}", showsTime : false, button : "date_start_picker", singleClick : true, step : 1
+});
+
+function check_this_form(){
+	var time_start = document.getElementById("time_start");
+	var date_start = document.getElementById("date_start_field");
+	var time_due = document.getElementById("time_due");
+	var date_due = document.getElementById("date_due_field");
+	
+	if(time_start.value != "" && date_start.value == ""){
+		alert("{MOD.DATE_JS_ERROR}");
+		return false;
+	}
+	if(time_due.value != "" && date_due.value == ""){
+		alert("{MOD.DATE_JS_ERROR}");
+		return false
+	} 
+	return true;
+}
+</script>
+{JAVASCRIPT}
+<!-- END: main -->

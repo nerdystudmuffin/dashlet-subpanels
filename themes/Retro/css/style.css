@@ -1,0 +1,1438 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+#moduleList ul[class="cssmenu"], #shortcuts ul li.moduleTabExtraMenu ul
+{
+	border:#26496D solid 1px;
+}
+
+ul.cssmenu li,.menuItemHilite,.menuItemX,.menuItemHiliteX,.menuItem:visited,.menuItemHilite:visited,.menuItem:hover,.menuItemHilite:hover,.menuItem:active,.menuItemHilite:active,.menuItem:link,.menuItemHilite:link,.menuItemX:visited,.menuItemHiliteX:visited,.menuItemX:hover,.menuItemHiliteX:hover,.menuItemX:active,.menuItemHiliteX:active,.menuItemX:link,.menuItemHiliteX:link
+{
+	font-weight:700;
+	border:none;
+}
+
+.menuItemHilite
+{
+	background-color:#FFF;
+}
+
+.menuItemX
+{
+	background-color:#CCC;
+}
+
+.menuItemHiliteX
+{
+	background-color:#999;
+}
+
+.calendar
+{
+	border-top:2px solid #fff;
+	border-right:2px solid #000;
+	border-bottom:2px solid #000;
+	border-left:2px solid #fff;
+	color:#000;
+	background:#c8d0d4;
+}
+
+.calendar table
+{
+	border-top:1px solid #000;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-left:1px solid #000;
+	color:#000;
+	background:#c8d0d4;
+}
+
+.calendar button, input[type=submit], input[type=reset], input[type=button]
+{
+	border-top:1px solid #fff;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #fff;
+	padding:1px;
+}
+
+.calendar thead .title
+{
+	border:1px solid #000;
+	background:#788084;
+	color:#fff;
+	padding:1px;
+}
+
+.calendar thead .name
+{
+	border-bottom:1px solid #000;
+	background:#e8f0f4;
+}
+
+.calendar thead .weekend
+{
+	color:red;
+}
+
+.calendar thead .hilite
+{
+	border-top:2px solid #fff;
+	border-right:2px solid #000;
+	border-bottom:2px solid #000;
+	border-left:2px solid #fff;
+	background-color:#d8e0e4;
+	padding:0;
+}
+
+.calendar thead .active
+{
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+}
+
+.calendar tbody .day
+{
+	width:2em;
+	text-align:right;
+	padding:2px 4px 2px 2px;
+}
+
+.calendar table .wn
+{
+	border-right:1px solid #000;
+	background:#e8f4f0;
+}
+
+.calendar tbody .rowhilite td
+{
+	background:#d8e4e0;
+}
+
+.calendar tbody .rowhilite td.wn
+{
+	background:#c8d4d0;
+}
+
+.calendar tbody td.hilite
+{
+	border-color:#fff #000 #000 #fff;
+}
+
+.calendar tbody td.active
+{
+	border-color:#000 #fff #fff #000;
+}
+
+.calendar tbody td.selected
+{
+	background:#d8e0e4;
+	border-color:#000 #fff #fff #000;
+}
+
+.calendar tbody td.weekend
+{
+	color:red;
+}
+
+.calendar tbody td.today
+{
+	color:#00f;
+}
+
+.calendar tfoot .ttip
+{
+	border:1px solid #000;
+	background:#788084;
+	color:#fff;
+	padding:1px;
+}
+
+.calendar tfoot .hilite
+{
+	border-top:1px solid #fff;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #fff;
+	background:#d8e0e4;
+	padding:1px;
+}
+
+.calendar tfoot .active
+{
+	border-top:1px solid #000;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-left:1px solid #000;
+}
+
+.calendar .combo
+{
+	border-top:1px solid #fff;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	border-left:1px solid #fff;
+	background:#d8e0e4;
+}
+
+.calendar .combo .label,.calendar .combo .label-IEfix
+{
+	text-align:center;
+	padding:1px;
+}
+
+.calendar .combo .active
+{
+	background:#c8d0d4;
+	border-top:1px solid #000;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-left:1px solid #000;
+	padding:0;
+}
+
+.calendar .combo .hilite
+{
+	background:#048;
+	color:#aef;
+}
+
+.calendar td.time
+{
+	border-top:1px solid #000;
+}
+
+.calendar td.time span.hilite
+{
+	border-color:#000;
+}
+
+.calendar td.time span.active
+{
+	background-color:#000;
+}
+
+body
+{
+	color:#444;
+	background-color:#fff;
+	scrollbar-arrow-color:#FFF;
+	scrollbar-3dlight-color:#ddd;
+	scrollbar-highlight-color:#aaa;
+	scrollbar-face-color:#aaa;
+	scrollbar-shadow-color:#aaa;
+	scrollbar-track-color:#ccc;
+	scrollbar-darkshadow-color:#666;
+}
+
+table,td
+{
+	color:#444;
+}
+
+h1
+{
+	color:#EA1313;
+}
+
+h2
+{
+	color:#4D95DD;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:700;
+	margin-bottom:6px;
+}
+
+h3
+{
+	color:#c60;
+	margin-bottom:4px;
+}
+
+h4
+{
+	color:#333;
+}
+
+h5
+{
+	color:#333;
+}
+
+a:link,a:visited
+{
+	color:#444;
+	font-size:11px;
+	text-decoration:underline;
+}
+
+a:hover
+{
+	color:#666;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	border:1px solid #386CA1;
+	color:#fff;
+	background-color:#3F7BB7;
+}
+
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]
+{
+	border:1px solid #386CA1;
+	color:#fff;
+	background-color:#00488F;
+}
+
+input,select
+{
+	border:1px solid #bbb;
+	background-color:#fff;
+}
+
+textarea
+{
+	border:1px solid #888;
+	background-color:#fff;
+}
+
+.contentBox
+{
+	background-color:#EEC;
+	border-top:1px #CACAAD solid;
+	border-bottom:1px #CACAAD solid;
+}
+
+.teamNoticeBox
+{
+	background-color:#ECF6FF;
+	border:1px #356799 solid;
+	color:#00568C;
+}
+
+a.body:link,a.body:visited
+{
+	color:#444;
+	text-decoration:underline;
+}
+
+a.body:hover
+{
+	color:#666;
+	text-decoration:underline;
+}
+
+#globalLinks
+{
+	font-weight:700;
+	margin-top:-9.2em;
+}
+
+#globalLinks a:link,#globalLinks a:visited
+{
+	color:#444;
+	text-decoration:underline;
+}
+
+#globalLinks a:hover
+{
+	color:#666;
+	text-decoration:underline;
+}
+
+.currentTab
+{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=currentTab_middle.gif);
+}
+
+.currentTabRight {
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=currentTab_right.gif);
+	padding-right:0px;
+}
+
+.currentTabLeft {
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=currentTab_left.gif);
+}
+
+.currentTab a:link,.currentTab a:visited
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+.currentTab a:hover
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+.notCurrentTab
+{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=otherTab_middle.gif);
+}
+
+
+.notCurrentTabLeft{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=otherTab_left.gif);
+}
+
+.notCurrentTabRight{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=otherTab_right.gif);
+}
+
+.notCurrentTab a:link,.notCurrentTab a:visited
+{
+	color:#444;
+	text-decoration:none;
+}
+
+.notCurrentTab a:hover
+{
+	color:#666;
+	text-decoration:none;
+}
+
+.subTabs
+{
+	color:#fff;
+	background-color:#004d99;
+	border-bottom:1px solid #002549;
+	padding-left:18px;
+	padding-right:18px;
+}
+
+.subTabs td
+{
+	font-size:11px;
+	color:#d4e6f6;
+}
+
+a.subTabLink:link,a.subTabLink:visited
+{
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+	border-bottom:0;
+	padding-left:0;
+}
+
+a.subTabLink:hover
+{
+	color:#fff;
+	text-decoration:none;
+	border-bottom:0;
+}
+
+.moreHandle
+{
+	background:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=more.gif) no-repeat bottom left;
+}
+
+.emptyTabSpace
+{
+	border-bottom:1px solid #67b4ff;
+}
+
+#subModuleList
+{
+	font-size:6px;
+	color:#fff;
+	background-color:#004d99;
+	border-bottom:1px solid #002549;
+	padding-left:18px;
+	padding-right:18px;
+}
+
+#shortcuts a:link,#shortcuts a:visited
+{
+	color:#fff;
+	padding-left:0;
+}
+
+#shortcuts a:hover
+{
+	color:#fff;
+	text-decoration:none;
+	border-bottom:0;
+}
+
+#welcome
+{
+	font-size:13px;
+	color:#444;
+	background-color:#ddd;
+	border-bottom:1px solid #bbb;
+	padding-left:10px;
+}
+
+.date
+{
+	background-color:#ddd;
+	border-bottom:1px solid #bbb;
+}
+
+
+table.leftColumnModuleS1 td
+{
+	border-bottom:1px solid #26496D;
+	border-left:1px solid #26496D;
+	border-right:1px solid #26496D;
+	background-color:#EEC;
+}
+
+table.leftColumnModuleS2
+{
+	border-bottom:1px solid #26496D;
+	border-left:1px solid #26496D;
+	border-right:1px solid #26496D;
+	background-color:#eee;
+}
+
+table.leftColumnModuleS2 td
+{
+	padding:2px 4px;
+}
+
+#newRecord form
+{
+	font-weight:700;
+	border-bottom:1px solid #26496D;
+	border-left:1px solid #26496D;
+	border-right:1px solid #26496D;
+	background-color:#efefef;
+}
+
+.list, .view
+{
+	border-bottom:1px solid #356799;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+}
+
+.reportlistView
+{
+	border-top:1px solid #356799;
+	border-left:1px solid #cbcbae;
+}
+
+table.reportlistView td,table.reportlistView th
+{
+	background:#ffe;
+	border-bottom:1px solid #cbcbae;
+	border-right:1px solid #cbcbae;
+	color:#444;
+}
+
+table.reportlistView th,.reportlistView .reportlistViewMatrixRightEmptyData,.reportlistView .reportlistViewMatrixRightEmptyData1
+{
+	background:#eec;
+}
+
+.reportGroupViewTable
+{
+	background:#cbcbae;
+	border-top:1px solid #356799;
+	border-bottom:1px solid #356799;
+	margin-bottom:20px;
+}
+
+table.reportGroupViewTable th,.reportGroupNByTableEvenListRowS1,table.reportGroupViewTable th .listViewThLinkS1
+{
+	background:#eec;
+	color:#444;
+}
+
+.reportGroupNByTableEvenListRowS1
+{
+	background:#cbcbae;
+	color:#000;
+}
+
+.reportGroup1ByTable .reportGroup1ByTableEvenListRowS1
+{
+	font-size:13px;
+	padding-left:5px;
+	color:#000;
+	background:#ecf6ff;
+}
+
+.reportGroup1ByTable .reportGroupNByTableEvenListRowS1
+{
+	background:#356799;
+	font-size:13px;
+	padding-left:0;
+	color:#fff;
+}
+
+.reportDataChildtablelistView
+{
+	margin-left:40px;
+}
+
+.list th, .list td[scope=col]
+{
+	color:#fff;
+	background-color:#356799;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+}
+
+h5.listViewSubHeadS1
+{
+	color:#6A6A5B;
+	font-size:13px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+
+a.listViewThLinkS1:link,a.listViewThLinkS1:visited
+{
+	color:#fff;
+	font-weight:700;
+}
+
+a.listViewThLinkS1:hover
+{
+	color:#FFF;
+}
+
+a.list td a:hover
+{
+	color:#478ACD;
+}
+
+a.listViewTdToolsS1:hover
+{
+	text-decoration:none;
+}
+
+.listViewHRS1
+{
+	background-color:#CBCBAE;
+}
+
+.pageNumbers
+{
+	color:#000;
+}
+
+.list table tr.pagination td
+{
+	border-top:1px solid #356799;
+	background-color:#ECF6FF;
+	vertical-align:middle;
+	padding:3px 5px 4px;
+}
+
+.detail .list table tr.pagination td
+{
+	border-bottom:1px solid #cacaad;
+	border-top:none;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	color:#004283;
+	text-decoration:underline;
+}
+
+a.list tr.pagination a:hover
+{
+	color:#3E78B2;
+	text-decoration:none;
+}
+
+a.listViewCheckLink:hover
+{
+	font-size:10px;
+	text-decoration:none;
+}
+
+a.utilsLink:link,a.utilsLink:visited
+{
+	color:#444444;
+    text-decoration:underline;
+}
+
+a.utilsLink:hover
+{
+	color:#666666;
+	font-size:11px;
+	text-decoration:underline;
+}
+
+.chartBox
+{
+	background-color:#fff;
+	border:1px #CACAAD solid;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#004283;
+	font-size:10px;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#3E78B2;
+	font-size:10px;
+	text-decoration:none;
+}
+
+table.edit .view
+{
+	background-color:#EEC;
+	border:1px #CACAAD solid;
+}
+
+table.edit .view td
+{
+	background-color:#EEC;
+}
+
+.edit
+{
+	background-color:#EEC;
+	border:1px #CACAAD solid;
+	background-image:none;
+}
+
+.subpanelTabForm
+{
+	background-color:#EEC;
+	border:1px #CACAAD solid;
+}
+
+.subpanelTabForm h3
+{
+	color:#444;
+}
+
+.subpanelTabForm .list .view
+{
+	border-left:1px solid #386ca1;
+	border-right:1px solid #386ca1;
+}
+
+h4.edit td[scope=row]
+{
+	color:#666;
+	margin-bottom:2px;
+}
+
+h5.edit td[scope=row]
+{
+	color:#888;
+	margin-bottom:1px;
+}
+
+.edit td[scope=row]
+{
+	font-weight:700;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	font-size:10px;
+	text-decoration:none;
+}
+
+a.tabFormAdvLink:hover
+{
+	text-decoration:none;
+}
+
+.detail
+{
+	border:1px solid #6A6A5B;
+	background-color:#E0E0C0;
+}
+
+.detail td[scope=row]
+{
+	color:#787878;
+	font-weight:700;
+	background-color:#EEC;
+}
+
+a.detail td a:link,a.detail td a:visited
+{
+	color:#3F7BB7;
+	text-decoration:none;
+	font-weight:700;
+}
+
+a.detail td a:hover
+{
+	color:#519EEA;
+	text-decoration:none;
+}
+
+h4.detail td[scope=row]
+{
+	color:#666;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:2px;
+	text-align:left;
+}
+
+.detail td
+{
+	background-color:#FFE;
+	font-weight:700;
+}
+
+.other
+{
+	border:1px solid #6A6A5B;
+	background-color:#E0E0C0;
+}
+
+.other td[scope=row]
+{
+	color:#888;
+	font-weight:700;
+	background-color:#EEC;
+	vertical-align:top;
+	padding:2px 4px;
+}
+
+.other td
+{
+	color:#222;
+	background-color:#FFE;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	color:#555;
+	font-weight:700;
+}
+
+a.other td[scope=row] a:hover
+{
+	color:#555;
+}
+
+.monthHeader
+{
+	background-color:#356799;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-image:none;
+}
+
+.monthFooter td
+{
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#356799;
+	background-image:none;
+}
+
+
+.monthHeader h3
+{
+	color:#fff;
+}
+
+.monthCalBody
+{
+	background-color:#CBCBAE;
+}
+
+.monthFooter a, .monthHeader a:link, .monthFooter a, .monthHeader a:visited
+{
+	color:#BDDEFF;
+}
+
+.monthFooter a, .monthHeader a:hover
+{
+	text-decoration:none;
+	font-weight:700;
+}
+
+.monthHeader td
+{
+	padding-right:5px;
+}
+
+.monthCalBodyTH th[scope=row]
+{
+	background-color:#6F6F5F;
+	color:#FFE;
+}
+
+.monthCalBodyTH th
+{
+	background-color:#59594C;
+	color:#FFE;
+}
+
+.monthViewDayHeight td[scope=row]
+{
+	background-color:#ACAC93;
+	color:#fff;
+}
+
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited
+{
+	color:#FFE;
+}
+
+a.monthViewDayHeight td[scope=row] a:hover
+{
+	font-size:11px;
+}
+
+.monthCalBodyTodayWeekDay
+{
+	border:1px solid #356799;
+}
+
+.monthViewDayHeight td
+{
+	background-color:#FFE;
+}
+
+.monthCalBodyTodayWeekEnd
+{
+	border:1px solid #356799;
+}
+
+.monthViewDayHeight td[class=weekend]
+{
+	background-color:#EEC;
+}
+
+a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	color:#59594C;
+	font-weight:700;
+}
+
+a.monthViewDayHeight td a:hover
+{
+	color:#59594C;
+	font-size:11px;
+	font-weight:700;
+}
+
+a.monthViewDayHeight td[class=weekend] a:hover
+{
+	color:#59594C;
+	font-size:11px;
+	font-weight:700;
+}
+
+a.monthCalBodyDayItemLink:hover
+{
+	color:#255194;
+	font-size:10px;
+}
+
+.monthCalBodyDayItem
+{
+	background-color:#EEC;
+	border:1px solid #CBCBAE;
+}
+
+.monthCalBody th
+{
+	background-color:#EEC;
+	color:#fff;
+}
+
+.monthCalBody td
+{
+	background-color:#FFE;
+}
+
+.monthCalBody th a:link,.monthCalBody th a:visited
+{
+	color:#255194;
+}
+
+.monthCalBody th a:hover
+{
+	color:#255194;
+}
+
+.yearCalBody
+{
+	background-color:#f0f0f0;
+}
+
+.yearCalBodyMonth
+{
+	border:1px solid #59594C;
+	background-color:#767665;
+}
+
+a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	color:#FFE;
+}
+
+a.yearCalBodyMonth > a:hover
+{
+	color:#FFE;
+}
+
+h5.calSharedUser
+{
+	color:#59594c;
+	background-color:#eec;
+	padding-left:4px;
+	font-size:12px;
+	margin-top:0;
+	border-left:1px solid #cbcbae;
+	border-right:1px solid #cbcbae;
+}
+
+.underfooter
+{
+	border-top:1px solid #999;
+	padding-top:10px;
+}
+
+.schedulerDiv
+{
+	width:100%;
+	background-color:#FFE;
+	margin-top:0;
+}
+
+#scheduler .schedulerDiv table
+{
+	background-color:#FFE;
+	border-collapse:collapse;
+}
+
+.schedulerTopRow
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerTopDeleteHeaderCell
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerDeleteHeaderCell
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+	border-collapse:collapse;
+}
+
+.schedulerTopDateCell
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+	border-collapse:collapse;
+	background-color:#59594C;
+	color:#fff;
+}
+
+.schedulerTopHeaderCell
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerAttendeeHeaderCell
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+#scheduler .schedulerDiv table tr.schedulerTimeRow td[scope=col]
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+	border-collapse:collapse;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td[scope=row]
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerAttendeeDeleteCell
+{
+	background-color:#FDD;
+	color:#000;
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+	padding-left:4px;
+	text-align:left;
+	border-collapse:collapse;
+}
+
+.schedulerAttendeeIconCell
+{
+	color:#000;
+	border:1px solid #CBCBAE;
+}
+
+.schedulerSlotCellStartTime
+{
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerSlotCellEndTime
+{
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td
+{
+	border-left:1px solid #CBCBAE;
+	border-right:1px solid #CBCBAE;
+	border-top:1px solid #CBCBAE;
+	border-bottom:1px solid #CBCBAE;
+}
+
+.schedulerEvenListRow
+{
+	background-color:#EEC;
+}
+
+.schedulerOddListRow
+{
+	background-color:#FFE;
+}
+
+ul.tablist
+{
+	border-bottom:1px solid #CACAAD;
+}
+
+ul.tablist li a
+{
+	border:1px solid #CACAAD;
+	background:#D5D5B7;
+}
+
+ul.tablist li a:link
+{
+	color:#333;
+}
+
+ul.tablist li a:visited
+{
+	color:#333;
+}
+
+ul.tablist li a:hover
+{
+	background:#EEC;
+	border-left:1px solid #CACAAD;
+	border-right:1px solid #CACAAD;
+	border-top:1px solid #CACAAD;
+}
+
+ul.tablist li a.current
+{
+	background:#EEC;
+	border-bottom:1px solid #EEC;
+}
+
+ul.subpanelTablist
+{
+	border-bottom:1px solid #CACAAD;
+}
+
+
+ul.subpanelTablist li a
+{
+	border:1px solid #CACAAD;
+	background:#D5D5B7;
+}
+
+ul.subpanelTablist li a:link
+{
+	color:#333;
+}
+
+ul.subpanelTablist li a:visited
+{
+	color:#333;
+}
+
+ul.subpanelTablist li a:hover
+{
+	background:#EEC;
+	border-left:1px solid #CACAAD;
+	border-right:1px solid #CACAAD;
+	border-top:1px solid #CACAAD;
+}
+
+ul.subpanelTablist li a.current
+{
+	background:#EEC;
+	border-bottom:1px solid #EEC;
+}
+
+ul#tablist li a.current,ul#tablist li a.current:hover
+{
+	border-bottom:1px solid #fff;
+}
+
+.olFontClass
+{
+	color:#444;
+}
+
+.olCapFontClass
+{
+	font-weight:700;
+	color:#444;
+}
+
+.olOptionsCapFontClass
+{
+	font-weight:700;
+}
+
+.olCapFontClass A
+{
+	color:#356799;
+}
+
+.olFgClass
+{
+	background-color:#ffe;
+	padding:2px 5px 5px;
+}
+
+.olCgClass td
+{
+	background-color:#eec;
+	border-bottom:1px solid #cacaad;
+	padding:3px 5px 3px 10px;
+}
+
+.olBgClass
+{
+	background-color:#cacaad;
+}
+
+.olCloseFontClass
+{
+	padding-bottom:1px;
+	text-align:right;
+}
+
+.olCloseFontClass a:link,.olCloseFontClass a:visited
+{
+	color:#fff;
+}
+
+#header {
+	background-image:none;
+}
+
+#header_left_bg, #header_right_bg, #header_right_bottom_bg{
+    visibility:hidden;
+}
+
+#shortcuts {
+    background-image:none;
+	background-color:#004D99;
+	border-bottom:1px solid #002549;
+    color:#FFFFFF;	
+	margin-top:-1px;
+}
+
+#moduleList {
+	margin-top:-0.7em;
+}
+
+#moduleList ul li {
+	padding-bottom:2px;
+	padding-top:2px;
+	padding-left:3px;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="button"] {
+    background-image:none;	
+}
+
+#search h3, #newRecord h3, #lastView h3,#hiddenLastView h3 {
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=moduleTab_right_1.GIF);	
+    color:#fff;
+}
+
+#moduleList li[id="moduleTabExtraMenu"] {
+	background:transparent url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=more.gif) no-repeat;
+	padding-bottom:3px;
+	margin-top:0px;
+}
+
+.formHeader h3 {
+	background-image:none;
+}
+
+.formHeader span {
+	margin-left:0px;
+}
+#shortcuts li[class="moduleTabExtraMenu"] {
+    	background:transparent url(../../../../index.php?entryPoint=getImage&themeName=Retro&imageName=moreSub.gif) no-repeat scroll left bottom;
+}
+
+#search ul {
+	background-color:#EEEECC;
+}
+
+.leftList ul {
+    background-color:#EEEEEE;
+	border-bottom:1px solid #26496D;
+	border-left:1px solid #26496D;
+	border-right:1px solid #26496D;
+}
+
+#search input[name="query_string"] {
+    background-color:#FFFFFF;
+    border:1px solid #BBBBBB;
+}
+
+#search a, #sitemapLink span {
+    margin-left:0.6em;
+}
+
+.leftList ul li a span {
+	text-decoration:underline;
+}
+
+.leftList ul li a span:hover {
+	color:#666666;
+	text-decoration:underline;
+}
+
+ul.cssmenu li:hover {
+    background-color:#FFF;
+}
+#shortcuts ul li.moduleTabExtraMenu ul li {
+	   border:none;
+}
+
+#shortcuts ul li.moduleTabExtraMenu ul li:hover {
+	background-color:#FFF;
+}
+.pagination td {
+background-color:#ECF6FF;
+}
+
+.pagination td[align="right"][colspan="5"], .pagination td[align="right"][colspan="6"], .pagination td[align="right"][colspan="7"] {
+background-color:#ECF6FF;
+border-top:1px solid #356799;
+}
+
+.list th, .list td[scope="col"] {
+	background-image:none;
+	border:none;
+}
+
+.detail tbody tr th[align="left"][width="100%"][valign="top"][colspan="4"] {
+	border:none;
+	background-color:#EEEECC;
+}
+
+.detail h4 {
+	color:#666666;
+}
+
+button[selected], input[type="submit"][selected], input[type="reset"][selected], input[type="button"][selected] {
+	background-image:none;
+}
+#daily_cal_table
+{
+    background:none;
+}
+
+#globalLinks ul li span {
+	background:none;
+	color:#000000;
+}
+
+#search a:hover {
+	cursor:pointer;
+}
+
+#colorPicker {
+    margin:-7.6em 3px 6.5em;
+    padding:0 0 0 5px;
+}
+
+#themepickerLinkSpan {
+    color:#444444;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:700;
+}

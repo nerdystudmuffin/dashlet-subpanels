@@ -1,0 +1,66 @@
+<!--
+/*
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ */
+-->
+
+<!-- BEGIN: main -->
+<table width="100%" border="0" cellspacing=0 cellpadding="0" class="list view">
+<!-- BEGIN: list_nav_row -->
+{PAGINATION}
+<!-- END: list_nav_row -->
+<tr height="20">
+<td scope="col" >{CHECKALL}</td>
+<td scope="col" ><span sugar='slot1'><a href="{ORDER_BY}order_number" class="listViewThLinkS1" >{MOD.LBL_LIST_ORDER_NUMBER}{arrow_start}{order_number_arrow}{arrow_end}</a></span sugar='slot'></td>
+<td scope="col" ><span sugar='slot1b'><a href="{ORDER_BY}name" class="listViewThLinkS1" >{MOD.LBL_LIST_NAME}{arrow_start}{name_arrow}{arrow_end}</a></span sugar='slot'></td>
+<td scope="col" ><span sugar='slot2'><a href="{ORDER_BY}parent_name" class="listViewThLinkS1" >{MOD.LBL_LIST_PARENT_NAME}{arrow_start}{parent_name_arrow}{arrow_end}</a></span sugar='slot'></td>
+<td scope="col" ><span sugar='slot2b'><a href='{ORDER_BY}project_task_cstm.m_c' class='listViewThLinkS1'>{MOD.m_c}{arrow_start}{project_task_cstm_m_c_arrow}{arrow_end}</a></span sugar='slot'></td>
+<td scope="col" ><span sugar='slot3'><a href="{ORDER_BY}status" class="listViewThLinkS1">{MOD.LBL_LIST_STATUS}{arrow_start}{status_arrow}{arrow_end}</a></span sugar='slot'></td>
+<td scope="col" ><span sugar='slot3b'><a href="{ORDER_BY}assigned_user_name" class="listViewThLinkS1">{APP.LBL_LIST_ASSIGNED_USER}{arrow_start}{assigned_user_name_arrow}{arrow_end}</a></span sugar='slot'></td>
+</tr>
+<!-- BEGIN: row -->
+<tr height="20" class="{ROW_COLOR}S1">
+<td>{PREROW}</td>
+<td><span sugar='slot4'>{PROJECTTASK.ORDER_NUMBER}</span sugar='slot'></td>
+<td><span sugar='slot4b'><{TAG.MAIN} href="index.php?module=ProjectTask&action=DetailView&record={PROJECTTASK.ID}&offset={PROJECTTASK.OFFSET}&stamp={PROJECTTASK.STAMP}" >{PROJECTTASK.NAME}</{TAG.MAIN}></span sugar='slot'></td>
+<td><span sugar='slot5'><{TAG.PARENT} href="index.php?module=Project&action=DetailView&record={PROJECTTASK.PARENT_ID}" >{PROJECTTASK.PARENT_NAME}</{TAG.PARENT}></span sugar='slot'></td>
+<td><span sugar='slot5b'>{PROJECTTASK.M_C}</span sugar='slot'></td>
+<td><span sugar='slot6'>{PROJECTTASK.STATUS}</span sugar='slot'></td>
+<td><span sugar='slot6b'>{PROJECTTASK.ASSIGNED_USER_NAME}</span sugar='slot'></td>
+</tr>
+<tr><td colspan="12" class="listViewHRS1"></td></tr>
+<!-- END: row -->
+{PAGINATION}
+</table>
+<!-- END: main -->

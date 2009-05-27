@@ -1,0 +1,792 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ * Description:  CSS file for the colors in this theme
+ ********************************************************************************/
+
+body
+{
+	color:#000;
+	background-color:#fff;
+}
+
+.h3Row h3
+{
+	color:#fff;
+	background:url(../../../../index.php?entryPoint=getImage&imageName=h3bg.gif) top right no-repeat;
+	padding:4px 5px 7px 10px;
+}
+
+h1,h3#blue
+{
+	background:#fff;
+}
+
+h1,.moduleTitle h2,h3#blue
+{
+	color:#fff;
+	padding-left:0;
+}
+
+.h3Row,.monthHeader
+{
+	color:#000;
+	background-color:#fff;
+	border-color:#009;
+}
+
+.subpanelTabForm .h3Row
+{
+	color:#444;
+	background-color:#eee;
+	border-color:#999;
+}
+
+.subpanelTabForm h3
+{
+	background:url(../../../../index.php?entryPoint=getImage&imageName=h3subpanelTabFormbg.gif) top right no-repeat !important;
+}
+
+.subpanelTabForm h3,.subpanelTabForm .h3Row,.subpanelTabForm table.h3Row td
+{
+	background-color:#eee;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	background-color:#eee;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=buttonBg.gif);
+	color:#000;
+	border-color:#ddd #666 #666 #ddd;
+}
+
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+button:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus,
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected],
+button[selected]:focus, input[type=submit][selected]:focus, input[type=reset][selected]:focus, input[type=button][selected]:focus
+button[selected]:hover, input[type=submit][selected]:hover, input[type=reset][selected]:hover, input[type=button][selected]:hover
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=buttonOnBg.gif);
+	border-color:#339;
+}
+
+button[disabled], input[disabled],button[disabled]:hover, input[disabled]:hover
+{
+	background-color:#f0f0f0;
+	color:#ccc;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#c1c1c1;
+}
+
+input,select
+{
+	background-color:#fafafa;
+	border-color:#666;
+}
+
+input:focus,textarea:focus,select:focus
+{
+	background-color:#fff;
+	border-color:#006;
+}
+
+textarea
+{
+	background-color:#fafafa;
+	border-color:#979797;
+}
+
+.teamNoticeBox
+{
+	color:#444;
+	border-color:#009;
+}
+
+#moduleList ul li
+{
+	background:#66c;
+	color:#fff;
+}
+
+#moduleList ul li span.currentTab a:hover,
+#moduleList ul li ul.cssmenu li:hover a,
+#moduleList ul li ul.cssmenu li:hover
+{
+	color:#009;
+	background:#fff;
+}
+
+#moduleList ul li span.currentTab a:link,
+#moduleList ul li span.currentTab a:visited,
+#moduleList ul li span.currentTab a:hover
+{
+	color:#000;
+	background:#ccf;
+}
+
+.subpanelTabSpace *
+{
+	display:none;
+}
+
+.moreHandle
+{
+	background:url('../../../../index.php?entryPoint=getImage&imageName=more.gif') no-repeat bottom left;
+}
+
+ul#subModuleList li,ul#subModuleList li a:link,ul#subModuleList li a:visited,#newRecord form
+{
+	color:#fff;
+	background-color:#66c;
+	border-top-color:#aaa;
+	border-bottom-color:#009;
+}
+
+ul#subModuleList li a:hover,ul#subModuleList li span:hover
+{
+	color:#000;
+	background-color:#ccf;
+}
+
+table.list .view th,.list th, .list td[scope=col],.schedulerTopRow
+{
+	color:#000;
+	background-color:#ccf;
+	border-top:1px solid #ccf;
+	border-color:#669;
+}
+
+.monthHeader
+{
+	background-color:#ccf;
+	border-top:2px solid #66c;
+}
+
+.moduleTitle
+{
+	border-color:#009;
+    border-bottom:2px solid #009;
+}
+
+.headerBg
+{
+	color:#000;
+	border-color:#999;
+}
+
+#welcome
+{
+	color:#000;
+	border-left:2px solid #ccf;
+	border-bottom:2px solid #ccf;
+}
+
+#subtabs
+{
+	background:#66c;
+	border-color:#ccf;
+}
+
+#globalLinks ul.subTabs,#globalLinks ul.subTabs li a
+{
+	color:#000;
+	border-bottom:none;
+	background-image:none;
+	background:transparent;
+}
+
+#search,#colorPicker,#globalLinks,#sitemapLink
+{
+	background:#ccf;
+	border-bottom:2px solid #ccf;
+}
+
+/*#colorPicker
+{
+	border-right:2px solid #fff;
+}*/
+
+ul.subTabs li a
+{
+	background-color:#fff;
+	border-top-color:#fff;
+	border-right-color:#66c;
+}
+
+ul.subTabs li a:hover
+{
+	color:#006;
+	border-color:#ccc;
+}
+
+#subModuleList span
+{
+	background:#eee;
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+.listViewButtons
+{
+	background:#fff;
+}
+
+/*#globalLinks
+{
+    border-right:2px solid #FFF;
+}*/
+
+#globalLinks ul li a
+{
+	background-image:none;
+	background-color:transparent;
+	border-top:none;
+	border-bottom:none;
+	color:#000;
+	font-size:12px;
+}
+
+#globalLinks ul
+{
+	background-image:none;
+	background-color:transparent;
+	border-top:none;
+	color:#000;
+	font-size:12px;
+}
+
+#globalLinks ul li a:hover
+{
+	background-color:#66c;
+	background-image:none;
+	color:#fff;
+}
+
+#search input[name=query_string]
+{
+	background-color:#eee;
+	border-color:#66c;
+}
+
+#search input[type=submit]
+{
+    border-color:#DDDDDD #666666 #666666 #DDDDDD;
+}
+
+#search
+{
+	color:#000;
+	font-size:12px;
+}
+
+.date
+{
+	color:#444;
+	background-color:#ddd;
+	border-bottom-color:#bbb;
+}
+
+#lastView
+{
+	color:#000;
+	border-top-color:#66c;
+	border-bottom-color:#66c;
+	background-color:#ccf;
+}
+
+#leftColumn h3, #HideMenu h3
+{
+	background-color:#339;
+	color:#fff;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=leftColumnModuleNameBg.gif);
+	background-repeat:no-repeat;
+	background-position:top left;
+	border-bottom-color:#009;
+}
+
+#newRecord form
+{
+	border-color:#aaa #aaa #009;
+}
+
+#newRecord form input,#newRecord form select
+{
+	background-color:#ccf;
+	color:#000;
+	border-color:#339;
+}
+
+#newRecord form input:focus,#newRecord form select:focus
+{
+	background-color:#fff;
+	color:#000;
+	border-color:#000;
+}
+
+#newRecord form input:hover,#newRecord form select:hover
+{
+	background-color:#fff;
+	color:#000;
+}
+
+#newRecord form button, 
+#newRecord form input[type=submit], 
+#newRecord form input[type=reset], 
+#newRecord form input[type=button]
+{
+	color:#339;
+}
+
+.list .view
+{
+	border-color:#ccf #009 #009;
+}
+
+.pageNumbers
+{
+	color:#333;
+}
+
+.list tr.pagination td,.detail .list tr.pagination td .detail td[scope=row]
+{
+	color:#666;
+	background-color:#ddd;
+	border-color:#99c;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	color:#336;
+}
+
+.chartBox
+{
+	background-color:#fff;
+	border-color:#999;
+}
+
+table.edit .view
+{
+	background-color:#efefef;
+	border-color:#999;
+}
+
+table.edit .view td
+{
+	background-color:#efefef;
+}
+
+.edit
+{
+	color:#000;
+	background-color:#ccc;
+	border-color:#666 #009 #009;
+}
+
+.subpanelTabForm
+{
+	color:#000;
+	background-color:#ccc;
+	border-color:#999;
+}
+
+.subpanelTabForm .list .view
+{
+	border-color:#999;
+}
+
+.detail
+{
+	background-color:#ccc;
+	border-color:#009;
+}
+
+.detail td[scope=row],.monthCalBody th,.monthViewDayHeight td[scope=row]
+{
+	color:#000;
+	background-color:#f6f6f6;
+	border-color:#ddd;
+}
+
+.detail td
+{
+	color:#444;
+	background-color:#fff;
+	border-color:#ddd;
+}
+
+.other
+{
+	background-color:#ccc;
+	border-color:#999;
+}
+
+.other td[scope=row]
+{
+	color:#000;
+	border-top-color:#fff;
+	background-color:#fafafa;
+}
+
+.other td
+{
+	color:#444;
+	background-color:#eee;
+	border-left-color:#dfdfdf;
+}
+
+.monthCalBody
+{
+	background-color:#ccf;
+}
+
+.monthFooter td,.monthFooter td
+{
+	border-top-color:#666;
+	border-bottom-color:#009;
+	background-color:#ccf;
+}
+
+a.monthFooter a, .monthHeader a:hover,a.monthViewDayHeight td[scope=row] a:hover,a.monthViewDayHeight td a:hover,a.monthViewDayHeight td[class=weekend] a:hover,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:visited,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:visited
+{
+	color:#006;
+	text-decoration:underline;
+}
+
+.monthCalBodyTH th[scope=row]
+{
+	background-color:#ccc;
+	color:#444;
+}
+
+.monthCalBodyTodayWeekDay,.monthCalBodyTodayWeekEnd
+{
+	background-color:#fff;
+	color:#444;
+	border-color:#006;
+}
+
+.monthViewDayHeight td[class=weekend]
+{
+	background-color:#f6f6f6;
+	color:#444;
+}
+
+.monthCalBodyDayItem
+{
+	background-color:#fff;
+	border-top-color:#ccc;
+	border-bottom-color:#ddd;
+}
+
+.yearCalBodyMonth #daily_cal_table
+{
+	border-top:#eee;
+}
+
+.yearCalBodyMonth #daily_cal_table .monthCalBodyTH th
+{
+	border-color:#ccc;
+}
+
+h5.calSharedUser
+{
+	color:#444;
+	background-color:#d5d9ec;
+	border-top-color:#669;
+}
+
+.footer
+{
+	background-color:#66c;
+	border:none;
+	color:#fff;
+}
+
+.aboveFooter
+{
+	background:#66c;
+}
+
+table.underFooter td
+{
+	color:#fff;
+	background-color:#66c;
+}
+
+.underFooter
+{
+	color:transparent;
+	background-color:#66c;
+}
+
+.underfooter img
+{
+	padding-top:10px;
+	background:#66c;
+}
+
+ul.tablist
+{
+	border-bottom-color:#009;
+}
+
+ul.tablist li a:hover
+{
+	color:#006;
+	background:#fafafa;
+	border-color:#009;
+}
+
+ul.tablist li a
+{
+	background-color:#ccf;
+	border-color:#009;
+}
+
+ul.tablist li a.current
+{
+	color:#000;
+	border-bottom-color:#ccc;
+	border-right-color:#009;
+	background:#ccc;
+}
+
+ul.tablist li a.current:hover
+{
+	border-bottom-color:#ccc;
+	color:#006;
+}
+
+ul.subpanelTablist
+{
+	border-bottom-color:#66c;
+}
+
+ul.subpanelTablist li a
+{
+	background-color:#ccf;
+	border-color:#66c;
+}
+
+ul.subpanelTablist li a.current,ul.subpanelTablist li a.current:hover
+{
+	color:#339;
+	border-bottom-color:#fff;
+	background:#fff;
+}
+
+ul.subpanelTablist#groupTabs
+{
+	border-bottom-color:#999;
+}
+
+ul.subpanelTablist#groupTabs li a
+{
+	background-color:#ccf;
+	border-color:#999;
+}
+
+ul.subpanelTablist#groupTabs li a.current,
+ul.subpanelTablist#groupTabs li a.current:hover,
+ul.subpanelTablist#groupTabs li a.current:visited,
+ul.subpanelTablist#groupTabs li a.current:focus,
+ul.subpanelTablist#groupTabs li a.current:active
+{
+	color:#000 !important;
+	border-bottom-color:#ccc;
+	background:#ccc;
+}
+
+ul.subpanelTablist li#addPageItem a
+{
+	background-color:#fff;
+	border-color:#fff;
+}
+
+ul.subpanelTablist li#addPageItem a:hover
+{
+	background-color:#66c;
+	color:#fff;
+	border-color:#66c;
+}
+
+.sqsFloater td
+{
+	background-color:#fdfdfd;
+	border:1px inset #999;
+	color:#000;
+}
+
+.sqsSelectedSmartInputItem
+{
+	background-color:#DEEFFF;
+}
+
+.olCapFontClass
+{
+	color:#222;
+	background-color:#dfdfdf;
+}
+
+.olCapFontClass A
+{
+	color:#dfdfdf;
+}
+
+.olFgClass td
+{
+	background-color:#f9f9f9;
+}
+
+.olCgClass td
+{
+	border-top-color:#f1f1f1;
+	border-bottom-color:#aaa;
+	background-color:#dfdfdf;
+}
+
+.olCloseFontClass
+{
+	background-color:#dfdfdf;
+}
+
+body,.listViewSubHeadS1
+{
+	background-color:#fff;
+}
+
+table,td,a.otherSubpanelTabLink:link,a.otherSubpanelTabLink:visited,ul.subTabs li a:link,ul.subTabs li a:visited,.detail .list table tr.pagination td .detail td a,h4.detail td[scope=row],a.other td[scope=row] a:link,a.other td[scope=row] a:visited,a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited,a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	color:#444;
+}
+
+h2,h4,h5,h5.listViewSubHeadS1,a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited,a#lastView a:link,a#lastView a:visited,#lastView a,.list .view th a:link,.list .view th a:visited,a.listViewThLinkS1:link,a.listViewThLinkS1:visited,a.list td a:hover,.evenListRowS1 td,.oddListRowS1 td,a.tabFormAdvLink:link,a.tabFormAdvLink:visited,h4.edit td[scope=row],table.edit td,h5.edit td[scope=row],.edit td[scope=row],a.tabFormAdvLink:link,a.tabFormAdvLink:visited,.detail .list table tr.pagination td .list tr.pagination a:hover,.detail .list table tr.pagination td .detail td a:hover,a.monthCalBody th a:link,a.monthCalBody th a:visited,ul.tablist li a:link,ul.tablist li a:visited
+{
+	color:#000;
+}
+
+#main,#footer,#HideMenu,#moduleList
+{
+	background-color:#66c;
+}
+
+#content,.evenListRowS1 td,.oddListRowS1 td
+{
+    background-color:#FFF;
+}
+
+.evenListRowS1:hover td,.oddListRowS1:hover td
+{
+    background-color:#F6F6F6;
+}
+
+a:link,a:visited,a.body:link,a.body:visited,a.list td a:link,a.list td a:visited,.evenListRowS1 a.detail td a:link,.evenListRowS1 a.detail td a:visited,.oddListRowS1 a.detail td a:link,.oddListRowS1 a.detail td a:visited,a.listViewTdToolsS1:link,a.listViewTdToolsS1:visited,a.detail td a:link,a.detail td a:visited,ul.subpanelTablist li a:link,ul.subpanelTablist li a:visited,ul.subpanelTablist#groupTabs li a:link,ul.subpanelTablist#groupTabs li a:visited
+{
+	color:#009;
+}
+
+a:hover,a.body:hover,a.currentSubpanelTabLink:link,a.currentSubpanelTabLink:visited,a.currentSubpanelTabLink:hover,a.otherSubpanelTabLink:hover,.list .view th a:hover,a.listViewThLinkS1:hover,a.utilsLink:link,a.utilsLink:visited,a.monthFooter a, .monthHeader a:link,a.monthFooter a, .monthHeader a:visited,a.tabFormAdvLink:hover,a.tabFormAdvLink:hover,a.detail td a:hover,a.other td[scope=row] a:hover,a.yearCalBodyMonth > a:hover
+{
+	color:#006;
+}
+
+a#moduleList ul li a:link,a#moduleList ul li a:visited,#newRecord form td,#newRecord form a:link,#newRecord form a:visited,#newRecord form a:hover,.underfooter a:link,.underfooter a:visited,.underfooter a:hover
+{
+	color:#fff;
+}
+
+ul.tablist li a#subModuleList span:hover,ul.subpanelTablist li a#subModuleList span:hover
+{
+	border-bottom-color:#ddd;
+	color:#006;
+}
+
+#search input[name=query_string],#search input[name=query_string]:focus
+{
+	background-color:#fafafa;
+}
+
+a#lastView a:hover,.monthCalBodyTH th
+{
+	background-color:#66c;
+	color:#fff;
+}
+
+.listViewHRS1,.monthViewDayHeight td[scope=row],.yearCalBodyMonth
+{
+	background-color:#ddd;
+}
+
+.monthViewDayHeight td,.monthCalBody td
+{
+	background-color:#fff;
+	color:#444;
+}
+
+.yearCalBody,.olBgClass
+{
+	background-color:#999;
+}
+
+ul.subpanelTablist li a:hover,ul.subpanelTablist#groupTabs li a:hover
+{
+	color:#006;
+	background:#fafafa;
+	border-color:#339;
+}
+.leftList li a 
+{
+    padding: 3px 3px 3px 6px;
+}
+.leftList li, .leftList li a:link, .leftList li a:visited
+{
+    color: #fff;
+    background-color: #6666cc;
+    border-top-color: #aaa;
+    border-bottom-color: #000099;
+}
+	
+.leftList li a:hover, .leftList li span:hover  
+{
+    color: #000;
+    background-color: #ccccff;
+}
+
+#select_link
+{
+    color:#333366;
+}

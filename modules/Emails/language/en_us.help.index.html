@@ -1,0 +1,164 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>Emails</h1>
+
+<p>Use the Emails module as an email client to view and manage emails from external mail accounts.
+<p>The Emails Home page displays the following information:<br>
+<ul>
+<li>A list of emails in your Sugar inbox along with related information such as the sender and the subject. Select an email from the list to view the contents in the panel below.
+<li>Buttons to perform basic email functions.
+<ul>
+<li>To check for incoming emails, click <span class="helpButton">Check Mail</span>.
+<li>To compose an email, click <span class="helpButton">Compose Email</span>.
+<li>To set your email preferences, create email accounts, and create group folders, click <span class="helpButton">Settings</span>.  
+<li>To change the page layout, click the desired layout displayed in the <span class="helpButton">Views</span> option adjacent to the Settings button.
+</ul>
+<li>Tabs for Folders, Search, and Address Book.
+<ul>
+<li>The Folders tab lists existing local folders and group folders. Sugar provides a local folder named My Email to store imported emails that are assigned to you. This folder contains two sub-folders to store your email drafts and outbound emails. You can create additional local folders in the Folders tab.
+<br>Only administrators can create group folders. Specific users or teams who are assigned to a Group folder can view its contents to perform assigned tasks.
+<li>The Search tab lists fields for simple search and for advanced search within mail accounts. Enter a keyword in the Simple Search field to find emails containing that word. To narrow down search results with additional filters such as subject, sender, and recipient, use the Advanced Search fields. To search within all imported emails, use All Emails.
+<li>The Address Book tab provides the ability to add entries from your list of users, contacts, and leads to your address book. 
+</ul>
+<li>A Shortcuts section that displays the following options:
+<ul>
+<li><span class="helpShortcut">My Email</span>. Click this option to view the Emails module.
+<li><span class="helpShortcut">My Archives</span>. Click this option to view a list of emails that you archived for your records.
+<li><span class="helpShortcut">Create Archived Email</span>. Click this option to archive an inbound or outbound email for your records.
+<li><span class="helpShortcut">Create Email Template</span>. Click this option to create a template for campaign emails. The system extracts variables such as names and addresses from campaign target records and merges them with the email template when you send out campaign emails.
+<li><span class="helpShortcut">All Emails</span>. Click this option to view all outbound emails including drafts and archived emails.
+<li><span class="helpShortcut">Email Templates</span>. Click this option to view a list of existing email templates.
+</ul>
+<h3>Setting General Preferences</h3>
+To set up general preferences, click <span class="helpButton">Settings</span> and select the <span class="helpButton">General</span> tab.
+<br>General settings include options such as how frequently you want to check for incoming emails, the number of emails listed on a page, page layout, character sets, and signatures. Some of these settings have default values, which you can change. General settings apply to all your email accounts in Sugar.
+<h3>Creating Mail Accounts</h3>
+You can send emails using the default mail account set up by the administrator. However, to access your external mail accounts through Sugar, you must set up a separate mail account for each external email account that you want to access.
+<p>To set up a mail account, do as follows:
+<ol>
+<li>Click <span class="helpButton">Settings</span> and select the <span class="helpButton">Accounts</span> tab.
+<li>Enter a name for the account.
+<li>Enter the address of the email server from which your emails will be routed to Sugar.
+<li>Enter a user name and password for the account. Some Email servers require the user name to be the user's email address.
+<li>From the Mail Server Protocol drop-down list, select either IMAP or POP3 as the mail server protocol. If you are setting up a gmail account, click <span class="helpButton">Show Advanced</span> and enable SSL.
+<br>If you select IMAP, click <span class="helpButton">Select</span> to specify a Monitored folder, a Trash folder and a Sent folder. The default monitored folder is Inbox. Use the Ctrl key or the Shift key to select multiple folders as the monitored folders.
+<li>To change the default mail server for outgoing emails from the Group mail account, select an different one from the drop-down list or specify a new server as described below.
+</ol>
+<p>Click <span class="helpButton">Test settings</span> to ensure they are correct and then click <span class="helpButton">Save</span> to create the account.
+<p>Click <span class="helpButton">Save</span> to save the settings; click <span class="helpButton">Clear Form</span> if you do not want to save the settings.
+
+<h3>Specifying a Mail Server for Outbound Emails</h3>
+<ol>
+<li>Click the <span class="helpButton">Add</span> button adjacent to the Outgoing Mail Server field on the Mail Accounts tab.
+<li>Enter the following information in the Outbound Mail Server window.
+<ul>
+<li>Name. Enter a name for the account.
+<li>SMTP Server. Enter the SMTP Mail Server's address.
+<li>SMTP Port. Enter the Mail Server's port number.
+<br>To add Google's Gmail Server, click <span class="helpButton">Set Gmail Defaults</span>.The system fills in the SMTP Server and SMTP Port fields with the Gmail server address and port number respectively.
+<li>Use SSL when connecting. Select this option if you are using the POP3 protocol and the mail server requires SSL. You can also use SSL with IMAP to access a gmail account. 
+<li>Use SMTP Authentication. Select this option if the mail server requires authentication to send out the email.
+<li>SMTP Username. Enter your username for the mail account.
+<li>SMTP Password. Enter your password for the mail account.
+</ul>
+<li>Click <span class="helpButton">Save</span> to add the mail server.
+<br>The new mail server displays in the Outgoing Mail Server drop-down list. 
+</ol>
+<h3>Creating Email Folders</h3>
+Sugar automatically creates a folder for every mail account that you configure. Emails in this folder reside on the mail server of the associated external mail account. 
+Sugar also provides the My Email folder for imported emails that are assigned to you, your teams, and your direct reports.
+You can create other local folders to group emails according to subject, project, or other criteria. 
+<br>As an administrator, you can create Group folders to route incoming emails for distribution among various users in the organization. 
+You create Group folders in the Folders tab of the Settings window, and local folders in the Folders tab of the Emails module home page.<br> 
+<p>To create a local folder, in the Folders tab in the Emails module, right-click <span class="helpButton">My Email</span> and select <span class="helpButton">Add Folder</span>.<br>
+<p>To create a Group folder, do the following:
+<ol>
+<li>Click <span class="helpButton">Settings</span> and select the <span class="helpButton">Folders</span> tab. 
+<li>In the Create Group Folder section, enter a name for the folder.
+<li>To create a sub-folder, select the parent folder from the Add Folder drop-down list.
+<!--BEGIN SUGARCRM CP ONLY -->
+<li>Select a group from the group drop-down list.
+<!--END SUGARCRM CP ONLY-->
+
+
+
+<li>Click <span class="helpButton">Add New Group Folder</span> to create the folder.
+</ol>
+To view local folders and group folders in the Folders tab of the Emails home page, you must select them in the Folders tab under Settings. Similarly, to hide a folder, de-select it in Settings.
+<h3>Creating an Address Book</h3>
+You can create an address book consisting of entries from your list of contacts, users, and leads. After you populate the Address Book, you can find an entry quickly by typing in an alphabet, partial name, or full name in the Filter field.<br>
+
+
+
+<ol>
+<li>Click <span class="helpButton">Add Entries</span> and in the Select Address Book Entries window, enter the first name, last name, or email address of the individual and click <span class="helpButton">Search</span>.
+<li>In the search results, click <span class="helpButton">Add</span> to list the individual in your address book.
+
+
+
+
+</ol>
+<h3>Composing and Managing Emails</h3>
+<ol>
+<li>To create an email, click <span class="helpButton">Compose Email</span>. 
+<li>If you created more than one mail account in Sugar, select a account from the drop-down list in the To field to specify the account from which to send the email.
+<li>To save the email as a draft, click <span class="helpButton">Save Draft</span>.
+<li>To attach one or more files, click <span class="helpButton">Attach Files</span>. To attach a file located on your local file system, select <span class="helpButton">Add File</span>. To attach a file created in Sugar, click <span class="helpButton">Add Document</span>.
+<li>To associate the email with a related record, select the module from the <b>Relate to</b> drop-down list and then click  <span class="helpButton">Select</span> to select the record from the module’s List View.
+<li>To select an email template for the email as well as a signature or a character set that is different from what you specified in Settings, click <span class="helpButton">Options</span> and select from the appropriate drop-down list. 
+<li>To send the email in HTML format, select <span class="helpButton">Send HTML</span>. 
+<li>To archive the email in Sugar, select <span class="helpButton">Archive Sent Email</span>.
+</ol>
+<h3>Associating Outbound Emails with  Related Records</h3>
+<ol>
+<li>Select the email from the Sent Emails folder, right-click, and select <span class="helpButton">View Relationships</span>, or click <span class="helpButton">View Relationships</span> in the panel below.
+<li>Scroll down to the appropriate sub-panel in the Email Record window that displays on the screen, click <span class="helpButton">Select</span>, and choose the record to associate with the email.
+</ol>

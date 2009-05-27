@@ -1,0 +1,92 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>Repair</h1>
+
+<p>Use this page to upgrade and rebuild data from a previous version of Sugar for the current version of the program. You also use this option to convert a Sugar installation to offline mode.</p>
+The upgrade options include:
+<ul>
+
+
+
+<li><span class ="helpButton">Quick Repair and Rebuild</span>: Repairs and rebuilds the database, extensions, vardefs, dashlets, and so on for selected modules. Click this option, select the modules you want to repair, and click <span class ="helpButton">Repair</span>.
+<li><span class ="helpButton">Repair Database:</span> Repairs My SQL database based on values defined in vardefs.
+<li><span class ="helpButton">Expand Column Width:</span> For MSSQL, expands certain char, varchar and text columns in database.
+<li><span class ="helpButton">Clear Chart Data Cache:</span> Removes cached data files used by charts.
+<li><span class ="helpButton">Clear Template Data Cache:</span> Removes cached template files. Click this option, select the modules you want to repair, and click <span class ="helpButton">Repair</span>.
+<li><span class ="helpButton">Clear Vardefs Data Cache:</span> Removes vardefs from the cache.  Click this option, select the modules you want to repair, and click <span class ="helpButton">Repair</span>.
+<li><span class ="helpButton">Rebuild .htaccess file:</span> Rebuilds .htaccess to limit access to certain files directly.  
+<li><span class ="helpButton">Rebuild Audit:</span> Rebuilds the audit table. 
+<li><span class ="helpButton">Rebuild Config File:</span> Rebuilds config.php by updating version and adding defaults when not explicitly declared. Click this option to check the file and if, necessary, click <span class ="helpButton">Rebuild</span>.
+<li><span class ="helpButton">Rebuild Extensions:</span> Rebuilds extensions including extended vardefs, language packs, menus, and administration. 
+<li><span class ="helpButton">Rebuild Relationships:</span> Rebuilds relationship metadata and drops the cache file.
+<li><span class ="helpButton">Rebuild Schedulers:</span> Rebuild your out-of-the-box Scheduler Jobs. Click this option and then click <span class ="helpButton">Rebuild</span>.
+<li><span class ="helpButton">Rebuild Sugar Dashlets:</span> Rebuilds the cache file for Sugar Dashlets.
+
+
+
+<li><span class ="helpButton">Rebuild Javascript Languages: Rebuilds Javascript versions of language files.
+<li><span class ="helpButton">Rebuild Workflow:</span> Rebuilds the workflow cache and compiles plugins. 
+<li><span class ="helpButton">Rebuild Javascript Languages:</span> Rebuilds Javascript versions of language files.
+<li><span class ="helpButton">Rebuild JS Compressed Files:</span> Copies original Full JS Source files and replaces existing compressed JS files. 
+<li><span class ="helpButton">Rebuild JS Grouping Files:</span> Re-concatenates and overwrites existing group files with latest versions of group files. 
+<li><span class ="helpButton">Rebuild Minified JS Files:</span> Copies original Full JS Source Files and minifies them, then replaces existing compressed files. 
+<li><span class ="helpButton">Repair JS Files:</span> Compresses Existing JS files - includes any changes made, but does not overwrite original JS Source files
+
+
+
+<li><span class ="helpButton">Repair Roles:</span> Repairs roles by adding all new modules that support access control as well as any new access controls to existing modules.
+<li><span class ="helpButton">Repair Indexes:</span> Validates and, optionally, repairs database indexes against definitions in vardef files.
+
+
+
+<li><span class ="helpButton">Repair Inbound Email Accounts:</span> Repairs Inbound Email accounts and encrypts account passwords.
+<li><span class ="helpButton">Remove XSS:</span> Removes XSS Vulnerabilities from the database.  Click this option, select a module, and click <span class ="helpButton">Execute</span>. If any XSS strings are found, the system lists them in the Object(s) found field below.
+<li><span class ="helpButton">Repair Activities:</span> Repairs Activities (Calls, Meetings) end dates. 
+<li><span class ="helpButton">Check Reports:</span> Checks whether reports are still valid after an upgrade and lists any invalid reports that are found during the check. 
+<li><span class ="helpButton">Enable/Disable Seed Users:</span> Enables or disables seed users populated during demo installation. Click this option, and if the seed users are enabled, click <span class ="helpButton">Deactivate</span> to disable them. If the seed users are disabled, click <span class ="helpButton">Activate</span> to enable them.
+</ul>

@@ -1,0 +1,909 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+body,.body
+{
+	color:#444;
+	background-color:#fff;
+}
+
+table,td
+{
+	color:#444;
+}
+
+h1,h2,h3
+{
+	color:#903;
+}
+
+h4,h5,h5.listViewSubHeadS1,a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	color:#444;
+}
+
+.h3Row,.monthHeader
+{
+	color:#444;
+	background-color:#fff;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#999;
+}
+
+a:link,a:visited,a.body:link,a.body:visited
+{
+	color:#444;
+}
+
+
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	background-color:#eee;
+	color:#444;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#999;
+}
+
+button[selected], button:hover,button:focus,
+input[type=submit][selected], input[type=submit]:hover,input[type=submit]:focus,
+input[type=button][selected],input[type=button][selected]:focus,input[type=button]:hover,input[type=button]:focus,
+input[type=reset][selected]
+{
+	color:#903;
+	background-color:#eee;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#903;
+}
+
+button[disabled], input[disabled]
+{
+	border-color:#ddd;
+}
+
+input,select
+{
+	background-color:#fafafa;
+	border-color:#999;
+}
+
+input:focus,textarea:focus,select:focus
+{
+	background-color:#fff;
+	border-color:#903;
+}
+
+textarea
+{
+	background-color:#fafafa;
+	border-color:#999;
+}
+
+.teamNoticeBox
+{
+	color:#444;
+	border-color:#999;
+}
+
+#moduleList
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=tabRowBg.gif);
+	border-color:#999;
+}
+
+#moduleList ul li span.currentTab, #moduleList ul li span.currentTabLeft, #moduleList ul li span.currentTabRight{
+background-repeat:no-repeat;
+border-color:#999999;
+color:#333333;
+}
+#moduleList ul li span.currentTabLeft{
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=currentTab.gif);
+
+}
+#moduleList ul li span.currentTab{
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=currentTab.gif);
+}
+a#moduleList ul li a:link,a#moduleList ul li a:visited
+{
+	color:#903;
+}
+
+a#moduleList ul li a:hover
+{
+	color:#903;
+}
+
+#moduleList ul li span.notCurrentTab {
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=otherTab.gif);
+border-color:#999999;
+color:#333333;
+}
+a#moduleList ul li a:link,a#moduleList ul li a:visited
+{
+	color:#444;
+}
+
+a#moduleList ul li a:hover
+{
+	color:#903;
+}
+
+.subpanelTabSpace *
+{
+	display:none;
+}
+
+a.currentSubpanelTabLink:link,a.currentSubpanelTabLink:visited
+{
+	color:#903;
+}
+
+a.currentSubpanelTabLink:hover
+{
+	color:#903;
+}
+
+a.otherSubpanelTabLink:link,a.otherSubpanelTabLink:visited
+{
+	color:#444;
+}
+
+a.otherSubpanelTabLink:hover
+{
+	color:#903;
+}
+
+.moreHandle
+{
+	background:url(../../../../index.php?entryPoint=getImage&imageName=more.gif) no-repeat bottom left;
+}
+
+#subModuleList
+{
+	border-color:#ccc;
+}
+
+#subModuleList,ul#subModuleList li,#newRecord form
+{
+	color:#444;
+	background-color:#fff;
+	border-color:#ccc;
+}
+
+ul#subModuleList li a:hover,ul#subModuleList li span:hover
+{
+	color:#903;
+	background-color:#f6f6f6;
+}
+
+#newRecord form
+{
+	border-color:#ccc;
+}
+
+table.list .view th,.list th, .list td[scope=col],.schedulerTopRow,.monthHeader
+{
+	color:#444;
+	background-color:#fff;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#999;
+}
+
+.moduleTitle
+{
+	border-color:#ccc;
+}
+
+#header
+{
+	color:#000;
+	background:url(../../../../index.php?entryPoint=getImage&imageName=bgGrayHeader.gif) repeat-x;
+	border-color:#999;
+}
+
+#welcome
+{
+	color:#444;
+	background-color:#f6f6f6;
+	border-right-color:#ddd;
+	border-bottom-color:#ccc;
+}
+
+
+ul.subTabs
+{
+	border-bottom-color:#ddd;
+}
+
+#globalLinks ul li a
+{
+	background-color:#fff;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-top-color:#fff;
+	border-right-color:#ccc;
+}
+
+ul.subTabs li a:link
+{
+	color:#444;
+}
+
+ul.subTabs li a:visited
+{
+	color:#444;
+}
+
+ul.subTabs li a:hover
+{
+	color:#903;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	background-color:#fff;
+	border-color:#ccc;
+}
+#subModuleList
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+}
+#subModuleList a
+{
+	background:#eee;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+#subModuleList a:hover
+{
+	border-bottom-color:#ddd;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	color:#903;
+}
+
+ul.subpanelTablist li a#subModuleList span:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+#search input[name=query_string]
+{
+	background-color:#eee;
+	border-color:#999;
+}
+
+#search, #sitemapLink
+{
+	color:#444;
+}
+
+#search input[name=query_string]
+{
+	background-color:#fafafa;
+}
+
+#search input[name=query_string]:focus
+{
+	background-color:#fafafa;
+}
+
+.date
+{
+	color:#444;
+	background-color:#ddd;
+	border-bottom-color:#bbb;
+}
+
+#lastView
+{
+	color:#444;
+	border-top-color:#FFF;
+	*border-top-color:#EEE;
+	border-bottom-color:#999;
+	background-color:#eee;
+}
+
+a#lastView a:link,a#lastView a:visited,#lastView a
+{
+	color:#444;
+	border-color:#ccc;
+}
+
+a#lastView a:hover
+{
+	background-color:#fff;
+	color:#903;
+}
+
+#newRecord form a:link,#newRecord form a:visited
+{
+	color:#666;
+}
+
+#newRecord form a:hover
+{
+	color:#444;
+}
+
+.list .view
+{
+	border-color:#999;
+}
+
+.listViewSubHeadS1
+{
+	background-color:#fff;
+}
+
+.list .view th a:link,.list .view th a:visited,a.listViewThLinkS1:link,a.listViewThLinkS1:visited
+{
+	color:#444;
+}
+
+.list .view th a:hover,a.listViewThLinkS1:hover
+{
+	color:#903;
+}
+
+a.list td a:link,a.list td a:visited
+{
+	color:#903;
+}
+
+a.list td a:hover
+{
+	color:#000;
+}
+
+.evenListRowS1
+{
+	color:#000;
+}
+
+.oddListRowS1
+{
+	color:#000;
+}
+
+.listViewHRS1
+{
+	background-color:#ddd;
+}
+
+.pageNumbers
+{
+	color:#444;
+}
+
+.list table tr.pagination td,.detail .list table tr.pagination td .detail td[scope=row]
+{
+	color:#999;
+	background-color:#eee;
+	border-color:#999;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	color:#444;
+}
+
+a.list tr.pagination a:hover
+{
+	color:#903;
+}
+
+a.utilsLink:link,a.utilsLink:visited,a.monthFooter a, .monthHeader a:link,a.monthFooter a, .monthHeader a:visited
+{
+	color:#903;
+}
+
+.chartBox
+{
+	background-color:#fff;
+	border-color:#999;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#444;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#903;
+}
+
+table.edit .view
+{
+	background-color:#efefef;
+	border-color:#999;
+}
+
+table.edit .view td
+{
+	background-color:#efefef;
+}
+
+.edit
+{
+	color:#000;
+	background-color:#f6f6f6;
+	background-image:url(images/bgGrayForm.gif);
+	border-color:#999;
+}
+
+.subpanelTabForm
+{
+	color:#000;
+	background-color:#f6f6f6;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgPurpleForm.gif);
+	border-color:#999;
+}
+
+.subpanelTabForm .list .view
+{
+	border-color:#999;
+}
+
+h4.edit td[scope=row]
+{
+	color:#444;
+}
+
+h5.edit td[scope=row]
+{
+	color:#444;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#444;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#903;
+}
+
+.detail
+{
+	background-color:#ccc;
+	border-color:#666;
+}
+
+.detail .list table tr.pagination td .list tr.pagination a:hover,.detail .list table tr.pagination td .detail td a:hover
+{
+	color:#000;
+}
+
+.detail .list table tr.pagination td .detail td a
+{
+	color:#444;
+}
+
+.detail td[scope=row],.monthCalBody th,.monthViewDayHeight td[scope=row]
+{
+	color:#000;
+	background-color:#f6f6f6;
+	border-color:#ddd;
+}
+
+h4.detail td[scope=row]
+{
+	color:#444;
+}
+
+.detail td
+{
+	color:#444;
+	background-color:#fff;
+	border-color:#ddd;
+}
+
+a.detail td a:link,a.detail td a:visited
+{
+	color:#000;
+}
+
+a.detail td a:hover
+{
+	color:#903;
+}
+
+.other
+{
+	background-color:#ccc;
+	border-color:#999;
+}
+
+.other td[scope=row]
+{
+	color:#000;
+	border-top-color:#fff;
+}
+
+.other td
+{
+	color:#444;
+	background-color:#eee;
+	border-left-color:#dfdfdf;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	color:#444;
+}
+
+a.other td[scope=row] a:hover
+{
+	color:#903;
+}
+
+.monthCalBody
+{
+	background-color:#ddd;
+}
+
+.monthFooter td,.monthFooter td
+{
+	border-top-color:#ccc;
+	border-bottom-color:#999;
+	background-color:#eee;
+}
+
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited,a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	color:#444;
+}
+
+a.monthFooter a, .monthHeader a:hover,a.monthViewDayHeight td[scope=row] a:hover,a.monthViewDayHeight td a:hover,a.monthViewDayHeight td[class=weekend] a:hover,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:visited,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:visited
+{
+	color:#903;
+}
+
+.monthCalBodyTH th[scope=row]
+{
+	background-color:#f6f6f6;
+	color:#444;
+}
+
+.monthCalBodyTH th
+{
+	background-color:#eee;
+	color:#444;
+}
+
+.monthCalBodyTodayWeekDay,.monthCalBodyTodayWeekEnd
+{
+	background-color:#fff;
+	color:#444;
+	border-color:#903;
+}
+
+.monthViewDayHeight td
+{
+	background-color:#fff;
+	color:#444;
+}
+
+.monthViewDayHeight td[class=weekend]
+{
+	background-color:#f6f6f6;
+	color:#444;
+}
+
+.monthCalBodyDayItem
+{
+	background-color:#fff;
+	border-top-color:#ccc;
+	border-bottom-color:#ddd;
+}
+
+.monthCalBody td
+{
+	background-color:#fff;
+	color:#444;
+}
+
+a.monthCalBody th a:link,a.monthCalBody th a:visited
+{
+	color:#000;
+}
+
+.yearCalBody
+{
+	background-color:#999;
+}
+
+.yearCalBodyMonth
+{
+	background-color:#ddd;
+}
+
+.yearCalBodyMonth #daily_cal_table
+{
+	border-top:#eee;
+}
+
+.yearCalBodyMonth #daily_cal_table .monthCalBodyTH th
+{
+	border-color:#ccc;
+}
+
+a.yearCalBodyMonth > a:hover
+{
+	color:#903;
+}
+
+h5.calSharedUser
+{
+	color:#444;
+	background-color:#eee;
+	border-top-color:#999;
+}
+
+.footer,.underFooter
+{
+	color:#999;
+	background-color:#f6f6f6;
+}
+
+a.footerLink:hover
+{
+	color:#903;
+}
+
+.footerHR
+{
+	color:#666;
+}
+
+.footer,.aboveFooter
+{
+	background-color:#fff;
+}
+
+ul.tablist
+{
+	border-bottom-color:#999;
+}
+
+ul.tablist li a:hover
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	color:#903;
+	background:#fafafa;
+	border-color:#999;
+}
+
+
+ul.tablist li a
+{
+	background-color:#fff;
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	border-color:#ccc;
+}
+
+ul.tablist li a:link
+{
+	color:#444;
+}
+
+ul.tablist li a:visited
+{
+	color:#444;
+}
+
+ul.tablist li a.current
+{
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+ul.tablist li a.current:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+ul.subpanelTablist
+{
+	border-bottom-color:#999;
+}
+
+ul.subpanelTablist li a:hover
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+	color:#903;
+	background:#fafafa;
+	border-color:#999;
+}
+
+ul.subpanelTablist li a
+{
+	background-color:#fff;
+	border-color:#ccc;
+}
+
+ul.subpanelTablist li a:link
+{
+	color:#444;
+}
+
+ul.subpanelTablist li a:visited
+{
+	color:#444;
+}
+ul.subpanelTablist li a
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+}
+ul.subpanelTablist li a.current
+{
+	color:#903;
+	background-image: none;
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+ul.subpanelTablist li a.current:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+.sqsFloater td
+{
+	background-color:#fdfdfd;
+	border:1px inset #999;
+	color:#000;
+}
+
+.sqsSelectedSmartInputItem
+{
+	background-color:#DEEFFF;
+}
+
+.olCapFontClass
+{
+	color:#222;
+	background-color:#dfdfdf;
+}
+
+.olCapFontClass A
+{
+	color:#dfdfdf;
+}
+
+.olFgClass td
+{
+	background-color:#f9f9f9;
+}
+
+.olCgClass td
+{
+	border-top-color:#f1f1f1;
+	border-bottom-color:#aaa;
+	background-color:#dfdfdf;
+}
+
+.olBgClass
+{
+	background-color:#999;
+}
+
+.olCloseFontClass
+{
+	background-color:#dfdfdf;
+}
+
+#sitemap .edit
+{
+	border-color:#999;
+}
+
+#shortcuts{
+background-color:#FFFFFF;
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+color:#444444;
+}
+
+#newRecord{
+background-color:#FFFFFF;
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGray.gif);
+color:#444444;
+border-color:#ccc;
+}
+#shortcuts li,#lastView li{
+background-color:#FFFFFF;
+border-color:#CCCCCC;
+color:#444444;
+}
+.line{
+background-color:#f6f6f6;
+}
+a:hover,a.body:hover,#tabList a:hover
+{
+	color:#903;
+}
+
+a.listViewTdLinkS1:link, a.listViewTdLinkS1:visited, ul#groupTabs li a:hover, ul#groupTabs li a:focus,ul.tablist li a:hover{
+color:#990033;
+}
+.tabForm {
+background-color:#F6F6F6;
+background-image:url(../../../../index.php?entryPoint=getImage&imageName=bgGrayForm.gif);
+border-color:#999999;
+color:#000000;
+}
+#content, textarea#content{
+border-color:#999999;
+}
+#header_right_bottom{
+color:#444444;
+}
+a.currentTabLink:visited{
+color:#444;
+}
+.leftList ul li span:hover,.leftList ul li a:hover {
+background-color:#f6f6f6;
+}
+#header #shortcuts{
+background-image:none;
+background-color:#EEEEEE;
+border-bottom-color:#999999;
+border-top-color:#EEEEEE;
+color:#444444;
+}
+.headerList a{
+border-left-color: #CCCCCC;
+}
+#leftColumn #lastView{
+background-color:#FFFFFF;
+border-color:#CCCCCC;
+color:#444444;
+}
+#leftColumn #lastView h3{
+background-image:url(../../../../index.php?entryPoint=getImage&themeName=Sugar2006&imageName=bgGray.gif);
+}
+#leftColumn #lastView ul{
+background-color:#FFFFFF;;
+background-image:none;
+}
+.leftList ul{
+background-color:#FFFFFF;
+}
+#moduleList ul li#moduleTabExtraMenu{
+background-image:url(../../../../index.php?entryPoint=getImage&themeName=Sugar2006&imageName=otherTab.gif);
+}

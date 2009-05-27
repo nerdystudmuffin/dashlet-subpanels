@@ -1,0 +1,2563 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+#moduleList ul[class="cssmenu"]
+{
+	position:absolute;
+	visibility:hidden;
+	background-color:#EEE;
+	border:#fff solid 1px;
+	z-index:2;
+	filter:alpha(opacity=95);
+	-moz-opacity:0.95;
+	opacity:0.95;
+	width:11em;
+	margin:-0.2em 0 0;
+}
+
+ul.cssmenu li a{
+    color:#666666;
+}
+
+ul.cssmenu li:hover {
+background-color:#DFE3E9;
+}
+
+.subDmenu
+{
+	position:absolute;
+	display:none;
+	visibility:hidden;
+}
+
+ul.cssmenu li,.menuItemHilite,.menuItemX,.menuItemHiliteX,.menuItem:visited,.menuItemHilite:visited,.menuItem:hover,.menuItemHilite:hover,.menuItem:active,.menuItemHilite:active,.menuItem:link,.menuItemHilite:link,.menuItemX:visited,.menuItemHiliteX:visited,.menuItemX:hover,.menuItemHiliteX:hover,.menuItemX:active,.menuItemHiliteX:active,.menuItemX:link,.menuItemHiliteX:link
+{
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	font-style:normal;
+	line-height:18px;
+	color:#666;
+	text-decoration:none;
+	width:150px;
+	border-left:none;
+	border-right:none;
+	display:block;
+	border-top:#fff solid 1px;
+	padding:1px 10px 1px 4px;
+	border-bottom:none;
+}
+
+.menuItem:hover,.menuItemHilite:hover,.menuItem:active,.menuItemHilite:active,.menuItemX:hover,.menuItemHiliteX:hover,.menuItemX:active,.menuItemHiliteX:active
+{
+	color:#394869;
+}
+
+.menuItem
+{
+	background-color:#EEE;
+}
+
+.menuItemHilite
+{
+	background-color:#dfe3e9;
+	color:#394869;
+}
+
+.menuItemX
+{
+	background-color:#EEE;
+}
+
+.menuItemHiliteX
+{
+	background-color:#dfe3e9;
+	color:#394869;
+}
+
+.calendar
+{
+	position:relative;
+	display:none;
+	border:1px solid #b1b8ce;
+	font-size:11px;
+	color:#394869;
+	cursor:default;
+	background:#dfe3e9;
+	font-family:tahoma,verdana,sans-serif;
+}
+
+.calendar table
+{
+	border:1px solid #fff;
+	font-size:11px;
+	color:#394869;
+	cursor:default;
+	background:#dfe3e9;
+	font-family:tahoma,verdana,sans-serif;
+}
+
+.calendar button, input[type=submit], input[type=reset], input[type=button]
+{
+	text-align:center;
+	background:#dfe3e9;
+	border-left:1px solid #dfe3e9;
+	border-top:1px solid #dfe3e9;
+	border-bottom:1px solid #a1a9b9;
+	border-right:1px solid #a1a9b9;
+	padding:2px 1px 1px 2px;
+}
+
+.calendar .nav
+{
+	background:transparent no-repeat 100% 100%;
+}
+
+.calendar thead .title
+{
+	font-weight:700;
+	border-bottom:1px solid #a1a9b9;
+	border-right:1px solid #a1a9b9;
+	color:#394869;
+	text-align:center;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=calendarHeaderBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+	padding:3px;
+}
+
+.calendar thead .name
+{
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	text-align:center;
+	background:#b1b8ce;
+	color:#fff;
+	padding:2px;
+}
+
+.calendar thead .hilite
+{
+	background-color:#fff;
+}
+
+.calendar thead .name.hilite
+{
+	background-color:#dfe3e9;
+	color:#394869;
+}
+
+.calendar thead .active
+{
+	border-top:1px solid #394869;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-left:1px solid #394869;
+	background-color:#b8c0c4;
+	padding:2px 0 0 2px;
+}
+
+.calendar tbody .day
+{
+	width:2em;
+	text-align:right;
+	color:#394869;
+	background:#eee;
+	padding:2px 4px 2px 2px;
+}
+
+.calendar tbody .day.othermonth
+{
+	font-size:80%;
+	color:#aaa;
+}
+
+.calendar tbody .day.othermonth.oweekend
+{
+	color:#faa;
+}
+
+.calendar table .wn
+{
+	border-right:1px solid #fff;
+	background:#dfe3e9;
+	color:#6d7894;
+	padding:2px 3px 2px 2px;
+}
+
+.calendar tbody .rowhilite td
+{
+	background:#fff;
+}
+
+.calendar tbody .rowhilite td.wn
+{
+	background:#e7e8ec;
+}
+
+.calendar tbody td.hilite
+{
+	border:1px solid;
+	background:#fff;
+	border-color:#b1b8ce;
+	padding:1px 3px 1px 1px;
+}
+
+.calendar tbody td.active
+{
+	border:1px solid;
+	background:#fff;
+	border-color:#b1b8ce;
+	padding:2px 2px 0;
+}
+
+.calendar tbody td.selected
+{
+	font-weight:700;
+	border:1px solid;
+	background:#fff;
+	border-color:#b1b8ce;
+	padding:2px 2px 0;
+}
+
+.calendar tbody td.weekend
+{
+	font-weight:700;
+	color:#6d7894;
+}
+
+.calendar tbody td.today
+{
+	font-weight:700;
+	color:#933;
+}
+
+.calendar tbody .disabled
+{
+	color:#999;
+}
+
+.calendar tbody .emptycell
+{
+	visibility:hidden;
+}
+
+.calendar tbody .emptyrow
+{
+	display:none;
+}
+
+.calendar tfoot .ttip
+{
+	font-size:90%;
+	border-top:1px solid #a1a9b9;
+	color:#394869;
+	text-align:center;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=calendarHeaderBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+	padding:1px;
+}
+
+.calendar tfoot .hilite
+{
+	background:#fff;
+}
+
+.calendar tfoot .active
+{
+	border-top:1px solid #fff;
+	padding:2px 0 0 2px;
+}
+
+.calendar .combo
+{
+	position:absolute;
+	display:none;
+	width:4em;
+	top:0;
+	left:0;
+	cursor:default;
+	border:1px solid #b1b8ce;
+	background:#dfe3e9;
+	font-size:90%;
+	padding:1px;
+}
+
+.calendar .combo .label,.calendar .combo .label-IEfix
+{
+	text-align:left;
+	padding:1px 1px 1px 5px;
+}
+
+.calendar .combo .label-IEfix
+{
+	width:4em;
+}
+
+.calendar .combo .active
+{
+	background:#fff;
+	border-top:1px solid #b1b8ce;
+	border-bottom:1px solid #b1b8ce;
+}
+
+.calendar .combo .hilite
+{
+	background:#fff;
+}
+
+.calendar td.time
+{
+	border-top:1px solid #394869;
+	text-align:center;
+	background-color:#e8f0f4;
+	padding:1px 0;
+}
+
+.calendar td.time .hour,.calendar td.time .minute,.calendar td.time .ampm
+{
+	border:1px solid #889;
+	font-weight:700;
+	background-color:#fff;
+	padding:0 3px 0 4px;
+}
+
+.calendar td.time .ampm
+{
+	text-align:center;
+}
+
+.calendar td.time .colon
+{
+	font-weight:700;
+	padding:0 2px 0 3px;
+}
+
+.calendar td.time span.hilite
+{
+	background-color:#667;
+	color:#fff;
+	border-color:#394869;
+}
+
+.calendar td.time span.active
+{
+	background-color:#394869;
+	color:#0f0;
+	border-color:red;
+}
+
+body
+{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	color:#555;
+	font-size:12px;
+	background-color:#dfe3e9;
+	margin:0;
+}
+
+img
+{
+	behavior:url(include/pngbehavior.htc);
+}
+
+.body
+{
+	font-size:12px;
+}
+
+table,td
+{
+	color:#555;
+	font-size:11px;
+}
+
+p
+{
+	margin-top:0;
+	margin-bottom:10px;
+}
+
+form
+{
+	margin:0;
+}
+
+h1
+{
+	color:#394869;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:700;
+	margin-bottom:8px;
+}
+
+h2
+{
+	color:#933;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:19px;
+	font-weight:400;
+	height:25px;
+}
+
+h3
+{
+	color:#394869;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:700;
+	margin-bottom:3px;
+	margin-top:3px;
+}
+
+h4
+{
+	color:#7b859a;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:2px;
+}
+
+h5
+{
+	color:#7b859a;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:700;
+	margin-bottom:1px;
+}
+
+LI
+{
+	list-style-type:square;
+	margin-left:6px;
+	margin-bottom:2px;
+}
+
+UL
+{
+	margin-top:2px;
+}
+
+hr
+{
+	height:1px;
+}
+
+a:link,a:visited
+{
+	color:#394869;
+	text-decoration:none;
+}
+
+a:hover
+{
+	color:#06c;
+	text-decoration:underline;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	border:1px solid #a1a9b9;
+	font-size:11px;
+	color:#555e74;
+	background-color:#fff;
+	font-weight:400;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=formButtonBg.gif);
+	background-repeat:repeat-x;
+}
+
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]
+{
+	border:1px solid #a1a9b9;
+	font-size:11px;
+	color:#6d7894;
+	background-color:#fff;
+	font-weight:400;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=formButtonBgOn.gif);
+	background-repeat:repeat-x;
+}
+
+button[disabled], input[disabled]
+{
+	background-color:#bac3d6;
+	background-image:none;
+}
+
+.detail button, input[type=submit], input[type=reset], input[type=button] img
+{
+	margin-right:5px;
+	margin-left:5px;
+}
+
+#listViewPaginationButtons button, input[type="submit"], input[type="reset"], input[type="button"]
+{
+	width:auto;
+}
+
+input,select
+{
+	border:1px solid #fff;
+	font-size:11px;
+	background-color:#dfe3e9;
+}
+
+textarea
+{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	border:1px solid #fff;
+	font-size:12px;
+	background-color:#dfe3e9;
+}
+
+input[type=checkbox],input[type=radio]
+{
+	border:0;
+	background-color:transparent;
+	vertical-align:bottom;
+	margin:0;
+}
+
+.contentBox
+{
+	background-color:#ededed;
+	border-top:1px #fff solid;
+	border-bottom:1px #fff solid;
+	margin:10px 0;
+	padding:0 10px 0 0;
+}
+
+.teamNoticeBox
+{
+	background-color:#eee;
+	border:1px #b3b5c8 solid;
+	padding-left:5px;
+	padding-right:5px;
+	color:#555;
+}
+
+a.body:link,a.body:visited
+{
+	color:#394869;
+	font-size:12px;
+	text-decoration:none;
+}
+
+a.body:hover
+{
+	color:#06c;
+	text-decoration:underline;
+}
+
+#lastView
+{
+    padding-left:0px;
+    padding-top:4px;
+    margin-top:0em;
+}
+
+#lastView li {
+	border-top:1px solid #FFFFFF;
+}
+
+#globalLinks
+{
+	font-size:11px;
+	color:#fff;
+	font-weight:400;
+	margin-top:-2.5em;
+}
+
+#globalLinks ul li
+{
+    list-style:none;
+    display:inline;
+    margin:1px 1px 0;
+}
+
+#globalLinks a:link, #globalLinks a:visited
+{
+	color:#777;
+	text-decoration:none;
+}
+
+#globalLinks a:hover
+{
+	color:#394869;
+}
+
+#globalLinks ul li span {
+	color:#394869;
+}
+
+.currentTab
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=currentTab_middle.gif);
+    background-repeat:repeat-x;
+	font-size:12px;
+	font-weight:700;
+	background-color:transparent;
+	padding:3px;
+}
+
+.currentTabRight {
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=currentTab_right.gif);
+    background-repeat:no-repeat;
+	padding:3px;
+}
+
+.currentTabLeft {
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=currentTab_left.gif);
+    background-repeat:no-repeat;
+    padding:3px 0;
+	margin-left:-0.2em;	
+}
+
+.currentTab a:link,.currentTab a:visited
+{
+	color:#933;
+	text-decoration:none;
+}
+
+.currentTab a:hover
+{
+	color:#dd4e00;
+	text-decoration:none;
+}
+
+.notCurrentTab
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=otherTab_middle.gif);
+    background-repeat:repeat-x;
+	font-size:12px;
+	font-weight:700;
+	background-color:transparent;
+	padding:3px;
+	color:#717989;
+}
+
+
+.notCurrentTabLeft{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=otherTab_left.gif);
+    background-repeat:no-repeat;
+	padding:3px 0;
+	margin-left:-0.2em;
+}
+
+.notCurrentTabRight{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=otherTab_right.gif);
+    background-repeat:no-repeat;
+	padding:3px;
+	margin-right:-0.2em;
+}
+
+.notCurrentTab a:link,.notCurrentTab a:visited
+{
+	color:#717989;
+	text-decoration:none;
+}
+
+.notCurrentTab a:hover
+{
+	color:#333;
+	text-decoration:none;
+}
+
+#groupTabs
+{
+	margin-top:20px;
+}
+
+.subTabs
+{
+	font-size:6px;
+	color:#47644f;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #ccc;
+	padding-left:18px;
+	padding-right:18px;
+	vertical-align:bottom;
+	padding-bottom:2px;
+	height:22px;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=subMenuBg.gif);
+	background-repeat:repeat-x;
+}
+
+.subTabs td
+{
+	padding-right:1em;
+}
+
+.moreHandle
+{
+	background:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=more.gif) no-repeat bottom left;
+}
+
+.emptyTabSpace
+{
+	border-bottom:2px solid #fff;
+	background-color:transparent;
+}
+
+#companyLogo
+{
+    padding:0px;
+    margin:-5.2em 0 0 0.8em;
+}
+
+#header
+{
+    font-size:12px;
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=header_bg.gif);
+    background-repeat:repeat-x;
+	height:10em;
+}
+
+#header_left_bg {
+	float:left;
+	margin-bottom:-1em;
+}
+
+#header_right_bg {
+	float:right;
+}
+
+#header_right_bottom_bg {
+    float:right;
+    margin-top:-0.6em;
+}
+
+#moduleList{
+	position:absolute;
+	z-index:2;
+}
+
+#moduleList ul
+{
+    display:block;
+    font-size:12px;
+    font-face:Arial, Verdana, Helvetica, sans-serif;
+    font-weight:700;
+    list-style-type:none;
+    margin:-1em 0 0 1em;
+    padding:0;
+}
+
+#moduleList ul li
+{
+    margin:0;
+    float:left;
+    width:auto;
+    display:block;
+}
+
+#moduleList li[id="moduleTabExtraMenu"]
+{
+    background:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=more.gif) no-repeat bottom left;
+    margin-top:0.2em;
+	padding-right:6px;
+}
+
+#moduleTabExtraMenu a[href="#"] {
+    visibility:hidden;
+}
+
+#subModuleList
+{
+	font-size:6px;
+	color:#47644f;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #ccc;
+	padding-left:18px;
+	padding-right:18px;
+	vertical-align:bottom;
+	padding-bottom:2px;
+	height:22px;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=subMenuBg.gif);
+	background-repeat:repeat-x;
+}
+
+a.subMenuLink:link,a.subMenuLink:visited
+{
+	font-size:11px;
+	color:#717989;
+	text-decoration:none;
+	border-bottom:0;
+	padding-left:1px;
+	vertical-align:middle;
+}
+
+a.subMenuLink:hover
+{
+	color:#933;
+}
+
+#welcome
+{
+	font-size:12px;
+	font-weight:700;
+	color:#7b859a;
+	background-color:#e7e8ec;
+	border-bottom:1px solid #f7f7f7;
+	padding-left:10px;
+	float:left;
+    width:100%;
+	padding:3px 0 2px 10px;
+	height:1.3em;
+}
+
+.date
+{
+	font-size:13px;
+	font-weight:700;
+	color:#444;
+	padding-right:10px;
+}
+
+table.leftColumnModuleS1 td
+{
+	border-bottom:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	background-color:#ededed;
+	padding:5px;
+}
+
+table.leftColumnModuleS2
+{
+	border-bottom:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	background-color:#ededed;
+}
+
+table.leftColumnModuleS2 td
+{
+	border-top:1px solid #fff;
+	padding:2px 4px;
+}
+
+#newRecord form
+{
+	font-size:11px;
+	font-weight:400;
+	border-bottom:1px solid #fff;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	background-color:#ededed;
+	padding:5px;
+}
+
+.lastViewedLink
+{
+	font-size:11px;
+	font-weight:400;
+	color:#394869;
+}
+
+a.lastViewedLink:link,a.lastViewedLink:visited
+{
+	font-size:11px;
+	font-weight:400;
+	color:#394869;
+	text-decoration:none;
+}
+
+a.lastViewedLink:hover
+{
+	color:#933;
+}
+
+.list .view
+{
+	border-bottom:1px solid #b3b5c8;
+	border-right:1px solid #b1b8ce;
+	border-left:1px solid #b1b8ce;
+}
+
+.reportlistView
+{
+	border:1px solid #b3b5c8;
+}
+
+table.reportlistView td,table.reportlistView th
+{
+	background:#fff;
+	border-bottom:1px solid #b3b5c8;
+	border-right:1px solid #b3b5c8;
+	color:#555;
+	text-align:center;
+	font-size:11px;
+	padding:4px;
+}
+
+table.reportlistView th,.reportlistView .reportlistViewMatrixRightEmptyData,.reportlistView .reportlistViewMatrixRightEmptyData1
+{
+	background:#eee;
+	font-weight:700;
+}
+
+.reportGroupViewTable
+{
+	background:#bac3d6;
+	border:1px solid #fff;
+	margin-bottom:20px;
+	margin-top:5px;
+}
+
+.reportGroupViewTable .reportevenListRowS1,.reportGroupViewTable .reportoddListRowS1,.reportoddListRowS1
+{
+	background:#fff;
+	color:#000;
+	font-size:11px;
+	padding:4px;
+}
+
+table.reportGroupViewTable th,.reportGroupNByTableEvenListRowS1,table.reportGroupViewTable th .listViewThLinkS1
+{
+	background:#eee;
+	font-weight:700;
+	color:#6d7894;
+	padding:6px;
+}
+
+.reportGroupNByTableEvenListRowS1
+{
+	background:#bac3d6;
+	border:none;
+	font-size:12px;
+	color:#394869;
+	padding:10px 6px;
+}
+
+.reportGroup1ByTable .reportGroup1ByTableEvenListRowS1,.reportGroup1ByTable .reportGroupNByTableEvenListRowS1
+{
+	background:#fff;
+	font-size:13px;
+	padding-left:5px;
+	color:#000;
+}
+
+.reportGroup1ByTable .reportGroupNByTableEvenListRowS1
+{
+	background:#dfe3e9;
+	color:#394869;
+	border-bottom:1px solid #b1b8ce;
+	border-top:1px solid #fff;
+	padding:5px 5px 5px 0;
+}
+
+.reportDataChildtablelistView
+{
+	border:1px solid #717989;
+	margin-left:40px;
+	margin-right:5px;
+	margin-bottom:10px;
+}
+
+.list th, .list td[scope=col]
+{
+	font-size:11px;
+	color:#6d7894;
+	font-weight:700;
+	text-align:left;
+	padding-left:5px;
+	padding-right:5px;
+	height:20px;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=listViewBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+	border-bottom:1px solid #b1b8ce;
+	border-top:1px solid #b1b8ce;
+}
+
+.listViewSubHeadS1
+{
+	background-color:#fff;
+}
+
+h5.listViewSubHeadS1
+{
+	border:none;
+	color:#394869;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:5px;
+	background-color:transparent;
+}
+
+a.listViewThLinkS1:link,a.listViewThLinkS1:visited
+{
+	color:#6d7894;
+	text-decoration:none;
+}
+
+a.listViewThLinkS1:hover
+{
+	color:#394869;
+	text-decoration:none;
+}
+
+a.list td a:link,a.list td a:visited
+{
+	font-size:12px;
+	color:#255194;
+	text-decoration:none;
+}
+
+a.list td a:hover
+{
+	color:#933;
+}
+
+a.listViewTdToolsS1:link,a.listViewTdToolsS1:visited
+{
+	text-decoration:none;
+}
+
+a.listViewTdToolsS1:hover
+{
+	color:#933;
+	text-decoration:none;
+}
+
+.evenListRowS1
+{
+	font-size:12px;
+	padding:2px 5px 4px;
+}
+
+.oddListRowS1
+{
+	font-size:12px;
+	padding:2px 5px 4px;
+}
+
+.listViewHRS1
+{
+	background-color:#fff;
+}
+
+.pageNumbers
+{
+	color:#394869;
+}
+
+.list table tr.pagination td
+{
+	font-size:12px;
+	color:#717989;
+	border-top:1px solid #b3b5c8;
+	background-color:#bac3d6;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=listViewPaginationBg.gif);
+	background-repeat:repeat-x;
+	padding:3px 5px;
+}
+
+.detail .list table tr.pagination td
+{
+	border-bottom:1px solid #b3b5c8;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	color:#394869;
+	font-size:12px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+a.list tr.pagination a:hover
+{
+	text-decoration:underline;
+}
+
+a.listViewCheckLink:link,a.listViewCheckLink:visited
+{
+	font-size:10px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+a.listViewCheckLink:hover
+{
+	color:#933;
+}
+
+.utilsLink a:link,.utilsLink a:visited
+{
+	color:#717989;
+	font-size:11px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+.utilsLink a:hover
+{
+	color:#394869;
+}
+
+.listViewCalCurrentAppt
+{
+	background-color:#75AF4F;
+}
+
+.listViewCalOtherAppt
+{
+	background-color:#4D5EAA;
+}
+
+.listViewCalConflictAppt
+{
+	background-color:#AA4D4D;
+}
+
+.listViewCalCurrentApptLgnd
+{
+	background-color:#75AF4F;
+	border:1px solid #444;
+}
+
+.listViewCalOtherApptLgnd
+{
+	background-color:#4D5EAA;
+	border:1px solid #444;
+}
+
+.listViewCalConflictApptLgnd
+{
+	background-color:#AA4D4D;
+	border:1px solid #444;
+}
+
+.chartBox
+{
+	background-color:#ededed;
+	border:1px #b1b8ce solid;
+	padding:5px;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#717989;
+	font-size:12px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#394869;
+}
+
+table.edit .view
+{
+	background-color:#ededed;
+	border:1px #b1b8ce solid;
+	padding:5px;
+}
+
+table.edit .view td
+{
+	background-color:#ededed;
+}
+
+.edit
+{
+	background-color:#e7e8ec;
+	border:2px #fff solid;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=searchFormBg.gif);
+	background-repeat:repeat-x;
+	padding:5px;
+}
+
+.subpanelTabForm
+{
+	background-color:#e7e8ec;
+	border:1px #fff solid;
+	padding:0 10px 0 15px;
+}
+
+.subpanelTabForm p
+{
+	margin-bottom:5px;
+	margin-top:15px;
+}
+
+.subpanelTabForm h3
+{
+	font-size:13px;
+	font-weight:700;
+}
+
+h4.edit td[scope=row]
+{
+	color:#394869;
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:5px;
+	margin-top:0;
+	padding-top:0;
+}
+
+h5.edit td[scope=row]
+{
+	color:#394869;
+	font-size:13px;
+	font-weight:700;
+	margin-bottom:5px;
+	margin-top:1px;
+}
+
+.edit td[scope=row]
+{
+	color:#444;
+	font-weight:400;
+	padding-top:6px;
+	vertical-align:top;
+}
+
+.edit td
+{
+	font-weight:400;
+	vertical-align:top;
+}
+
+.tabFormAddDel
+{
+	padding-left:4px;
+	padding-right:4px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#394869;
+	font-size:10px;
+	text-decoration:none;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#933;
+}
+
+.detail
+{
+	background-color:#eee;
+	border-left:1px #fff solid;
+}
+
+.detail td[scope=row]
+{
+	color:#444;
+	background-color:#eee;
+	border-bottom:1px #fff solid;
+	vertical-align:top;
+	text-align:right;
+	font-size:12px;
+	padding:2px 4px;
+}
+
+th.detail td[scope=row]
+{
+	border-bottom:1px #bac3d6 solid;
+	background-color:#dfe3e9;
+}
+
+a.detail td a:link,a.detail td a:visited
+{
+	color:#394869;
+	font-size:12px;
+	text-decoration:underline;
+}
+
+a.detail td a:hover
+{
+	color:#3e8bd9;
+}
+
+h4.detail td[scope=row]
+{
+	border:none;
+	color:#394869;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:700;
+	margin-bottom:2px;
+	text-align:left;
+	background-color:transparent;
+}
+
+.detail td
+{
+	color:#555;
+	background-color:#fff;
+	vertical-align:top;
+	font-size:12px;
+	padding:2px 4px;
+}
+
+.other
+{
+	background-color:#efefef;
+	border:1px #bac3d6 solid;
+}
+
+.other td[scope=row]
+{
+	color:#444;
+	background-color:#FFF;
+	border-bottom:1px #fff solid;
+	vertical-align:top;
+	font-size:12px;
+	padding:2px 4px;
+}
+
+.other td
+{
+	color:#444;
+	background-color:#e7e8ec;
+	vertical-align:top;
+	padding:2px 4px;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	color:#394869;
+	font-size:11px;
+	text-decoration:none;
+}
+
+a.other td[scope=row] a:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+.monthBox
+{
+	border:1px #b1b8ce solid;
+}
+
+.monthHeader
+{
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=calendarHeaderBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom:1px #dfe3e9 solid;
+	margin-top:0px;
+}
+
+.monthFooter td
+{
+	padding-left:5px;
+	padding-top:2px;
+	padding-bottom:3px;
+	border-top:1px #bac3d6 solid;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=listViewBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+}
+
+.monthFooter td
+{
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:3px;
+	border-top:1px #bac3d6 solid;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=listViewBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+}
+
+.monthHeaderH3
+{
+	color:#394869;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:700;
+}
+
+.monthCalBody
+{
+	background-color:#fff;
+}
+
+.monthHeader td
+{
+	padding-left:5px;
+}
+
+a.monthFooter a, .monthHeader a:link,a.monthFooter a, .monthHeader a:visited
+{
+	color:#6d7894;
+	text-decoration:none;
+	font-weight:700;
+}
+
+a.monthFooter a, .monthHeader a:hover
+{
+	color:#394869;
+}
+
+.monthHeader td
+{
+	padding-right:8px;
+}
+
+.monthCalBodyTH th[scope=row]
+{
+	font-size:12px;
+	background-color:#dfe3e9;
+	color:#6d7894;
+	padding:5px;
+}
+
+.monthCalBodyTH th
+{
+	font-size:12px;
+	background-color:#b1b8ce;
+	color:#fff;
+	padding:5px;
+}
+
+.monthViewDayHeight td[scope=row]
+{
+	vertical-align:top;
+	background-color:#dfe3e9;
+	color:#394869;
+	padding:5px;
+}
+
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited
+{
+	font-size:11px;
+	color:#6d7894;
+}
+
+a.monthViewDayHeight td[scope=row] a:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+.monthCalBodyTodayWeekDay
+{
+	border:1px solid #b1b8ce;
+	background-color:#fff;
+	color:#444;
+	text-align:right;
+	padding:3px;
+}
+
+.monthViewDayHeight td
+{
+	background-color:#eee;
+	color:#444;
+	text-align:right;
+	padding:3px;
+}
+
+.monthCalBodyTodayWeekEnd
+{
+	border:1px solid #b1b8ce;
+	background-color:#fff;
+	color:#444;
+	text-align:right;
+	padding:3px;
+}
+
+.monthViewDayHeight td[class=weekend]
+{
+	background-color:#e7e8ec;
+	color:#444;
+	text-align:right;
+	padding:3px;
+}
+
+a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	color:#394869;
+	font-size:11px;
+}
+
+a.monthViewDayHeight td a:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+a.monthViewDayHeight td[class=weekend] a:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+a.monthCalBodyDayItemLink:link,a.monthCalBodyDayItemLink:visited
+{
+	color:#255194;
+	font-size:10px;
+}
+
+a.monthCalBodyDayItemLink:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+.monthCalBodyDayItem
+{
+	background-color:#e7e8ec;
+	border:1px solid #b1b8ce;
+	padding:3px;
+}
+
+.monthCalBodyDayIconTd
+{
+	padding-left:2px;
+	padding-right:3px;
+	vertical-align:top;
+}
+
+.monthCalBodyDayItemTd
+{
+	vertical-align:top;
+}
+
+.monthViewDayHeight
+{
+	height:100px;
+}
+
+.yearViewDayHeight
+{
+	height:40px;
+}
+
+.monthCalBody th
+{
+	vertical-align:top;
+	background-color:#e7e8ec;
+	color:#394869;
+	font-weight:700;
+	height:20px;
+	padding:3px;
+}
+
+.monthCalBody td
+{
+	background-color:#eee;
+	color:#444;
+	text-align:left;
+	padding:3px;
+}
+
+a.monthCalBody th a:link,a.monthCalBody th a:visited
+{
+	color:#394869;
+	text-decoration:none;
+	font-weight:400;
+}
+
+a.monthCalBody th a:hover
+{
+	color:#3e8bd9;
+	text-decoration:underline;
+}
+
+.yearCalBody
+{
+	background-color:#c9cdd3;
+}
+
+.yearCalBodyMonth
+{
+	background-color:#e7e8ec;
+	border:1px solid #b1b8ce;
+	padding-top:10px;
+}
+
+a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	font-size:13px;
+	font-weight:700;
+	text-decoration:none;
+	color:#6d7894;
+}
+
+a.yearCalBodyMonth > a:hover
+{
+	color:#394869;
+	text-decoration:underline;
+}
+
+#daily_cal_table
+{
+	background-color:#fff;
+}
+
+h5.calSharedUser
+{
+	color:#394869;
+	background-color:#e7e8ec;
+	height:20px;
+	padding-top:5px;
+	padding-left:5px;
+	font-size:12px;
+	border-top:1px solid #b1b8ce;
+	border-left:1px solid #c9cdd3;
+	border-right:2px solid #fff;
+	margin-top:0;
+}
+
+.todaysTask
+{
+	color:#FF7800;
+}
+
+.overdueTask
+{
+	color:red;
+}
+
+.required
+{
+	color:red;
+}
+
+.error
+{
+	color:red;
+}
+
+.success
+{
+	color:#0e0;
+}
+
+.rssItemDate
+{
+	color:#666;
+	font-size:10px;
+}
+
+.dateFormat
+{
+	font-weight:400;
+	font-style:italic;
+	font-size:10px;
+}
+
+.chartFootnote
+{
+	font-size:10px;
+}
+
+.tm
+{
+	font-size:8px;
+	font-family:Verdana;
+}
+
+a.footerLink:link,a.footerLink:visited
+{
+	color:#717989;
+}
+
+.underfooter
+{
+	border-top:1px solid #fff;
+	padding-top:10px;
+	background:#e7e8ec;
+}
+
+.schedulerDiv
+{
+	width:100%;
+	background-color:#e7e8ec;
+	margin-top:0;
+	border:1px solid #b1b8ce;
+}
+
+#scheduler .schedulerDiv table
+{
+	width:100%;
+	background-color:#e7e8ec;
+	border-collapse:collapse;
+}
+
+.schedulerTimeRow
+{
+	border-collapse:collapse;
+}
+
+.schedulerTopDeleteHeaderCell
+{
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-collapse:collapse;
+}
+
+.schedulerDeleteHeaderCell
+{
+	border-left:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+
+.schedulerTopDateCell
+{
+	border-bottom:1px solid #b1b8ce;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=listViewBg.gif);
+	background-repeat:repeat-x;
+	background-color:#ebecef;
+	font-weight:700;
+	font-size:12px;
+	color:#394869;
+}
+
+.schedulerTopHeaderCell
+{
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-collapse:collapse;
+}
+
+.schedulerAttendeeHeaderCell
+{
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-collapse:collapse;
+}
+
+#scheduler .schedulerDiv table tr.schedulerTimeRow td[scope=col]
+{
+	border-left:1px solid #fff;
+	border-bottom:1px solid #fff;
+	font-size:12px;
+	font-family:sans-serif;
+	padding-left:4px;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td[scope=row]
+{
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	overflow:hidden;
+	border-collapse:collapse;
+	height:14px;
+	padding-left:4px;
+	width:125px;
+	font-size:12px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+.schedulerAttendeeDeleteCell
+{
+	background-color:#e7e8ec;
+	color:#394869;
+	border-left:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	padding-left:4px;
+	padding-right:4px;
+	text-align:left;
+	border-collapse:collapse;
+}
+
+.schedulerAttendeeIconCell
+{
+	color:#394869;
+	border:1px solid #fff;
+	height:18px;
+	border-collapse:collapse;
+	width:16px;
+	padding:0;
+}
+
+.schedulerSlotEmptyDiv
+{
+	border:0 solid transparent;
+	width:100%;
+	height:100%;
+}
+
+.schedulerSlotCellStartTime
+{
+	border-left:4px solid #75AF4F;
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-collapse:collapse;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+.schedulerSlotCellEndTime
+{
+	border-left:4px solid red;
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	border-collapse:collapse;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td
+{
+	border-collapse:collapse;
+	border-left:1px solid #fff;
+	border-right:1px solid #fff;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+.schedulerAttendeeRow
+{
+	height:18px;
+}
+
+.schedulerEvenListRow
+{
+	font-size:12px;
+	color:#000;
+	background-color:#eee;
+	padding:2px 5px 4px;
+}
+
+.schedulerOddListRow
+{
+	font-size:12px;
+	color:#000;
+	background-color:#eee;
+	padding:2px 5px 4px;
+}
+
+ul.tablist
+{
+	margin-left:0;
+	margin-bottom:0;
+	border-bottom:1px solid #b1b8ce;
+	font:bold 11px Arial, Verdana, Helvetica, sans-serif;
+	padding:3px 0;
+}
+
+ul.tablist li
+{
+	list-style:none;
+	display:inline;
+	margin:0;
+}
+
+ul.tablist li a
+{
+	margin-left:3px;
+	border:1px solid #b1b8ce;
+	border-bottom:none;
+	background:#e7e8ec;
+	text-decoration:none;
+	padding:3px .5em;
+}
+
+ul.tablist li a:link
+{
+	color:#717989;
+	text-decoration:none;
+}
+
+ul.tablist li a:visited
+{
+	color:#717989;
+	text-decoration:none;
+}
+
+ul.tablist li a:hover
+{
+	color:#333;
+	background:#f7f7f7;
+	border-left:1px solid #b1b8ce;
+	border-right:1px solid #b1b8ce;
+	border-top:1px solid #b1b8ce;
+}
+
+ul.tablist li a.current
+{
+	background:#f7f7f7;
+	border-bottom:1px solid #e7e8ec;
+}
+
+ul.subpanelTablist
+{
+	margin-left:0;
+	margin-bottom:0;
+	border-bottom:2px solid #fff;
+	font:bold 11px Arial, Verdana, Helvetica, sans-serif;
+	padding:3px 0;
+}
+
+ul.subpanelTablist li
+{
+	list-style:none;
+	display:inline;
+	margin:0;
+}
+
+ul.subpanelTablist li a
+{
+	margin-left:3px;
+	border:1px solid #b1b8ce;
+	border-bottom:none;
+	background:#dfe3e9;
+	text-decoration:none;
+	padding:3px .5em;
+}
+
+ul.subpanelTablist #addPageItem a,ul.subpanelTablist #addPageItem a:hover
+{
+	border:none;
+	background:transparent;
+	text-decoration:none;
+	font-weight:400;
+}
+
+ul.subpanelTablist li a:link
+{
+	color:#717989;
+	text-decoration:none;
+}
+
+ul.subpanelTablist li a:visited
+{
+	color:#717989;
+	text-decoration:none;
+}
+
+ul.subpanelTablist li a:hover
+{
+	color:#333;
+	background:#f7f7f7;
+	border-left:1px solid #b1b8ce;
+	border-right:1px solid #b1b8ce;
+	border-top:1px solid #b1b8ce;
+}
+
+ul.subpanelTablist li a.current
+{
+	border:1px solid #fff;
+	color:#394869;
+	background:#e7e8ec;
+	border-bottom:2px solid #e7e8ec;
+}
+
+ul#tablist li a.current,ul#tablist li a.current:hover
+{
+	background:transparent;
+	border-bottom-color:#dfe3e9;
+}
+
+.olFontClass
+{
+	color:#555;
+}
+
+.olFontClass A
+{
+	color:#444;
+}
+
+.olCapFontClass
+{
+	font-weight:400;
+	color:#7b859a;
+	font-size:12px;
+}
+
+.olCapFontClass A
+{
+	color:#e7e8ec;
+	font-size:9px;
+}
+
+.olFgClass
+{
+	background-color:#dfe3e9;
+	padding:5px 7px 7px;
+}
+
+.olOptionsFgClass td
+{
+	padding:0;
+}
+
+.olCgClass td
+{
+	background-color:#e7e8ec;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #fff;
+	padding:2px 5px 2px 7px;
+}
+
+.olCgClass
+{
+	border:0;
+	padding:0;
+}
+
+.olBgClass
+{
+	background-color:#fff;
+}
+
+.olCloseFontClass
+{
+	padding-bottom:1px;
+	text-align:right;
+	background-color:#e7e8ec;
+}
+
+.olCloseFontClass a:link,.olCloseFontClass a:visited
+{
+	color:#6d7894;
+	text-decoration:none;
+}
+
+.aclAll
+{
+	color:green;
+	font-weight:700;
+}
+
+.aclOwner
+{
+	color:#000;
+	font-weight:700;
+}
+
+.aclNone
+{
+	color:red;
+	font-weight:700;
+}
+
+.aclEnabled
+{
+	color:green;
+	font-weight:700;
+}
+
+.aclDisabled
+{
+	color:red;
+	font-weight:700;
+}
+
+.aclAdmin
+{
+	color:#00F;
+	font-weight:700;
+}
+
+.aclNormal
+{
+	color:green;
+	font-weight:700;
+}
+
+ul.noBullet
+{
+	list-style-type:none;
+	margin-left:0;
+	padding-left:0;
+}
+
+li.noBullet
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+table.edit td ul li
+{
+	list-style-type:none;
+	margin-bottom:10px;
+}
+
+.helpButton
+{
+	font-weight:700;
+}
+
+.helpShortcut
+{
+	font-weight:700;
+}
+
+#sitemap .edit
+{
+	background-image:none;
+	padding:10px 10px 10px 20px;
+}
+
+#sitemap a:link,#sitemap a:visited
+{
+	text-decoration:none;
+	font-size:11px;
+	color:#444;
+}
+
+#sitemap h4 a:link,#sitemap h4 a:visited
+{
+	font-size:13px;
+}
+
+#sitemap ul.nobullet
+{
+	margin-top:10px;
+}
+
+#sitemap td
+{
+	border:none;
+	background-color:transparent;
+}
+
+#sitemap a:hover,#sitemap h4 a:hover
+{
+	text-decoration:underline;
+}
+
+#sitemap ul.nobullet li
+{
+	margin-bottom:5px;
+}
+
+.sugarFeedDashlet
+{
+	overflow:auto;
+	max-height:375px;
+	height:expression(this.scrollHeight>375?'375px':'auto');
+}
+
+.sugarFeedDashlet td.list th, .list td[scope=col]
+{
+	display:none;
+}
+
+.sugarFeedDashlet tr
+{
+	height:auto;
+}
+
+.sugarFeedDashlet .byLineBox
+{
+	width:100%;
+	position:relative;
+}
+
+.sugarFeedDashlet .byLineBox .byLineLeft
+{
+	font-size:79%;
+}
+
+.sugarFeedDashlet .byLineBox .byLineRight
+{
+	display:inline;
+	right:0;
+	position:absolute;
+	font-size:79%;
+}
+
+iframe.teamNoticeBox
+{
+	width:99%;
+	padding:0;
+}
+
+.loading-indicator
+{
+	font-size:11px;
+	background-image:url(../default/ext/resources/images/default/grid/loading.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:20px;
+	line-height:16px;
+	margin:3px;
+}
+
+.x-sqs-list
+{
+	border:1px solid #d0d0d0;
+	background:#d0d0d0;
+	zoom:1;
+	overflow:hidden;
+}
+
+.x-sqs-list-inner
+{
+	overflow:auto;
+	background:#FFF;
+	position:relative;
+	zoom:1;
+	overflow-x:hidden;
+}
+
+.x-sqs-list-item
+{
+	font:normal 12px tahoma,arial,helvetica,sans-serif;
+	border:1px solid #fff;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:1px;
+}
+
+.x-sqs-list .x-sqs-selected
+{
+	border:1px dotted #f6f6f6!important;
+	background:#d0d0d0;
+	cursor:pointer;
+}
+
+#shortcuts {
+	background-color:#F7F7F7;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=subMenuBg.gif);
+	background-repeat:repeat-x;
+	border-bottom:1px solid #CCCCCC;
+	color:#47644F;
+	font-size:12px;
+	height:1.7em;
+	margin-top:0.3em;
+	padding:0px;
+}
+
+#shortcuts ul{
+	display:block;
+	margin:0em 0 0 1.5em;
+    padding:0;
+}
+
+#shortcuts ul li
+{
+    margin:2px 0 0;
+    float:left;
+    display:block;
+}
+
+li.shortcutstabextramenu {
+	height:1.3em;
+	width:1.3em;
+}
+
+#shortcuts li[class="moduleTabExtraMenu"] {
+	background:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=moreSub.gif) no-repeat bottom left;
+	margin:0.4em 0 0 -0.2em;
+	padding-right:6px;
+}
+
+li.moduleTabExtraMenu a[href="#"] {
+	visibility:hidden;
+}
+
+#shortcuts ul li.moduleTabExtraMenu:hover ul {
+    visibility:visible;
+    display:block;
+}
+
+#shortcuts ul li.moduleTabExtraMenu ul {
+	display:block;
+	height:auto;
+	visibility:hidden;
+	width:14em;
+	margin-top:0.2em;
+	margin-left:0;
+	z-index:2;
+	position:absolute;
+	font-size:12px;
+	background-color:#EEEEEE;
+	border:1px solid #FFFFFF;
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	opacity:0.95;
+}
+
+#shortcuts ul li.moduleTabExtraMenu ul li {
+	border-bottom:1px solid #FFFFFF;
+	width:100%;
+	height:1.7em;
+}
+
+#shortcuts ul li.moduleTabExtraMenu ul li a {
+	   color:#666666;
+}
+
+#shortcuts ul li.moduleTabExtraMenu ul li:hover {
+    background-color:#DFE3E9;
+}
+
+
+#shortcuts a {
+    color:#717989;
+    text-decoration:none;
+}
+
+#shortcuts a:hover {
+	color:#993333;
+	text-decoration:none;
+}
+
+ #space {
+ 	border:none;
+	margin:0 0.3em -0.3em;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=shortcutSeparator.gif);
+ }
+ 
+ #leftColumn {
+ 	width:18em;
+	margin-top:1em;
+ }
+ 
+ 
+ #search, #sitemapLink, #unified_search_advanced_img {
+ 	float:left;
+	height:auto;
+	padding:0;
+	width:100%;
+ }
+ 
+ #search [class="leftList"] ul{
+ 	height:5.6em;
+    padding-top:0.2em;
+ }
+ 
+ #search input[value="GO"]{
+	height:auto;
+	padding:0;
+	width:3em;
+ }
+ 
+ #search input[name="query_string"]
+{
+    border:1px solid #fff;
+    font-size:11px;
+	height:1.3em;
+    width:8em;
+}
+
+#search form{
+    margin:0.3em 0 0 0.5em;
+}
+ 
+ #unified_search_advanced_img {
+ 	margin:0.5em 0 0;
+ }
+ 
+ #sitemapLink{
+ 	margin:0.2em 0 0 0.2em;
+ }
+ 
+ #searchmap {
+ 	margin:0;
+	padding:0;
+	height:6.8em;
+ }
+ 
+ #search a, #sitemapLink span {
+ 	color:#555555;
+    font-size:11px;
+ }
+
+  #search a:hover {
+	color:#0066CC;
+	text-decoration:underline;
+ }
+ 
+ .leftList ul {
+ 	background-color:#EDEDED;
+	border-bottom:1px solid #FFFFFF;
+	border-left:1px solid #FFFFFF;
+	border-right:1px solid #FFFFFF;
+	width:auto;
+ }
+ 
+ .leftList ul li a span:hover {
+ 	color:#993333;
+    text-decoration:none;
+ }
+ 
+ #hiddenLastView {
+ 	width:15em;
+ }
+ 
+ #hiddenLastView ul {
+ 	width:100%;
+ }
+ 
+ #search h3, #newRecord h3, #lastView h3,  #hiddenLastView h3
+{
+    font-size:12px;
+	background-color:#DFE3E9;
+	background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=moduleTab_right_1.GIF);
+	background-repeat:no-repeat;
+	background-position:right;
+	border-left:1px solid #fff;
+	margin-bottom:0;
+	padding:3px 0 2px 4px;
+	margin-top:0;
+	width:97.7%;
+}
+
+ #search h3 span {
+ 	width:100%;
+	height:100%;
+ }
+ 
+ #newRecord form button, #newRecord form input[type="button"], #newRecord form input[type="submit"], #newRecord form input[type="reset"] {
+ 	width:auto;
+ }
+ 
+ .formHeader h3 {
+background-image:url(../../../../index.php?entryPoint=getImage&themeName=GoldenGate&imageName=h3Arrow.gif);
+background-position:left center;
+background-repeat:no-repeat;
+}
+
+.formHeader span {
+    margin-left:1em;
+    font-size:18px;
+}
+
+.formHeader table {
+    margin-bottom:-1em;
+}
+
+.pagination td
+{
+    font-size:12px;
+    color:#c35531;
+    background-color:#BAC3D6;
+}
+
+.pagination td[align="right"][colspan="5"], .pagination td[align="right"][colspan="6"], .pagination td[align="right"][colspan="7"]{
+    border-top:1px solid #B3B5C8;
+}
+
+.pagination table {
+    margin-bottom:0px;
+}
+
+table.list tr.oddListRowS1 td, table.list tr.evenListRowS1 td  {
+	white-space:nowrap !important;
+}
+
+.list {
+	border-bottom:1px solid #B3B5C8;
+    border-left:1px solid #B1B8CE;
+    border-right:1px solid #B1B8CE;
+}
+
+#unified_search_advanced_div {
+	margin-left:2em;
+	margin-top:0em;
+}
+
+.detail h4 {
+    margin-top:0.5em;
+    color:#394869;
+    font-family:Arial,Verdana,Helvetica,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-align:left;
+}
+
+.detail tbody tr th[align="left"][width="100%"][valign="top"][colspan="4"]{
+	background-color:#DFE3E9;
+    border-bottom:1px solid #BAC3D6;
+}
+
+.edit h4{
+    float:left;
+    font-family:Arial,Verdana,Helvetica,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    margin-top:0em;
+    height:2em;
+	color:#394869;
+}
+
+#sitemap {
+	margin:0;
+}
+
+.none input[type=radio] {
+    vertical-align:middle;
+    padding-left:2px;
+    margin-left:0.2em;
+    margin-right:0.2em;
+}
+
+#content {
+	border:none
+}
+
+#colorPicker {
+	border-left:1px solid #777777;
+	margin:-1.4em 3px 8px;
+	padding:0 0 0 5px;
+}
+
+#themepickerLinkSpan {
+    color:#777777;
+    text-decoration:none;
+    font-size:11px;
+    font-weight:400;
+}

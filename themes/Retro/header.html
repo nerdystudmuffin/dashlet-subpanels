@@ -1,0 +1,259 @@
+<!--
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+ * {LBL_CURRENCY_SYM}Header: /cvsroot/sugarcrm/sugarcrm/themes/Amazon/header.html,v 1.14 2004/07/04 04:00:48 sugarclint Exp {LBL_CURRENCY_SYM}
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD html 4.01 Transitional//EN">
+<link REL="SHORTCUT ICON" HREF="include/images/sugar_icon.ico">
+<meta http-equiv="Content-Type" content="text/html; charset={LBL_CHARSET}">
+<title>{APP.LBL_BROWSER_TITLE}</title>
+<style type="text/css">@import url("{IMAGE_SERVER}themes/{THEME}/style.css?s={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"); </style>
+<link href="{IMAGE_SERVER}themes/{THEME}/navigation.css?s"={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}" rel="stylesheet" type="text/css" />
+<script language="javascript" src="{IMAGE_SERVER}themes/default/SiteMapJS.js?s"={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script language="javascript" src="{IMAGE_SERVER}themes/menu.js?s"={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script language="javascript" src="{IMAGE_SERVER}themes/cookie.js?s"={SUGAR_VERSION}&c={JS_CUSTOM_VERSION}"></script>
+<script language="javascript">
+
+function hideLeftCol(id){
+
+	if(this.document.getElementById( id).style.display=='none'){
+		this.document.getElementById( id).style.display='inline';
+		Set_Cookie('showLeftCol','true',30,'/','','');
+		var show = Get_Cookie('showLeftCol');
+		document['HideHandle'].src = '{IMAGE_PATH}hide.gif';		
+	}else{
+		this.document.getElementById(  id).style.display='none';
+		Set_Cookie('showLeftCol','false',30,'/','','');
+		var show = Get_Cookie('showLeftCol');
+		document['HideHandle'].src = '{IMAGE_PATH}show.gif';	
+
+	}
+}
+
+function showSubMenu(id){
+	if(this.document.getElementById( id).style.display=='none'){
+		tbButtonMouseOver('HideHandle',122,'',10);
+	}
+}
+
+function printPage() {
+	var url = location.href;
+	var is_print = 'print=true';
+	if(url.indexOf(is_print)>-1) {
+		window.print();
+	} else {
+		return;
+	}
+}
+
+</script>
+</head>
+<body {ONLOAD}  onMouseOut="closeMenus();" onload="javascript:printPage();">
+	<!-- BEGIN: gcl_submenu -->
+	<div id="{GCL_SUBMENU_KEY}Menu" class="menu">
+	<!-- BEGIN: gcl_submenu_items -->
+	<a href="{GCL_SUBMENU_LINK_URL}" class="menuItem" id="{GCL_SUBMENU_LINK_KEY}Handle" parentid="{GCL_SUBMENU_KEY}Menu" onMouseOver="hiliteItem(this,'yes'); closeSubMenus(this);" onMouseOut="unhiliteItem(this);">{GCL_SUBMENU_LINK_LABEL}</a>
+	<!-- END: gcl_submenu_items -->
+	</div>
+	<!-- END: gcl_submenu -->
+	<div id="MoreMenu" class="menu">
+	<!-- BEGIN: more -->
+	<a href="index.php?module={MODULE_KEY}&action=index{MODULE_QUERY}" class="menuItem" id="{MODULE_KEY}Handle" parentid="MoreMenu" onMouseOver="hiliteItem(this,'yes'); closeSubMenus(this);" onMouseOut="unhiliteItem(this);">{MODULE_NAME}</a>
+	<!-- END: more -->
+	</div>
+	<!-- BEGIN: sub_more -->
+	<div id="SubMoreMenu" class="menu">
+	<!-- BEGIN: sub_more_item -->
+	<a class="menuItem" href="{URL}" id="{SC_MODULE_NAME}Handle" parentid="SubMoreMenu" onMouseOver="hiliteItem(this,'yes'); closeSubMenus(this);" onMouseOut="unhiliteItem(this);">{SC_IMAGE}&nbsp;&nbsp;{LABEL}</A>
+	<!-- END: sub_more_item -->
+	</div>
+	<!-- END: sub_more -->
+<div id="HideMenu" class="subDmenu">
+       	<table cellpadding="0" cellspacing="0" border="0" width="180" class="leftColumnModuleHead" onMouseOver="hiliteItem(this,'no');">
+  <tr>
+		<th width="5"><img src="{IMAGE_PATH}/moduleTab_left.gif" alt="{TITLE}" width="5" height="20" border="0"></th>
+		<th style="background-image : url({IMAGE_PATH}/moduleTab_middle.gif);" width="100%">{TITLE}</th>
+		<th width="5"><img src="{IMAGE_PATH}/moduleTab_right.gif" alt="{TITLE}" width="5" height="20" border="0"></th></tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" border="0" width="180" class="leftColumnModuleS2" onMouseOver="hiliteItem(this,'no');">
+		<!-- BEGIN: hide -->
+			 	<tr>
+			<td valign="top"><a title="{RECENT_LABEL_FULL} [{APP.LBL_ALT_HOT_KEY}{ROW_NUMBER}]" accessKey="{ROW_NUMBER}" href="{RECENT_URL}">{RL_IMAGE}</a></td>
+			<td width="100%"><a title="{RECENT_LABEL_FULL} [{APP.LBL_ALT_HOT_KEY}{ROW_NUMBER}]" accessKey="{ROW_NUMBER}" href="{RECENT_URL}">{RECENT_LABEL}</A></td>
+		        </tr>
+		<!-- END: hide -->
+		<!-- BEGIN: hide_empty -->
+			 	<tr>
+			<td>{APP.NTC_NO_ITEMS_DISPLAY}</td>
+		        </tr>
+		<!-- END: hide_empty -->
+		</table>
+	</div>
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td colspan="3" id="header">
+			<table cellspacing="0" cellpadding="0" border="0" width="100%">
+				<tr height="50">
+					<td>
+						<img src="{COMPANY_LOGO}" width="212" height="40" alt="Company Logo" border="0" style="margin-left: 10px;">
+					</td>
+					<td align="right" class="myArea" style="padding-right: 10px;">
+<!-- BEGIN: global_control_links -->
+						<a href="{GCL_URL}" class="myAreaLink" {GCL_MENU}>
+							{GCL_LABEL}</a>{MENU_ARROW}{SEPARATOR} 
+<!-- END: global_control_links -->
+				
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<table cellspacing="0" cellpadding="0" border="0" width="100%">
+							<tr height="20">
+								<td style="padding-left:7px" class="emptyTabSpace">&nbsp;
+									 
+								</td>
+<!-- BEGIN: tab -->
+								<td style="background-image : url({IMAGE_PATH}{TAB_CLASS}_left.gif); background-repeat: repeat-x;"><img src="{IMAGE_SERVER}include/images/blank.gif" alt="{MODULE_NAME}" width="4" height="21" border="0"></td>
+								<td class="{TAB_CLASS}" style="background-image : url({IMAGE_PATH}{TAB_CLASS}_middle.gif); background-repeat: repeat-x; padding: 0 7px 0 7px" nowrap><a class="{TAB_CLASS}" href="index.php?module={MODULE_KEY}&action=index{MODULE_QUERY}">{MODULE_NAME}</A></td>
+								<td style="background-image : url({IMAGE_PATH}{TAB_CLASS}_right.gif); background-repeat: repeat-x;"><img src="{IMAGE_SERVER}include/images/blank.gif" alt="{MODULE_NAME}" width="4" height="21" border="0"></td>
+								{MORE} 
+								<td class="emptyTabSpace"><img src="{IMAGE_SERVER}include/images/blank.gif" width="1" height="1" border="0" alt=""></td>
+<!-- END: tab -->
+								<td width="100%" class="emptyTabSpace">&nbsp;
+									 
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr height="22">
+					<td colspan="3" class="subMenu">
+<!-- BEGIN: sub_menu -->
+<!-- BEGIN: sub_menu_item -->
+						{SC_IMAGE}&nbsp;<a class="subMenuLink" href="{URL}">{LABEL}</A>{SEPARATOR} 
+<!-- END: sub_menu_item -->
+<!-- END: sub_menu -->
+					</td>
+				</tr>
+				<tr height="20">
+					<td id="welcome" class="welcome" nowrap colspan="3">
+						{APP.NTC_WELCOME}, <strong>{CURRENT_USER}</strong> <a href='{LOGOUT_LINK}' >[{LOGOUT_LABEL}]</a> 
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+<tr height="10">
+	<td colspan="3"></td>
+</tr>
+<tr>
+	<td colspan="3">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+    {LEFT_FORM_OTD}
+	<!-- BEGIN: left_form -->
+		<p>
+       	<table cellpadding="0" cellspacing="0" border="0" width="100%" class="leftColumnModuleHead" height="20">
+  <tr>
+		<th width="5" height="20"><img src="{IMAGE_PATH}/moduleTab_left.gif" alt="{TITLE}" width="5" height="20" border="0"></th>
+		<th height="20" style="background-image : url({IMAGE_PATH}/moduleTab_middle.gif);" width="100%">{TITLE}</th>
+		<th width="5" height="20"><img src="{IMAGE_PATH}/moduleTab_right.gif" alt="{TITLE}" width="5" height="20" border="0"></th></tr>
+		</table>
+		<!-- BEGIN: left_form_search -->
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" class="leftColumnModuleS1">
+		<tr>
+			<td>
+				  <form name='UnifiedSearch' onsubmit='return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()'>
+			  	  <input type="hidden" name="action" value="UnifiedSearch">
+				  <input type="hidden" name="module" value="Home">
+				  <input type="hidden" name="search_form" value="false">
+				  <input type="hidden" name="advanced" value="false">
+		      <input type="text" name="query_string" size="15" value="{SEARCH}">
+		      <input class="button" type="submit" value="GO">
+		      
+		      <div style="padding-top: 5px"><a id="unified_search_advanced_img">Advanced Search</a><img id="unified_search_advanced_img" src="{IMAGE_PATH}/MoreDetail.png" style="margin-left: 2px;" style="cursor:pointer;"></div>
+			<div style='padding-top:5px;'><span style="cursor:pointer;" onClick="getSiteMap(0,120,170);">{SITEMAP}<img src="{IMAGE_PATH}MoreDetail.png" style="margin-left: 2px;" style="cursor:pointer;"></span></div><span id='sm_holder'></span>
+		    	  </form>
+		    	  <div id="unified_search_advanced_div" style="display: none; height: 1px; position: absolute; overflow: hidden; width: 300px; padding-top: 5px"></div>
+			 </td>
+		</tr>
+		    	</table>
+		</p>
+		<!-- END: left_form_search -->
+		<!-- BEGIN: left_form_recent_view -->
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" class="leftColumnModuleS2">
+		<!-- BEGIN: left_form_recent_view_row -->
+			 	<tr>
+			<td valign="top"><a title="{RECENT_LABEL_FULL} [{APP.LBL_ALT_HOT_KEY}{ROW_NUMBER}]" accessKey="{ROW_NUMBER}" href="{RECENT_URL}">{RL_IMAGE}</td>
+			<td width="100%"><a title="{RECENT_LABEL_FULL} [{APP.LBL_ALT_HOT_KEY}{ROW_NUMBER}]" accessKey="{ROW_NUMBER}" href="{RECENT_URL}">{RECENT_LABEL}</A></td>
+		        </tr>
+		<!-- END: left_form_recent_view_row -->
+		<!-- BEGIN: left_form_recent_view_empty -->
+			 	<tr>
+			<td>{APP.NTC_NO_ITEMS_DISPLAY}</td>
+		        </tr>
+		<!-- END: left_form_recent_view_empty -->
+		</table>
+		</p>
+		<!-- END: left_form_recent_view -->
+	<script language="Javascript">
+	if (!Get_Cookie('showLeftCol')) {
+		Set_Cookie('showLeftCol','true',30,'/','','');
+	}
+	var show = Get_Cookie('showLeftCol');
+
+	if (show == 'true') {
+		this.document.getElementById('leftCol').style.display='inline';
+		document['HideHandle'].src = '{IMAGE_PATH}hide.gif';
+	} else {
+		this.document.getElementById('leftCol').style.display='none';
+		document['HideHandle'].src = '{IMAGE_PATH}show.gif';	
+		
+	}
+	</script>
+	<!-- END: left_form -->
+	<!-- BEGIN: left_form_new_record -->
+	{NEW_RECORD}
+	<!-- END: left_form_new_record -->
+	{LEFT_FORM_CTD}
+   <td style="padding-right: 10px; vertical-align: top; width: 100%;">
+
+
+<!-- END: main -->

@@ -1,0 +1,1920 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+
+
+
+body
+{
+	font-size:12px;
+}
+
+p
+{
+	margin-bottom:5px;
+}
+
+
+h2,h1
+{
+	font-size:13px;
+	font-weight:700;
+	text-transform:uppercase;
+	letter-spacing:0.05em;
+}
+
+h3
+{
+	font-size:12px;
+	font-weight:700;
+	margin-bottom:3px;
+	margin-top:3px;
+	padding-top:3px;
+	text-transform:uppercase;
+	letter-spacing:0.04em;
+}
+
+.h3Row,.monthHeader
+{
+	border-top:1px solid;
+	border-bottom:1px solid;
+	margin-bottom:0;
+	margin-top:10px;
+	vertical-align:middle;
+	background-repeat:repeat-x;
+	background-position:top;
+	padding:2px 5px;
+}
+
+h4,h4.edit td[scope=row],h5,h5.listViewSubHeadS1
+{
+	font-size:12px;
+	font-weight:700;
+	margin-bottom:2px;
+	padding-left:4px;
+	text-transform:uppercase;
+	letter-spacing:0.05em;
+}
+
+h4.edit td[scope=row]
+{
+	margin-top:0;
+	padding-left:0;
+	padding-top:0;
+}
+
+
+a:link,a:visited, a.body:link,a.body:visited,a:hover,a.body:hover
+{
+text-decoration:none;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	border:1px solid;
+	font-size:12px;
+	font-weight:400;
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected],button, input[type=submit], input[type=reset], input[type=button]:hover,button, input[type=submit], input[type=reset], input[type=button]:focus,button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]:focus
+{
+	border:1px solid;
+	background-color:#fff;
+	font-size:12px;
+	font-weight:400;
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+.detail button, input[type=submit], input[type=reset], input[type=button] img
+{
+	margin-right:5px;
+	margin-left:5px;
+}
+
+button[disabled], input[disabled]
+{
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+input,select
+{
+	border:1px solid;
+	font-size:12px;
+}
+
+textarea
+{
+	border:1px solid;
+	font-size:12px;
+}
+
+
+
+
+.teamNoticeBox
+{
+	border-bottom:2px solid;
+}
+
+.moduleTitle
+{
+	padding-bottom:3px;
+	padding-top:1px;
+	margin-bottom:5px;
+	border-top:1px solid;
+}
+
+#companyLogo
+{
+	height:60px;
+	vertical-align:bottom;
+	padding:10px 10px 15px 15px;
+}
+
+#header
+{
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#welcome
+{
+	font-weight:400;
+	border-right:1px solid;
+	vertical-align:middle;
+	background-repeat:repeat-x;
+	background-position:top;
+	height:23px;
+	padding:3px 10px;
+}
+
+#search input[name=query_string]
+{
+	border:1px solid;
+	font-size:11px;
+}
+
+ul.subTabs
+{
+	border-bottom:1px solid;
+	font:11px Arial, Verdana, Helvetica, sans-serif;
+	margin:3px 0 0;
+	padding:2px 0;
+}
+
+ul.subTabs li
+{
+	list-style:none;
+	display:inline;
+	margin:0;
+}
+
+#subModuleList span,ul.subTabs li a#subModuleList span:link,ul.subTabs li a#subModuleList span:visited,ul.subTabs li a#subModuleList span:hover
+{
+	background-repeat:repeat-x;
+	background-position:top;
+	border-bottom:1px solid;
+}
+
+ul.subTabs li a
+{
+	background-repeat:repeat-x;
+	background-position:bottom;
+	border-top:1px solid;
+	border-right:1px solid;
+	border-bottom:none;
+	text-decoration:none;
+	margin:0;
+	padding:3px 6px;
+}
+
+ul.subTabs li a:link
+{
+	text-decoration:none;
+}
+
+ul.subTabs li a:visited
+{
+	text-decoration:none;
+}
+
+ul.subTabs li a:hover
+{
+}
+
+.subTabMore
+{
+	font-size:11px;
+	text-decoration:none;
+	padding-top:3px;
+}
+
+.moreHandle
+{
+	background:url(../images/more.gif) no-repeat bottom left;
+}
+#subModuleList
+{
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	color:#000;
+	background:#f1f1f1;
+	background-repeat:repeat-x;
+	background-position:bottom;
+    padding:0.4em 0 0.3em 1em;
+}
+#subModuleList span
+{
+    display: none;
+}
+#subModuleList a
+{
+    text-decoration: none;
+	margin: 2px -3px 0 0;
+	border-right: 1px solid;
+	border-bottom: none;
+    padding: 0.2em 0.5em 0.3em 0.5em;
+}
+#subModuleList span a
+{
+    padding: 0;
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+#subModuleList span a:hover
+{
+	color:#000;
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+.date
+{
+	font-size:13px;
+	font-weight:700;
+	border-bottom:1px solid;
+	padding-right:10px;
+}
+
+#lastView
+{
+	padding-left:10px;
+	border-top:1px solid;
+	border-bottom:1px solid;
+	padding-top:3px;
+	padding-bottom:3px;
+	vertical-align:middle;
+}
+
+a#lastView a:link,a#lastView a:visited,#lastView a
+{
+	text-decoration:none;
+	padding:2px 5px;
+}
+
+#newRecord form
+{
+	padding-right:8px;
+}
+
+.leftColumnModuleName
+{
+	padding-left:3px;
+	padding-top:4px;
+	padding-bottom:4px;
+	text-transform:uppercase;
+}
+
+#newRecord form
+{
+	font-size:11px;
+	background-repeat:repeat-x;
+	background-position:bottom;
+	padding:8px 8px 5px;
+}
+
+#newRecord form input,#newRecord form select
+{
+	margin-bottom:4px;
+	margin-top:2px;
+}
+
+td#newRecord form button, input[type=submit], input[type=reset], input[type=button]
+{
+	padding-top:0;
+	vertical-align:bottom;
+	font-size:11px;
+}
+
+td#newRecord form .edit td[scope=row]
+{
+	padding-bottom:2px;
+	padding-top:3px;
+	padding-left:0;
+	vertical-align:bottom;
+	font-size:11px;
+}
+
+td#newRecord form .edit td
+{
+	padding-bottom:3px;
+}
+
+#newRecord form #jscal_trigger
+{
+	margin-bottom:4px;
+	margin-top:2px;
+	vertical-align:bottom;
+}
+
+#newRecord form a:link,#newRecord form a:visited
+{
+	text-decoration:underline;
+	border-bottom:0;
+	padding-left:0;
+	font-size:11px;
+}
+
+#newRecord form a:hover
+{
+	text-decoration:underline;
+	border-bottom:0;
+}
+
+.list .view
+{
+	border-top:1px solid;
+	border-right:none;
+	border-bottom:1px solid;
+	border-left:none;
+}
+
+.reportlistView
+{
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+}
+
+table.reportlistView td,table.reportlistView th
+{
+	background:#fff;
+	border-bottom:1px solid #000;
+	border-right:1px solid #000;
+	color:#000;
+	text-align:center;
+	font-size:11px;
+	padding:4px;
+}
+
+table.reportlistView th,.reportlistView .reportlistViewMatrixRightEmptyData,.reportlistView .reportlistViewMatrixRightEmptyData1
+{
+	background:#dcdcdc;
+	font-weight:700;
+}
+
+.reportGroupViewTable
+{
+	background:#ccc;
+	border-top:1px solid #666;
+	border-bottom:1px solid #666;
+	margin-bottom:20px;
+}
+
+.reportGroupViewTable .reportevenListRowS1,.reportGroupViewTable .reportoddListRowS1,.reportoddListRowS1
+{
+	background:#fff;
+	color:#000;
+	font-size:11px;
+	padding:4px;
+}
+
+table.reportGroupViewTable th,.reportGroupNByTableEvenListRowS1,table.reportGroupViewTable th .listViewThLinkS1
+{
+	background:#eee;
+	font-weight:700;
+	color:#444;
+	padding:6px;
+}
+
+.reportGroupNByTableEvenListRowS1
+{
+	background:#ccc;
+	font-size:12px;
+	color:#000;
+	padding:10px 6px;
+}
+
+.reportGroup1ByTable .reportGroup1ByTableEvenListRowS1
+{
+	font-size:13px;
+	padding-left:5px;
+	color:#000;
+}
+
+.reportGroup1ByTable .reportGroupNByTableEvenListRowS1
+{
+	background:#fff;
+	font-size:13px;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding-left:0;
+}
+
+.reportDataChildtablelistView
+{
+	margin-left:40px;
+}
+
+table.list .view th,.list th, .list td[scope=col]
+{
+	font-size:11px;
+	font-weight:700;
+	text-align:left;
+	border-bottom:1px solid;
+	border-left:none;
+	border-right:none;
+	border-top:1px solid;
+	height:25px;
+	background-repeat:repeat-x;
+	background-position:bottom;
+	padding:3px 5px;
+}
+
+.list .view th a:link,.list .view th a:visited
+{
+	font-weight:700;
+	text-decoration:none;
+}
+
+.list .view th a:hover
+{
+	text-decoration:none;
+}
+
+a.listViewThLinkS1:link,a.listViewThLinkS1:visited
+{
+	font-weight:700;
+	text-decoration:none;
+}
+
+a.listViewThLinkS1:hover
+{
+	text-decoration:none;
+}
+
+a.list td a:link,a.list td a:visited
+{
+	font-size:12px;
+	text-decoration:none;
+}
+
+a.list td a:hover
+{
+	text-decoration:underline;
+}
+
+a.listViewTdToolsS1:link,a.listViewTdToolsS1:visited
+{
+	text-decoration:none;
+}
+
+a.listViewTdToolsS1:hover
+{
+	text-decoration:none;
+}
+
+.evenListRowS1,.oddListRowS1
+{
+	font-size:12px;
+	vertical-align:middle;
+	padding:2px 8px 4px 5px;
+}
+
+.detail .list table tr.pagination td
+{
+	border-bottom:1px solid;
+	padding:2px 5px 3px 8px;
+}
+
+.list table tr.pagination td
+{
+	padding:1px 5px 2px;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	font-size:12px;
+	font-weight:700;
+	text-decoration:none;
+	padding:2px 0 3px;
+}
+
+a.list tr.pagination a:hover
+{
+	text-decoration:underline;
+}
+
+a.listViewCheckLink:link,a.listViewCheckLink:visited
+{
+	font-size:11px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+a.utilsLink:link,a.utilsLink:visited
+{
+	font-size:11px;
+	font-weight:400;
+	text-decoration:none;
+	padding-bottom:3px;
+}
+
+a.utilsLink:hover
+{
+	text-decoration:underline;
+}
+
+.listViewCalCurrentAppt
+{
+	background-color:#75AF4F;
+}
+
+.listViewCalOtherAppt
+{
+	background-color:#4D5EAA;
+}
+
+.listViewCalConflictAppt
+{
+	background-color:#AA4D4D;
+}
+
+.listViewCalCurrentApptLgnd
+{
+	background-color:#75AF4F;
+	border:1px solid #444;
+}
+
+.listViewCalOtherApptLgnd
+{
+	background-color:#4D5EAA;
+	border:1px solid #444;
+}
+
+.listViewCalConflictApptLgnd
+{
+	background-color:#AA4D4D;
+	border:1px solid #444;
+}
+
+.chartBox
+{
+	border:1px solid;
+	padding:5px;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	font-size:11px;
+	font-weight:400;
+	text-decoration:none;
+}
+
+a.tabFormAdvLink:hover
+{
+	text-decoration:none;
+}
+
+table.edit .view
+{
+	border:1px solid;
+	padding:5px;
+}
+
+.edit
+{
+	border-top:1px solid;
+	border-bottom:1px solid;
+	font-size:12px;
+	background-repeat:repeat-x;
+	background-position:top;
+	padding:10px 6px 12px 10px;
+}
+
+.subpanelTabForm
+{
+	border-top:1px solid;
+	border-bottom:1px solid;
+	font-size:12px;
+	background-repeat:repeat-x;
+	background-position:top;
+	padding:15px 0 12px;
+}
+
+table.subpanelTabForm td .listViewButtons
+{
+	background-color:#fff;
+}
+
+.subpanelTabForm p
+{
+	background:#fff;
+	margin-bottom:0;
+}
+
+.subpanelTabForm h3
+{
+	font-size:11px;
+}
+
+.subpanelTabForm .h3Row
+{
+	padding-bottom:5px;
+	margin-top:0;
+}
+
+.subpanelTabForm .list .view
+{
+	margin-bottom:20px;
+	border-left:1px solid;
+	border-right:1px solid;
+}
+
+h5.edit td[scope=row]
+{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:700;
+	margin-bottom:0;
+	text-align:left;
+	padding-bottom:15px;
+	margin-top:1px;
+	padding-left:5px;
+}
+
+td.edit td[scope=row]
+{
+	padding:5px;
+}
+
+.edit td[scope=row]
+{
+	text-align:left;
+	font-size:12px;
+	font-weight:400;
+}
+
+.edit td
+{
+	font-size:12px;
+	font-weight:400;
+}
+
+
+.tabFormAddDel
+{
+	padding-left:4px;
+	padding-right:4px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	font-size:11px;
+	text-decoration:none;
+	line-height:20px;
+	margin-right:2px;
+}
+
+a.tabFormAdvLink:hover
+{
+	text-decoration:none;
+}
+
+.detail
+{
+	border-top:1px solid;
+	border-bottom:1px solid;
+}
+
+.detail .list table tr.pagination td .detail td[scope=row],table.monthHeader td
+{
+	border:none;
+	vertical-align:top;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size:12px;
+}
+
+.detail td[scope=row]
+{
+	font-size:12px;
+	vertical-align:top;
+	text-align:right;
+	border-bottom:1px solid;
+	padding:5px 6px;
+}
+
+h4.detail td[scope=row]
+{
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:700;
+	margin-bottom:0;
+	text-align:left;
+	border:none;
+}
+
+.detail td
+{
+	font-size:12px;
+	border-bottom:1px solid;
+	vertical-align:top;
+	padding:5px 10px 5px 6px;
+}
+
+a.detail td a:link,a.detail td a:visited
+{
+	text-decoration:underline;
+}
+
+.other
+{
+	border:1px solid;
+}
+
+.other td[scope=row]
+{
+	font-size:12px;
+	font-weight:400;
+	vertical-align:middle;
+	padding:3px 6px 4px;
+}
+
+.other td
+{
+	font-size:11px;
+	font-weight:400;
+	vertical-align:middle;
+	padding:4px 10px 4px 6px;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	font-size:11px;
+	text-decoration:underline;
+}
+
+
+
+/* calendar module styles */
+.monthFooter td
+{
+	border-bottom:1px solid;
+	border-top: none;
+}
+.monthHeader{
+	border-bottom:none;
+}
+.monthHeader td
+{
+	padding-right:5px;
+	border: none;
+}
+.monthHeader h3
+{
+margin: 0;
+padding-top: 0;
+border: none;
+}
+a.monthFooter a, .monthHeader a:link,a.monthFooter a, .monthHeader a:visited,a.monthFooter a, .monthHeader a:hover
+{
+	text-decoration:none;
+}
+.monthViewDayHeight td[scope=row]
+{
+	vertical-align:top;
+}
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited
+{
+	font-size:11px;
+}
+
+.monthCalBodyTodayWeekDay,.monthCalBodyTodayWeekEnd
+{
+	border:1px solid;
+	text-align:right;
+	padding:3px;
+}
+
+.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:visited,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:visited
+{
+	font-weight:700;
+}
+
+.monthViewDayHeight td,.monthViewDayHeight td[class=weekend]
+{
+	text-align:right;
+	padding:3px;
+}
+
+a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	font-size:12px;
+}
+
+a.monthCalBodyDayItemLink:link,a.monthCalBodyDayItemLink:visited,a.monthCalBodyDayItemLink:hover
+{
+	font-size:10px;
+}
+
+.monthCalBodyDayItem
+{
+	border-top:1px solid;
+	border-bottom:1px solid;
+	margin:7px 0;
+	padding:5px 0 8px;
+}
+
+.monthCalBodyDayIconTd
+{
+	padding-right:3px;
+	vertical-align:top;
+}
+
+.monthCalBodyDayItemTd
+{
+	vertical-align:top;
+}
+
+.monthViewDayHeight
+{
+	height:100px;
+}
+
+.yearViewDayHeight
+{
+	height:40px;
+}
+
+.monthCalBody th
+{
+	vertical-align:top;
+	height:20px;
+	padding:7px;
+}
+
+.monthCalBody td
+{
+	text-align:left;
+	font-size:12px;
+	padding:5px;
+}
+
+.yearCalBodyMonth
+{
+	padding-top:5px;
+}
+
+.yearCalBodyMonth #daily_cal_table
+{
+	margin-top:5px;
+	border-top:1px solid;
+}
+
+.yearCalBodyMonth #daily_cal_table .monthCalBodyTH th
+{
+	border-top:1px solid;
+}
+
+a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	text-transform:uppercase;
+	font-size:12px;
+	font-weight:700;
+	width:100%;
+	text-decoration:none;
+	margin:0 0 5px;
+	padding:5px;
+}
+
+a.yearCalBodyMonth > a:hover
+{
+	text-decoration:underline;
+}
+
+.calSharedUser
+{
+	height:20px;
+	padding-top:5px;
+	padding-left:8px;
+	font-size:11px;
+	margin-top:0;
+	margin-bottom:0;
+	border-top:1px;
+}
+
+.todaysTask
+{
+	color:#FF7800;
+}
+
+.overdueTask
+{
+	color:red;
+}
+
+.required
+{
+	color:red;
+}
+
+.error
+{
+	color:red;
+}
+
+.success
+{
+	color:#0e0;
+}
+
+.rssItemDate
+{
+	color:#666;
+	font-size:11px;
+}
+
+.dateFormat
+{
+	font-weight:400;
+	font-style:italic;
+	font-size:11px;
+}
+
+.chartFootnote
+{
+	font-size:11px;
+}
+
+.tm
+{
+	font-size:8px;
+	font-family:Verdana;
+}
+
+.aboveFooter
+{
+	background:#fff;
+}
+
+.underFooter
+{
+	border-top:1px solid #ccc;
+	padding-top:15px;
+	padding-bottom:10px;
+}
+
+.schedulerDiv
+{
+	font-size:12px;
+	color:#000;
+	text-align:left;
+	width:100%;
+	background-color:#FAFAFA;
+	border-collapse:collapse;
+	border-bottom:1px solid #999;
+	margin-top:0;
+}
+
+#scheduler .schedulerDiv table
+{
+	width:100%;
+	border-collapse:collapse;
+}
+
+table#scheduler .schedulerDiv table td
+{
+	height:18px;
+}
+
+.schedulerTopRow,.schedulerTopDeleteHeaderCell,.schedulerDeleteHeaderCell,.schedulerTopHeaderCell,.schedulerAttendeeHeaderCell,.schedulerAttendeeHeaderCell
+{
+	height:22px;
+	border-bottom:1px solid #ddd;
+}
+
+.schedulerTimeRow
+{
+	border-top:1px solid #999;
+	border-collapse:collapse;
+}
+
+#scheduler .schedulerDiv table tr.schedulerTimeRow td[scope=col],.schedulerAttendeeDeleteCell
+{
+	border-left:1px solid #ddd;
+	padding-left:4px;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td[scope=row]
+{
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	overflow:hidden;
+	padding-left:4px;
+	width:125px;
+}
+
+.schedulerAttendeeIconCell
+{
+	border:1px solid #ddd;
+	width:16px;
+	padding:0;
+}
+
+.schedulerSlotEmptyDiv
+{
+	border:0 solid transparent;
+	width:100%;
+	height:100%;
+}
+
+.schedulerSlotCellStartTime
+{
+	border-left:4px solid #75AF4F;
+	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+.schedulerSlotCellEndTime
+{
+	border-left:4px solid red;
+	border-right:1px solid #ddd;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td
+{
+	border:1px solid #ddd;
+	background-color:#eee;
+	width:15px;
+	padding:0;
+}
+
+.schedulerEvenListRow,.schedulerOddListRow
+{
+	padding-top:2px 5px 4px 5px;
+	background-color:#f6f6f6;
+}
+
+
+#colorPicker
+{
+	vertical-align:middle;
+}
+
+ul.colorpicker
+{
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+ul.colorpicker li
+{
+	list-style:none;
+	display:inline;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+}
+
+ul.tablist
+{
+	border-bottom:1px solid;
+	font:12px Arial, Verdana, Helvetica, sans-serif;
+	margin:0;
+	padding:3px 0;
+}
+
+ul.tablist li
+{
+	list-style:none;
+	display:inline;
+	margin:0;
+}
+
+ul.tablist li a
+{
+	background-repeat:repeat-x;
+	background-position:top;
+	border-top:1px solid;
+	border-right:1px solid;
+	border-bottom:none;
+	text-decoration:none;
+	margin:0;
+	padding:3px 8px;
+}
+
+ul.tablist li a:link
+{
+	text-decoration:none;
+}
+
+ul.tablist li a:visited
+{
+	text-decoration:none;
+}
+
+ul.tablist li a:hover
+{
+	border-top:1px solid;
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+ul.tablist li a.current,ul.tablist li a.current:hover
+{
+	background-repeat:repeat-x;
+	background-position:bottom;
+	border-bottom:1px solid;
+	font-weight:700;
+}
+
+ul.subpanelTablist
+{
+	border-bottom:1px solid;
+	font:12px Arial, Verdana, Helvetica, sans-serif;
+	font-weight:700;
+	margin:0;
+	padding:3px 0;
+}
+
+ul.subpanelTablist li
+{
+	list-style:none;
+	display:inline;
+	margin:0;
+}
+
+ul.subpanelTablist li a
+{
+	background-repeat:repeat-x;
+	background-position:top;
+	border-top:1px solid;
+	border-right:1px solid;
+	border-bottom:none;
+	text-decoration:none;
+	margin:0;
+	padding:3px 8px;
+}
+
+ul.subpanelTablist li a:link
+{
+	text-decoration:none;
+}
+
+ul.subpanelTablist li a:visited
+{
+	text-decoration:none;
+}
+
+ul.subpanelTablist li a:hover
+{
+	border-top:1px solid;
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+ul.subpanelTablist li a.current,ul.subpanelTablist li a.current:hover
+{
+	background-repeat:repeat-x;
+	background-position:bottom;
+	border-bottom:1px solid;
+	font-weight:700;
+}
+
+ul#tablist li a.current,ul#tablist li a.current:hover
+{
+	background-image:none;
+	background:#fff;
+	border-bottom-color:#fff;
+	border-top-color:#999;
+}
+
+ul.subpanelTablist #addPageItem a,ul.subpanelTablist #addPageItem a:hover
+{
+	border:none;
+	background:transparent;
+	text-decoration:none;
+}
+
+.olCapFontClass
+{
+	font-weight:700;
+	color:#222;
+	background-color:#dfdfdf;
+}
+
+.olCapFontClass A
+{
+	color:#dfdfdf;
+	font-size:9px;
+}
+
+.olFgClass td
+{
+	background-color:#f9f9f9;
+	line-height:18px;
+	padding:5px 7px 7px;
+}
+
+.olCgClass td
+{
+	border-top:1px solid #f1f1f1;
+	border-bottom:1px solid #aaa;
+	background-color:#dfdfdf;
+	padding-left:5px;
+}
+
+.olCgClass
+{
+	border:0;
+	padding:0;
+}
+
+.olBgClass
+{
+	background-color:#9e9e9e;
+}
+
+.olCloseFontClass
+{
+	padding-bottom:1px;
+	text-align:right;
+	background-color:#dfdfdf;
+}
+
+.aclAll
+{
+	color:green;
+	font-weight:700;
+}
+
+.aclOwner
+{
+	color:#000;
+	font-weight:700;
+}
+
+.aclNone
+{
+	color:red;
+	font-weight:700;
+}
+
+.aclEnabled
+{
+	color:green;
+	font-weight:700;
+}
+
+.aclDisabled
+{
+	color:red;
+	font-weight:700;
+}
+
+.aclAdmin
+{
+	color:#00F;
+	font-weight:700;
+}
+
+.aclNormal
+{
+	color:green;
+	font-weight:700;
+}
+
+ul.noBullet
+{
+	list-style-type:none;
+	margin-left:0;
+	padding-left:0;
+}
+
+li.noBullet
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+table.edit td ul li
+{
+	list-style-type:none;
+	margin-bottom:10px;
+}
+
+.helpButton
+{
+	font-weight:700;
+}
+
+.helpShortcut
+{
+	font-weight:700;
+}
+
+table.days
+{
+	font-family:Tahoma, Arial, Verdana, Helvetica, sans-serif;
+	font-size:11px;
+}
+
+td.days
+{
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	border-left:0;
+	border-right:0;
+}
+
+td.sunday
+{
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	border-left:1px solid #dfdfdf;
+	border-right:0;
+}
+
+td.saturday
+{
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	border-left:0;
+	border-right:1px solid #dfdfdf;
+}
+
+td.date
+{
+	width:100%;
+	border-top:0;
+	border-bottom:0;
+	border-left:0;
+	border-right:0;
+	font-size:10px;
+	padding:0;
+}
+
+tr.empty
+{
+	height:2px;
+}
+
+div.completed
+{
+	background-color:#777;
+	float:left;
+	width:100%;
+	line-height:10px;
+	margin-top:4px;
+}
+
+div.inprogress
+{
+	background-color:#002E4D;
+	float:left;
+	width:100%;
+	line-height:10px;
+	margin-top:4px;
+}
+
+div.inprogress_bar
+{
+	background-color:red;
+	float:left;
+	width:100%;
+	line-height:10px;
+	margin-top:4px;
+}
+
+div.notstarted
+{
+	background-color:#ccc;
+	float:left;
+	width:100%;
+	line-height:10px;
+	margin-top:4px;
+}
+
+div.indent_left
+{
+	background-color:#000;
+	float:left;
+	line-height:10px;
+	margin-top:4px;
+}
+
+div.indent_bar
+{
+	background-color:#000;
+	float:left;
+	margin-top:4px;
+}
+
+div.indent_right
+{
+	background-color:#000;
+	float:right;
+	line-height:10px;
+	margin-top:4px;
+}
+
+#horizWrapper
+{
+	position:relative;
+	margin-left:60px;
+	width:218px;
+	float:left;
+}
+
+#horizBGDiv
+{
+	position:relative;
+	top:60px;
+	background:url(horizBg.png) no-repeat;
+	height:26px;
+	width:218px;
+	zindex:5;
+}
+
+#horizHandleDiv
+{
+	position:absolute;
+	left:100px;
+	top:8px;
+	cursor:default;
+	width:18px;
+	height:18px;
+}
+
+#sitemap .edit
+{
+	border:1px solid;
+	padding:10px 10px 10px 20px;
+}
+
+#sitemap a:link,#sitemap a:visited
+{
+	text-decoration:none;
+	font-size:11px;
+	color:#444;
+}
+
+#sitemap h4 a:link,#sitemap h4 a:visited
+{
+	font-size:12px;
+}
+
+#sitemap ul.nobullet
+{
+	margin-top:10px;
+	margin-left:5px;
+}
+
+#sitemap a:hover,#sitemap h4 a:hover
+{
+	text-decoration:underline;
+}
+
+#sitemap ul.nobullet li
+{
+	margin-bottom:5px;
+}
+
+.sugarFeedDashlet
+{
+	overflow:auto;
+	max-height:375px;
+	height:expression(this.scrollHeight>375?'375px':'auto');
+}
+
+.sugarFeedDashlet td.list th, .list td[scope=col]
+{
+	display:none;
+}
+
+.sugarFeedDashlet tr
+{
+	height:auto;
+}
+
+.sugarFeedDashlet .byLineBox
+{
+	width:100%;
+	position:relative;
+}
+
+.sugarFeedDashlet .byLineBox .byLineLeft
+{
+	font-size:79%;
+}
+
+.sugarFeedDashlet .byLineBox .byLineRight
+{
+	display:inline;
+	right:0;
+	position:absolute;
+	font-size:79%;
+}
+
+iframe.teamNoticeBox
+{
+	width:99%;
+	padding:0;
+}
+
+.loading-indicator
+{
+	font-size:11px;
+	background-image:url(../default/ext/resources/images/default/grid/loading.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:20px;
+	line-height:16px;
+	margin:3px;
+}
+
+.x-sqs-list
+{
+	border:1px solid #d0d0d0;
+	background:#d0d0d0;
+	zoom:1;
+	overflow:hidden;
+}
+
+.x-sqs-list-inner
+{
+	overflow:auto;
+	background:#FFF;
+	position:relative;
+	zoom:1;
+	overflow-x:hidden;
+}
+
+.x-sqs-list-item
+{
+	font:normal 12px tahoma,arial,helvetica,sans-serif;
+	border:1px solid #fff;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:1px;
+}
+
+.x-sqs-list .x-sqs-selected
+{
+	border:1px dotted #f6f6f6!important;
+	background:#d0d0d0;
+	cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+/* header */
+#header {
+    background-color: #f1f1f1;
+    font-size: 11px;
+}
+/*customization for header*/
+#header_right{
+float:right;
+background: transparent;
+}
+#header_left{
+float:left;
+padding: 5px 0 10px 5px;
+}
+#header_right_bottom{
+padding-top: 15px;
+border-top: 1px solid #ddd;
+background: transparent;
+}
+#header_right_top{
+background-position:center top;
+background-repeat:repeat-x;
+background-color:#f6f6f6;
+margin:0px;
+padding:0px;
+height:25px;
+}
+
+#companyLogo {
+    margin-bottom: -18px;
+    padding: 5px 0px 0px 10px;
+    float: left;
+    vertical-align: bottom;
+}
+
+
+#moduleList ul, #globalLinks ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#moduleList ul li, #globalLinks ul li, #colorPicker ul li {
+    float: left;
+    display: block;
+    margin: 0px 1px;
+    padding: 0px;
+}
+#moduleList ul li {
+    font-weight: bold;
+}
+#welcome{
+	height: 20px;
+}
+
+#colorPicker ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+
+
+
+
+#globalLinks
+{
+	white-space:nowrap;
+	font:11px Arial, Verdana, Helvetica, sans-serif;
+	margin:0;
+	padding:0px 0px 0px 0px;;
+	border-right:0px;
+	margin-right:10px;
+	margin-bottom:0px;	
+	height:25px;
+}
+#globalLinks ul li{
+*width: 40px;}
+#globalLinks ul li span
+{
+visibility: hidden;
+display:none;
+}
+#globalLinks ul li a
+{
+background-position:center bottom;
+background-repeat:repeat-x;
+border-bottom:medium none;
+border-right:1px solid;
+margin:0;
+display:block;
+padding: 5px;
+margin: 0 -1px 0 0;
+}
+#globalLinks ul li a:link, #globalLinks ul li a:visited { text-decoration: none; }
+
+#globalLinks ul li a:hover
+{
+background-repeat: repeat-x;
+background-position: top;
+}
+
+/* module list in header.tpl */
+
+#moduleList
+{
+    display: block;
+    height: 2em;
+	background-repeat:repeat;
+	background-position:right top;
+}
+#moduleList ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#moduleList ul li
+{
+    float: left;
+    margin: 0 0;
+    display:block;
+    font-weight: bold;
+    padding:8px 0px 0px 0px;
+	
+}
+
+#moduleList ul li span.currentTab,#moduleList ul li span.notCurrentTab 
+{
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 3px;
+    background-position: top right;		
+    margin: 0 !important;
+    border-left: 0 !important;
+}
+
+#moduleList ul li span.notCurrentTab {
+background-repeat:no-repeat;
+background-position:right top;
+}
+#moduleList ul li span.currentTabLeft{
+    padding-top: 8px;
+    padding-bottom: 3px;
+	background-position:left top;	
+}
+#moduleList ul li span.notCurrentTabLeft 
+{
+display:none;
+visibility:hidden;
+}		
+#moduleList ul li span.currentTabRight{
+display:none;
+visibility:hidden;}
+#moduleList ul li span.notCurrentTabRight
+{
+display:none;
+visibility:hidden;
+}
+#moduleList ul li a:link, 
+#moduleList ul li a:visited 
+{
+    text-decoration: none;
+    padding-top: 0px;
+}
+#moduleList ul li a:hover 
+{
+    text-decoration: none;
+}
+#subModuleList
+{
+    padding:0.4em 0 0.4em 1em;
+}
+#subModuleList span
+{
+    display: none;
+}
+#subModuleList span a
+{
+    text-decoration: none;
+    padding: 0.5em;
+}
+#leftColumn #shortcuts,#leftColumn #lastView{
+	margin-top:15px;
+}
+#header #shortcuts{
+	margin-top:0px;
+	border-bottom:1px solid;
+border-top:1px solid;
+padding-bottom:3px;
+padding-left:10px;
+padding-top:3px;
+vertical-align:middle;
+}
+.headerList a {
+border-left:1px solid;
+padding:2px 5px;
+text-decoration:none;
+}
+#shortcuts h3,#lastView h3{
+border-top:1px solid;
+}
+
+#shortcuts li,##lastView li{
+border-style:solid none none;
+border-width:1px 0 0;
+}
+#newRecord{
+
+}
+#newRecord h3{
+border-top:1px solid;
+}
+
+#content {
+border-width:1px;
+}
+
+
+
+.view > table, table.view {
+width:100%;
+}
+a.listViewTdLinkS1:link, a.listViewTdLinkS1:visited {
+text-decoration:none;
+}
+a.listViewTdLinkS1:hover {
+text-decoration: underline;
+}
+.tabForm {
+background-position:center top;
+background-repeat:repeat-x;
+border-bottom:1px solid;
+border-top:1px solid;
+font-size:12px;
+padding:10px 6px 12px 10px;
+}
+#wizard th{
+text-align:left;
+}
+textarea#content{
+border-style:solid solid solid solid;
+margin:0px;
+}
+.leftList ul h3
+{
+border-bottom:1px solid;
+}
+.leftList ul li
+{
+border-bottom:1px solid;
+}
+.leftList ul li a 
+{
+    display: block ;
+	height:100%;
+}
+div#pageContainer{
+height:100%;
+}
+
+table.list .view th, .list th, .list td[scope="col"] {
+padding:0px;
+}
+#leftColumn #lastView{
+background-position:center top;
+background-repeat:repeat-x;
+border-top:0px solid;
+border-bottom:0px solid;
+padding:0px;
+text-align:left;
+}
+#moduleList > ul:first-child{
+margin-left:2em;
+}
+#moduleList ul li#moduleTabExtraMenu{
+padding-left:16px;
+padding-right:20px;
+background-position:right top;
+}

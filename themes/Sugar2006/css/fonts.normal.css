@@ -1,0 +1,396 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+body
+{
+	font-size:12px;
+}
+
+.body
+{
+	font-size:12px;
+}
+
+table,td
+{
+	font-size:11px;
+}
+
+h2,h1
+{
+	font-size:13px;
+}
+
+h3,.monthHeaderH3,.schedulerTopDateCell
+{
+	font-size:12px;
+}
+
+h4,h4.edit td[scope=row],h5,h5.listViewSubHeadS1
+{
+	font-size:12px;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	font-size:11px;
+}
+
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected],button, input[type=submit], input[type=reset], input[type=button]:hover,button, input[type=submit], input[type=reset], input[type=button]:focus,button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]:focus
+{
+	font-size:11px;
+}
+
+input,select
+{
+	font-size:12px;
+}
+
+textarea
+{
+	font-size:12px;
+}
+
+.ygrid-row,.ygrid-hd,ygrid-hd-body,.ygrid-hd-body span
+{
+	font-size:8pt;
+}
+
+#moduleList
+{
+height:25px;
+}
+
+.currentTab
+{
+	font-size:11px;
+}
+
+.otherTab
+{
+	font-size:11px;
+}
+
+#subModuleList
+{
+	font:normal 11px Arial, Verdana, Helvetica, sans-serif;
+}
+
+ul#subModuleList li a
+{
+	padding:3px 3px 3px 6px;
+}
+
+.headerBg
+{
+	font-size:12px;
+}
+
+#welcome
+{
+	font-size:12px;
+}
+
+#search input[name=query_string]
+{
+	font-size:11px;
+}
+
+ul.subTabs
+{
+	font:11px Arial, Verdana, Helvetica, sans-serif;
+}
+
+.subTabMore
+{
+	font-size:11px;
+}
+
+#newRecord form
+{
+	font-size:11px;
+}
+
+td#newRecord form button, input[type=submit], input[type=reset], input[type=button]
+{
+	font-size:11px;
+}
+
+td#newRecord form .edit td[scope=row]
+{
+	font-size:11px;
+}
+
+#newRecord form a:link,#newRecord form a:visited
+{
+	font-size:11px;
+}
+
+table.reportlistView td,table.reportlistView th,.reportGroupViewTable .reportevenListRowS1,.reportGroupViewTable .reportoddListRowS1,.reportoddListRowS1
+{
+	font-size:11px;
+}
+
+.reportGroupNByTableEvenListRowS1
+{
+	font-size:12px;
+}
+
+.reportGroup1ByTable .reportGroup1ByTableEvenListRowS1,.reportGroup1ByTable .reportGroupNByTableEvenListRowS1
+{
+	font-size:13px;
+}
+
+table.list .view th,.list th, .list td[scope=col]
+{
+	font-size:11px;
+}
+
+a.list td a:link,a.list td a:visited
+{
+	font-size:12px;
+}
+
+.evenListRowS1,.oddListRowS1
+{
+	font-size:12px;
+	padding-bottom:4px;
+	padding-top:2px;
+}
+
+.detail .list table tr.pagination td
+{
+	font-size:12px;
+}
+
+#listViewPaginationButtons a.list tr.pagination a:link,#listViewPaginationButtons a.list tr.pagination a:visited
+{
+	font-size:12px;
+}
+
+a.listViewCheckLink:link,a.listViewCheckLink:visited
+{
+	font-size:11px;
+}
+
+a.utilsLink:link,a.utilsLink:visited
+{
+	font-size:11px;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	font-size:11px;
+}
+
+.edit
+{
+	font-size:12px;
+}
+
+.subpanelTabForm
+{
+	font-size:12px;
+}
+
+.subpanelTabForm h3
+{
+	font-size:11px;
+}
+
+h5.edit td[scope=row]
+{
+	font-size:12px;
+}
+
+.edit td[scope=row]
+{
+	font-size:12px;
+}
+
+.edit td
+{
+	font-size:12px;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	font-size:11px;
+}
+
+.detail td[scope=row]
+{
+	font-size:12px;
+}
+
+h4.detail td[scope=row]
+{
+	font-size:12px;
+}
+
+.detail td
+{
+	font-size:12px;
+}
+
+.other td[scope=row]
+{
+	font-size:12px;
+}
+
+.other td
+{
+	font-size:11px;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	font-size:11px;
+}
+
+.monthBox
+{
+	font-size:12px;
+}
+
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited
+{
+	font-size:11px;
+}
+
+a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	font-size:12px;
+}
+
+a.monthCalBodyDayItemLink:link,a.monthCalBodyDayItemLink:visited,a.monthCalBodyDayItemLink:hover
+{
+	font-size:10px;
+}
+
+.monthCalBody td
+{
+	font-size:12px;
+}
+
+a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	font-size:12px;
+}
+
+.calSharedUser
+{
+	font-size:11px;
+}
+
+.rssItemDate
+{
+	font-size:11px;
+}
+
+.dateFormat
+{
+	font-size:11px;
+}
+
+.chartFootnote
+{
+	font-size:11px;
+}
+
+.tm
+{
+	font-size:8px;
+}
+
+.schedulerDiv
+{
+	font-size:12px;
+}
+
+.schedulerTopRow,.schedulerTopDeleteHeaderCell,.schedulerDeleteHeaderCell,.schedulerTopHeaderCell,.schedulerAttendeeHeaderCell,.schedulerAttendeeHeaderCell
+{
+	height:22px;
+}
+
+#scheduler .schedulerDiv table tr.schedulerAttendeeRow td[scope=row]
+{
+	width:125px;
+}
+
+#globalLinks ul li a
+{
+	font:11px Arial, Verdana, Helvetica, sans-serif;
+}
+
+#globalLinks ul li a
+{
+	height:15px;
+	font:11px Arial, Verdana, Helvetica, sans-serif;
+}
+
+ul.tablist
+{
+	font:12px Arial, Verdana, Helvetica, sans-serif;
+}
+
+ul.subpanelTablist
+{
+	font:12px Arial, Verdana, Helvetica, sans-serif;
+}
+
+.sqsMatchedSmartInputItem
+{
+	font-size:11px;
+}
+
+.olCapFontClass A
+{
+	font-size:9px;
+}
+
+.leftList{
+	font-size:11px;
+}
+#header_right{
+width:55%;
+}
+#shortcuts h3{
+font-size:11px;
+font-weight:bold;
+}
+#moduleList ul li#moduleTabExtraMenu{
+height:17px;
+}

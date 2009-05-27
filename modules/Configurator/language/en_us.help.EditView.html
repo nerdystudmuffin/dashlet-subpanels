@@ -1,0 +1,84 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>System Settings</h1>
+
+<p>Use this page to configure system-wide settings according to your organization's specifications.</p>
+<ul>
+<li><span class="helpButton">User Interface:</span> Use this sub-panel to configure the user interface such as the number of items displayed in a List View.</li>
+<li><span class="helpButton">Logos:</span> Use this sub-panel to view your organization's current logo or to upload a new logo for display on your system and for your customer quotes.  </lil>
+<li><span class="helpButton">LDAP Authentication Support:</span> If you have implemented LDAP authentication, select Enable LDAP and enter the necessary information to allow the application to authenticate your users against your LDAP directory when they attempt to log into Sugar.
+<li><span class="helpButton">Proxy Settings:</span> If you are using a proxy server to connect to the Internet, select the Use Proxy Server? box.</li>
+<li><span class="helpButton">Customer Self-service Portal:</span> Select <span class="helpButton">Enable self-service portal integration?</span> to integrate your organization's self-service portal with Sugar. This allows your customers to access your Sugar items such as Notes and Cases.</li>
+<li><span class="helpButton">SkypeOut:</span> Select <span class="helpButton">Enable SkypeOut Integration?</span> to allow users to communicate using SkypeOut.</li>
+<li><span class="helpButton">Mail Merge: </span>If you have installed the Sugar Plug-in for Microsoft Word, click <span class="helpButton">Enable Mail Merge?</span> to allow users to perform a mail merge with Word documents.</li>
+
+
+
+<li><span class="helpButton">Advanced:</span> Use this sub-panel to do the following:
+<ul>
+<li><span class="helpButton">Validate user IP address:</span> Select this option to validate, for security purposes, the IP addresses of users who log into Sugar.</li>
+<li><span class="helpButton">Log slow queries:</span> Select this option to log the system's slow responses to user queries in the sugarcrm.log file. This information is for performance tuning investigation.</li> 
+<li><span class="helpButton">Maximum upload size:</span> Enter the maximum file size, in KB, that users are allowed to upload. The upload size is also dependent on PHP's upload settings.</li>
+<li><span class="helpButton">Log memory usage:</span> Select this option to record memory usage in the sugarcrm.log file.</li>
+<li><span class="helpButton">Slow query time threshold:</span> Specify the threshold, in milliseconds, that defines slow queries. Queries that take longer that the threshold time are logged in the sugarcrm.log file. This information is for performance tuning investigation.</li> 
+<li><span class="helpButton">Display stack trace of errors:</span> When you select this option, if an error occurs when users are running the application, the system displays where the error occurred in the application's stack trace. This information is for debugging purposes.</li>
+<li><span class="helpButton">Portal Session Timeout:</span> Enter the time period, in seconds, for a SugarPortal session. The session will timeout when the limit is reached.
+</ul>
+<li><span class="helpButton">Logger Settings:</span>To configure Logger settings to log events that occur in the Sugar application, enter information in the following fields.
+<ul>
+<li><span class="helpButton">Log File Name</span>. Specify a name for the log file.
+<li><span class="helpButton">Extension</span>. Enter the file extension. The default is .log.
+<li><span class="helpButton">Append After File Name</span>. From the drop-down list, select a time period to append to the file name. This makes it easier to identify the log that you want to view.
+<li><span class="helpButton">Maximum Log Size</span>. Specify the maximum size of the log file in MegaBytes (MB). The default is 10MB.
+<li><span class="helpButton">Log Level</span>. From the drop-down list, select the event level that you want to capture in the log file. The default is fatal.
+<li><span class="helpButton">Default Date Format</span>. Enter the default date format for the log file. This format must be supported by strftime. The default is %c.
+<li><span class="helpButton">Maximum Number of Logs</span>. Specify the maximum number of log files to save. When the number of log files exceed this limit, Sugar deletes the log file that was created first. The default is 10 logs.
+</ul>
+<p>To save your settings, click <span class="helpButton">Save</span>.
+<p>To restore the previous settings, click <span class="helpButton">Restore</span>.
+<p>To exit the System Settings page without saving your changes, click <span class="helpButton">Cancel</span>.

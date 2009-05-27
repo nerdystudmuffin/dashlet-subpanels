@@ -1,0 +1,473 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ * Description:  Contains a variety of utility functions used to display UI 
+ * components such as form headers and footers.  Intended to be modified on a per 
+ * theme basis.
+ ********************************************************************************/
+
+
+/* UNUSED STYLES */
+
+/* Default Styles */
+	
+.h3Row { 
+	margin-top: 10px;
+	vertical-align: middle;
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #fff;
+}
+.h3Row td
+{
+	padding: 4px 5px 3px 3px;
+}
+h4, h5 
+{
+	margin-bottom: 2px;
+	padding-left: 4px;		
+}
+hr 
+{
+    border: 0;
+    border-top: 1px solid #999;
+    background-color: #999;
+    color: #999;
+    height: 1px;
+    margin: 1em 0;
+    clear: both;
+}
+a:link, a:visited, a:hover 
+{
+	text-decoration: underline;
+}
+input, select, textarea, button, .button
+{
+	border: 1px solid;
+}
+button, input[type=submit], input[type=reset], input[type=button], .button
+{
+	font-weight: normal;
+	background-repeat: repeat-x;
+	background-position: top;
+	padding-bottom: 1px;
+	vertical-align: middle;
+}	
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+button:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus,
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]
+{
+	color: #fff;
+	background-image: none;
+	cursor:pointer;
+	font-weight: normal;
+}
+
+/* set a minimum width for the header */
+#header
+{
+    min-width: 85em;
+}
+/* header */
+#header div.line {
+height: 2px;
+	border-bottom: 2px solid;
+    color:#0046ad;
+}
+
+#sitemapLink 
+{
+    padding-top: 3px;
+}
+#sitemapLinkSpan 
+{
+    border-right:1px solid #999;
+    border-right:none;
+}
+#search {
+    border-left:1px solid #999;
+}
+
+/* DetailView/EditView/ListView styles */
+.view
+{
+    border-bottom:1px solid;
+    border-top:2px solid;
+}
+
+/* DetailView styles */
+
+.detail table,
+table.detail
+{
+    padding: 0;
+}
+.detail tr td
+{
+    border-bottom: 1px solid;
+}
+.detail tr td[scope=row] 
+{
+    border-bottom:1px solid;
+}
+.detail tr th
+{
+    border-bottom: 2px solid;
+    background: #fff;
+}
+
+
+/* search panel on top of list views ( extends .edit .view definition ) */
+.search
+{
+    border-top: 0px none; 
+}
+
+
+/* Listview styles */
+.list
+{
+    border: 1px solid;
+}
+.list tr.pagination td table td
+{
+    background:#FAFAFA none repeat scroll 0 0;
+    color:#666666;
+}
+.list tr th, .list tr td[scope=col], .edit .list tr th, .edit .list tr td[scope=col]
+{
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #cccccc;		
+    border-bottom: 1px solid #cccccc;
+    background: #ebebed !important;
+}
+
+		
+/* module title */
+.moduleTitle 
+{
+    padding-bottom: 3px;
+    padding-top: 0;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.moduleTitle > h2 > img
+{
+    display: none;
+}
+    
+/* for subpanel tabs */
+ul.subTabs
+{
+    padding: 4px 0;
+    margin: 0px 0 0 0;
+    border: none;
+    font: 12px Arial, Verdana, Helvetica, sans-serif;
+}
+ul.subTabs li
+{
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+.activeSubTab, 
+ul.subTabs li a.activeSubTab:link, 
+ul.subTabs li a.activeSubTab:visited, 
+ul.subTabs li a.activeSubTab:hover
+{
+    font-weight: bold;
+}
+ul.subTabs li a
+{
+    padding: 0 8px 0 8px;
+    margin: 0px;
+    border-right: 1px solid;
+    border-bottom: none;
+    text-decoration: none;
+}
+ul.subTabs li a:link, ul.subTabs li a:visited 
+{ 
+    text-decoration: none; 
+}
+.subTabMore 
+{
+    font-size: 11px;
+    text-decoration: none;
+    padding-top: 3px;
+}
+
+/* module list in header.tpl */
+#moduleList
+{
+    display: block;
+    height: 2.4em;
+}
+#moduleList ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #ccc;
+}
+#moduleList ul li
+{
+    float: left;
+    margin: 0 0.15em;
+    display:block;
+    font-weight: bold;
+    padding:8px 6px 4px 2px;
+}
+#moduleList > ul > li
+{
+    background-repeat:no-repeat;
+    background-position:right top;
+}
+#moduleList > ul > li.noBorder
+{
+    background-image: none;
+    padding-right: 0;
+    padding-left: 0px; 
+    margin-left: -2px;
+}
+#moduleList > ul:first-child
+{
+    padding-left: 14px;
+}
+#moduleList > ul > li#moduleTabExtraMenu
+{
+    padding-left:16px;
+    padding-right:20px;
+}
+#moduleList ul li span.currentTab 
+{
+    font-weight: bold;
+    padding: 8px 5px 6px 5px;
+    background-position: top center;		
+    border-bottom: 2px solid;
+    margin: 0 !important;
+    border-left: 0 !important;
+}	
+#moduleList ul li span.currentTabLeft 
+{
+    background-position: top left;
+    border-bottom: 2px solid;
+    margin-right: 0 !important;
+    border-left: 0 !important;
+    padding:8px 2px 6px;
+}		
+#moduleList ul li span.currentTabRight 
+{
+    background-position: top right;
+    border-bottom: 2px solid;
+    margin-left: 0 !important;
+    border-left: 0 !important;
+    padding:8px 2px 6px;
+}
+#moduleList ul li a:link, 
+#moduleList ul li a:visited 
+{
+    text-decoration: none;
+    padding-top: 0px;
+}
+#moduleList ul li a:hover 
+{
+    text-decoration: none;
+}
+#subModuleList
+{
+    padding:0.4em 0 0.3em 1em;
+	border-bottom: none;
+	border-top: 2px solid;
+}
+#subModuleList span
+{
+    display: none;
+}
+#subModuleList span a
+{
+    text-decoration: none;
+    padding: 0.2em 0.5em 0.3em 0.5em;
+	margin: 0 -3px 0 0;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-bottom: none;
+}
+
+/* last viewed and shortcuts lists in the header */
+.headerList
+{
+    border-bottom: 2px solid;
+}
+.headerList a:link, .headerList a:visited, .headerList a 
+{
+    text-decoration: none;
+    border-left:1px solid;
+}
+.headerList a:hover 
+{
+    background: #fff;
+}
+.headerList a:hover span
+{
+	text-decoration: underline;
+}
+/* for lists of items in the left column ( such as the shortcuts or last view items lists ) */	
+.leftList ul li
+{    
+    border-bottom: 1px solid;
+}
+
+/* left side column */
+#leftColumn 
+{
+    padding-right: 8px;
+    padding-top: 10px;
+}
+#leftColumn h3, #HideMenu h3
+{
+    padding-left: 3px;	
+    padding-top: 8px;
+    padding-bottom: 4px;
+	margin-bottom: 0;
+    border-bottom:2px solid;
+    color:#444;
+}
+
+/* hidden shortcuts menu */
+#HideMenu
+{
+    border-bottom: 2px #cccccc solid;
+    border-right: 2px #cccccc solid;
+    background: #ffffff;
+    left: 10px;
+    width: 20em;
+}
+    
+/* new record form */
+#newRecord form  
+{
+    border-bottom: 1px solid;
+}
+
+/* misc links */
+a.utilsLink:link, a.utilsLink:visited 
+{
+    font-weight: normal;
+    text-decoration: underline;
+    padding-bottom: 3px;
+}
+a.tabFormAdvLink:link, a.tabFormAdvLink:visited, a.tabFormAdvLink:hover 
+{
+    text-decoration: none;
+    line-height: 20px;
+    margin-right: 2px;
+}
+	
+/* global links */
+#globalLinks ul 
+{
+    color: #ccc;
+}
+#globalLinks ul li a 
+{
+    color: #444444;
+}
+#globalLinks ul li span
+{
+    color: #CCCCCC
+}
+
+#welcome, #globalLinks {
+border-right: 2px solid #ddd;
+}
+
+/* themepicker */
+#themepickerLinkSpan a 
+{
+    color: #444444;
+}
+
+/* search form */
+#search input[name=query_string] 
+{
+    border: 1px solid;
+    font-size: 11px;
+}
+
+
+/* for subpanel tabs */
+ul.tablist, ul.subpanelTablist
+{
+    border-bottom: 2px solid;
+}
+ul.tablist li a, ul.subpanelTablist li a
+{
+    border-top: 2px solid;
+    border-right: 1px solid;
+    border-bottom: none;
+}
+ul.tablist li a:hover, ul.subpanelTablist li a:hover
+{
+    border-top: 2px solid;
+}
+ul.tablist li a.current, ul.tablist li a.current:hover 
+{
+    border-bottom:2px solid #f6f6f6;
+	font-weight: bold;
+}
+ul.subpanelTablist li a.current, ul.subpanelTablist li a.current:hover
+{
+    border-bottom:2px solid #fff;
+}
+.subpanelTabForm 
+{
+    padding: 15px 0px 0 0px;
+	margin-top: 15px;
+}
+.subpanelTabForm .h3Row 
+{
+    border-top: 1px solid #dddddd;
+	background-image: none;
+}
+
+/*Bug 29945 */
+.pagination button {
+    border-color: #c1c1c1;
+    background-color: #f0f0f0;
+    color: #000;
+    background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif);
+}

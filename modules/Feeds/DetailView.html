@@ -1,0 +1,79 @@
+<!--
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+{PREFORM}
+<td>
+<form action="index.php" method="post" name="DetailView" id="form">
+			<input type="hidden" name="module" value="Feeds">
+			<input type="hidden" name="record" value="{ID}">
+			<input type="hidden" name="isDuplicate" value=false>
+			<input type="hidden" name="action">
+			<input type="hidden" name="return_module">
+			<input type="hidden" name="return_action">
+			<input type="hidden" name="return_id" value="{ID}">
+			<input type="hidden" name="reports_to_id">
+			<input type="hidden" name="addtofavorites">
+			<input type="hidden" name="removefavorites">
+
+
+
+<!-- BEGIN: delete -->
+<input title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Feeds'; this.form.return_action.value='ListView'; this.form.action.value='Delete'; return confirm('{APP.NTC_DELETE_CONFIRMATION}')" type="submit" name="Delete" value=" {APP.LBL_DELETE_BUTTON_LABEL} ">
+<!-- END: delete -->
+<!-- BEGIN: delete_favorite -->
+<input title="{MOD.LBL_DELETE_FAV_BUTTON_TITLE}" accessKey="{MOD.LBL_DELETE_FAV_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Feeds'; this.form.return_action.value='DetailView'; this.form.action.value='DeleteFavorite'; " type="submit" name="deletefavorite" value=" {MOD.LBL_DELETE_FAV_BUTTON_LABEL} ">
+<!-- END: delete_favorite -->
+<!-- BEGIN: add_favorite -->
+<input title="{MOD.LBL_ADD_FAV_BUTTON_TITLE}" accessKey="{MOD.LBL_ADD_FAV_BUTTON_KEY}" class="button" onclick="this.form.return_module.value='Feeds'; this.form.return_action.value='DetailView'; this.form.action.value='AddFavorite';" type="submit" name="addfavorite" value=" {MOD.LBL_ADD_FAV_BUTTON_LABEL} ">
+<!-- END: add_favorite -->
+	</form>
+	</td>
+</tr>
+</table>
+
+
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0">
+	<tr>
+	<td>{FEED}</td>
+</tr></table>
+
+<!-- END: main -->

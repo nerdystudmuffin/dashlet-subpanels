@@ -1,0 +1,64 @@
+<!--
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+-->
+
+<!-- BEGIN: main -->
+<form action="index.php" method="post" name="quick_save">
+<input type="hidden" name="module" value="EditCustomFields" />
+<input type="hidden" name="action" value="Save" />
+<input type="hidden" name="return_action" value="index" />
+<input type="hidden" name="return_module" value="EditCustomFields" />
+<input type="hidden" name="return_module_select" value="{return_module_select}" />
+<input type="hidden" name="custom_module" value="{return_module_select}" />
+<p>
+{mod.COLUMN_TITLE_NAME}<br />
+<input type="text" name="name" value="" /><br />
+{mod.COLUMN_TITLE_LABEL}<br />
+<input type="text" name="label" value="" /><br />
+{mod.COLUMN_TITLE_DATA_TYPE}<br />
+<select name="data_type">{data_type_options}</select><br />
+{mod.COLUMN_TITLE_MAX_SIZE}<br />
+<input type="text" name="max_size" value="" /><br />
+{mod.COLUMN_TITLE_REQUIRED_OPTION}<br />
+<input type="checkbox" name="required_option" value="1" /><br />
+{mod.COLUMN_TITLE_DEFAULT_VALUE}
+<input type="text" name="default_value" value="" /><br />
+</p>
+<p><input class="button" title="{app.LBL_SAVE_BUTTON_TITLE}"
+	type="submit" name="button" value="{app.LBL_SAVE_BUTTON_LABEL}"
+	accessKey="{app.LBL_SAVE_BUTTON_KEY}" /></p>
+</form>
+<!-- END: main -->

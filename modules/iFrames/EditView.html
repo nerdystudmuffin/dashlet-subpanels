@@ -1,0 +1,88 @@
+<!--
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ ********************************************************************************/
+-->
+
+<!-- BEGIN: main -->
+<table width="100%" cellspacing="0" cellpadding="0" border="0" >
+<tr>
+<form name="EditView" method="POST" action="index.php" >
+			<input type="hidden" name="module" value="iFrames">
+			<input type="hidden" name="record" value="{IFRAME.ID}">
+			<input type="hidden" name="id" value="{IFRAME.ID}">
+			<input type="hidden" name="action" value=>
+			<input type="hidden" name="return_module" value="{RETURN_MODULE}">
+			<input type="hidden" name="return_id" >
+			<input type="hidden" name="return_action" value="{RETURN_ACTION}">
+	<td><input title="{APP.LBL_SAVE_BUTTON_TITLE}" accessKey="{APP.LBL_SAVE_BUTTON_KEY}" class="button" onclick="this.form.action.value='Save';return check_form('EditView');" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" accessKey="{APP.LBL_CANCEL_BUTTON_KEY}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  "></td>
+</tr></table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="edit view">
+<td width="15%" scope="row" nowrap><slot>{MOD.LBL_LIST_NAME}: <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+<td width="35%"><slot><input name='name' tabindex='1' size='30' maxlength='50' type="text" value="{IFRAME.NAME}"></slot></td>
+<td width="15%" scope="row" nowrap><slot> {MOD.LBL_LIST_STATUS}: <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+<td width="35%"><slot><input tabindex='2' class="checkbox" type='checkbox' name='status'  {IFRAME.STATUS_CHECKED}></slot></td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td width="15%" scope="row" nowrap><slot>{MOD.LBL_LIST_URL}: <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span></slot></td>
+<td width="35%"><slot><input name='url' tabindex='1' size='30' maxlength='255' type="text" value="{IFRAME.URL}"></slot></td>
+<td width="15%" scope="row" nowrap><slot>&nbsp; </slot></td>
+<td width="35%"><slot>&nbsp; </slot></td>
+
+</tr>
+<tr>
+<td width="15%" scope="row" nowrap><slot>{MOD.LBL_LIST_PLACEMENT}: </slot></td>
+<td width="35%"><slot><select name='placement' tabindex='1'>{IFRAME.PLACEMENT_SELECT}</select></slot></td>
+<td width="15%" scope="row" nowrap><slot>{MOD.LBL_LIST_TYPE}: </slot></td>
+<td width="35%"><slot><select name='type' tabindex='2'>{IFRAME.TYPE_SELECT}</select></slot></td>
+
+</tr>
+<tr>
+
+</tr>
+</table>
+<div style="padding-top: 2px;">
+<input title="{APP.LBL_SAVE_BUTTON_TITLE}" class="button" onclick="this.form.action.value='Save';return check_form('EditView');" type="submit" name="button" value="  {APP.LBL_SAVE_BUTTON_LABEL}  " > <input title="{APP.LBL_CANCEL_BUTTON_TITLE}" class="button" onclick="this.form.action.value='{RETURN_ACTION}'; this.form.module.value='{RETURN_MODULE}'; this.form.record.value='{RETURN_ID}'" type="submit" name="button" value="  {APP.LBL_CANCEL_BUTTON_LABEL}  ">
+</div>
+
+<input type='hidden' name='record' value='{ID}'>
+</form>
+{JAVASCRIPT}
+<!-- END: main -->

@@ -1,0 +1,256 @@
+<!--
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ ********************************************************************************/
+-->
+<!-- BEGIN: main -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 0px none; margin-bottom: 4px" class="edit view">
+
+		<tr>
+			<td>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td scope="row" nowrap>
+							<slot>
+								{MOD.LBL_FIRST_NAME} 
+							</slot>
+							&nbsp;&nbsp; 
+							<slot>
+								<input type="text" size="10" name="first_name_basic"  value="{FIRST_NAME}">
+							</slot>
+						</td>
+						<td scope="row" nowrap>
+							<slot>
+								{MOD.LBL_LAST_NAME} 
+							</slot>
+							&nbsp;&nbsp; 
+							<slot>
+								<input type="text" size="10" name="last_name_basic"  value="{LAST_NAME}">
+							</slot>
+						</td>
+						<td scope="row" nowrap>
+							<slot>
+								{MOD.LBL_DEPARTMENT} 
+							</slot>
+							&nbsp;&nbsp; 
+							<slot>
+								<input type="text" size="10" name="department_basic"  value="{DEPARTMENT}">
+							</slot>
+						</td>
+						<td scope="row" nowrap>
+							<slot>
+								{MOD.LBL_EMPLOYEE_STATUS} 
+							</slot>
+							&nbsp;&nbsp; 
+							<slot>
+								<select name='employee_status_basic'>
+									{STATUS_OPTIONS}
+								</select>
+							</slot>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+<!-- END: main -->
+<!-- BEGIN: advanced -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 0px none; margin-bottom: 4px" class="edit view">
+		<tr>
+			<td>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="15%" scope="row">
+							<slot>
+								{MOD.LBL_FIRST_NAME} 
+							</slot>
+						</td>
+						<td width="30%" >
+							<slot>
+								<input name='first_name' tabindex='1' size='25' maxlength='25' type="text" value="{FIRST_NAME}">
+							</slot>
+						</td>
+						<td width="15%" scope="row">
+							<slot>
+								{MOD.LBL_USER_NAME} 
+							</slot>
+						</td>
+						<td width="30%" >
+							<slot>
+								<input name='user_name' tabindex='2' type="text" value='{USER_NAME}'>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_LAST_NAME} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='last_name' type="text" tabindex='1' size='25' maxlength='25' value="{LAST_NAME}">
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_EMPLOYEE_STATUS} 
+							</slot>
+						</td>
+						<td class='dataField'>
+							<slot>
+								<select tabindex='2' size="3" name='employee_status[]' multiple="true">
+									{STATUS_OPTIONS}
+								</select>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_TITLE} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='title' type="text" tabindex='1' size='25' maxlength='100' value='{TITLE}'>
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_ANY_PHONE} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='phone' type="text" tabindex='2' size='20' maxlength='25' value='{PHONE}'>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_DEPARTMENT} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='department' type="text" tabindex='1' size='25' maxlength='100' value='{DEPARTMENT}'>
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_ANY_EMAIL} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='email' type="text" tabindex='2' size='20' maxlength='100' value='{EMAIL}'>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_ADDRESS} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input type="text" name='address_street' tabindex='1' value='{ADDRESS_STREET}'>
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_CITY} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='address_city' tabindex='2' size='15' maxlength='100' value='{ADDRESS_CITY}'>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_STATE} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='address_state' tabindex='1' size='15' maxlength='100' value='{ADDRESS_STATE}'>
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_POSTAL_CODE} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='address_postalcode' tabindex='2' size='10' maxlength='20' value='{ADDRESS_POSTALCODE}'>
+							</slot>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">
+							<slot>
+								{MOD.LBL_COUNTRY} 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								<input name='address_country' tabindex='1' size='10' maxlength='20' value='{ADDRESS_COUNTRY}'>
+							</slot>
+						</td>
+						<td scope="row">
+							<slot>
+								&nbsp; 
+							</slot>
+						</td>
+						<td >
+							<slot>
+								&nbsp; 
+							</slot>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+<!-- END: advanced -->

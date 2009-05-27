@@ -1,0 +1,552 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+/*********************************************************************************
+
+ * Description:  Contains a variety of utility functions used to display UI
+ * components such as form headers and footers.  Intended to be modified on a per
+ * theme basis.
+ ********************************************************************************/
+
+/* Default Styles */
+body
+{
+	color: #444444;
+	background-color: #ffffff;
+}
+h1, h2, h3
+{
+	color: #000000;
+}
+.h3Row 
+{
+	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBlue.gif);
+}
+h4, h5
+{
+	color: #444;
+}
+a:link, a:visited
+{
+    color: #4f638b;
+}
+a:hover
+{
+    color: #000000;
+}
+button, input[type=submit], input[type=reset], input[type=button], .button
+{
+	border-color: #b3b9cf;
+	background-color: #edeef3;
+	color: #000;
+	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtnBlue.gif);
+}
+button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover,
+button:focus, input[type=submit]:focus, input[type=reset]:focus, input[type=button]:focus,
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]
+{
+	background-color: #7580a8;
+	border-color: #7580a8;
+}
+button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled]
+{
+	border-color: #c1c1c1;
+	background-color: #f0f0f0;
+	color: #000;
+	background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBtnGray.gif);
+}
+input,select 
+{
+	border-color: #b0b6cd;
+	background-color: #ffffff;
+}
+input:focus,textarea:focus, select:focus 
+{
+	background-color: #fff;
+	border-color: #b3b9cf;
+}
+textarea 
+{
+	border-color: #b3b9cf;
+	background-color: #fff;
+}
+
+/* for team notices dashlet */
+.teamNoticeBox 
+{
+    border-color: #b3b9cf;
+    color: #444444;
+}
+
+/* header */
+#header div.line 
+{
+    background-color: #7580a8;
+    color: #4f638b;
+    border-color: #4f638b;
+}
+
+/* for the main screen navigation tabs */
+#moduleList 
+{
+    background-image : url(../../../../index.php?entryPoint=getImage&imageName=tabRowBlueBg.gif);
+    background-repeat: repeat-x;
+    border-bottom-color: #4f638b;
+}
+#moduleList > ul > li
+{
+    background-image:url(../../../../index.php?entryPoint=getImage&themeName=Sugar&imageName=otherTabBlue.gif);
+}
+#moduleList ul li span.currentTab a:link, 
+#moduleList ul li span.currentTab a:visited, 
+#moduleList ul li span.currentTab a:hover 
+{
+    color: #ffffff;
+}
+#moduleList ul li a:link, 
+#moduleList ul li a:visited 
+{
+    color: #444444;
+}
+#moduleList ul li a:hover 
+{
+    color: #000000;
+}
+#moduleList ul li span.currentTabLeft, 
+#moduleList ul li span.currentTabRight, 
+#moduleList ul li span.currentTab 
+{
+    background-image : url(../../../../index.php?entryPoint=getImage&imageName=currentTabBlue.gif);
+    background-repeat: no-repeat;
+    border-bottom-color: #7580a8;
+}
+#subModuleList 
+{
+	background-color:#7580a8;
+	border-color:#4f638b;
+}
+#subModuleList span a
+{
+	border-right-color:#4f638b;
+	border-left-color:#9098b6;
+}
+#subModuleList span a:link, 
+#subModuleList span a:visited 
+{ 
+    color: #ffffff;
+}
+#subModuleList span a:hover
+{
+    background-color: #4f638b;
+	border-left-color:#4f638b;
+}
+
+/* lists in the header */
+.headerList 
+{
+    color: #444;
+    border-top-color:#4f638b;
+    border-bottom-color: #b3b9cf;
+    background-color: #f6f6f6;
+}
+.headerList a:link, 
+.headerList a:visited, 
+.headerList a 
+{
+    color: #444444;	
+    border-color: #b3b9cf;
+}
+.headerList a:hover
+{
+    color: #4f638b;	
+}
+
+/* for lists of items in the left column ( such as the shortcuts or last view items lists ) */
+.leftList ul, 
+.leftList ul li, 
+#newRecord form 
+{
+    background-color: #fff;
+    border-color: #d0d4e1;
+}
+#leftColumn h3, #HideMenu h3 
+{
+    border-color: #b3b9cf;
+}
+.leftList ul li a:hover, 
+.leftList ul li span:hover
+{
+    color: #000000;
+    background-color: #edeef3;
+}
+
+/* global links and theme picker */
+#globalLinks ul li a:hover, #themepickerLinkSpan a:hover
+{
+    color: #4f638b;
+}
+/* for subpanel tabs */
+ul.tablist li a.activeSubTab:hover
+{
+    border-bottom-color: #ddd;
+    color: #000000;
+}
+ul.subpanelTablist li a.activeSubTab:hover
+{
+    color: #000000;
+}
+
+/* search */
+#search input[name=query_string] 
+{
+	border-color: #969ebd;
+	background-color: #f6fafd;
+}
+
+/* new record form */
+#newRecord form a:link, 
+#newRecord form a:visited 
+{
+    color: #666666;
+}
+#newRecord form a:hover 
+{
+    color: #444444;
+}
+
+/* listviews */
+.list tr.pagination td table td a:link,
+.list tr.pagination td table td a:visited,
+.reportGroupByDataChildTablelistViewThS1 a:link,
+.reportGroupByDataChildTablelistViewThS1 a:visited,
+.list tr th,
+.list tr th a:link,
+.list tr th a:visited,
+.list tr td[scope=col],
+.list tr td[scope=col] a:link,
+.list tr td[scope=col] a:visited,
+.list tr.pagination td table td span.pageNumbers
+{
+    color: #444444;
+}
+.list
+{
+	border-color: #b3b9cf !important;
+}
+.evenListRowS1 td, 
+.oddListRowS1 td
+{
+    color: #000000;
+    border-bottom: 1px solid #d0d4e1;
+}
+.evenListRowS1:hover td, 
+.oddListRowS1:hover td
+{
+    background: #f6f6f6;
+}
+
+/* detailviews */
+.detail table, 
+table.detail
+{
+    border-top-color: #7580a8;
+    border-bottom-color: #b3b9cf;
+    background-color: #d0d4e1;
+}
+.detail tr td[scope="row"] 
+{
+    color: #000000;
+    background-color: #f6f6f6;
+    border-color: #d0d4e1;
+}
+.detail h4 {
+    color: #444444;
+}
+.detail tr th 
+{
+    border-color: #d0d4e1;
+}
+.detail tr td 
+{
+    color: #444444;
+    border-color: #d0d4e1;
+    background-color: #fff;
+}
+.detail tr td a:link, 
+.detail tr td a:visited,
+.detail tr td a:hover 
+{
+    color: #4f638b;
+}
+
+/* editviews */
+.edit td[scope=row]
+{
+    color: #444444;
+}
+.edit 
+{
+    color: #000000;
+    background-color: #f6f6f6;
+}
+.edit, .edit > table, .detail, .detail > table
+{
+    border-bottom-color: #b3b9cf !important;
+    border-top-color: #7580a8 !important;
+}
+.detail .edit td
+{
+    background-color: #fff !important;
+    border-bottom: 0 !important;
+}
+
+/* other views */
+.other 
+{
+    border-color: #b3b9cf;
+    background-color: #d0d4e1;
+}
+.other td
+{
+    color: #444444;
+    background-color: #ffffff;
+    border-left-color: #dfdfdf;
+}
+.other td[scope=row]
+{
+    color: #000000;
+    background-color: #fafafa;
+}
+.other td.edit
+{
+    color: #000000;
+    background-color: #f6f6f6;
+}
+
+/* misc links */
+a.utilsLink:link, a.utilsLink:visited 
+{
+    color: #4f638b;
+}
+a.tabFormAdvLink:link, a.tabFormAdvLink:visited 
+{
+    color: #444444;
+}
+
+/* calendar styles */
+.monthCalBody
+{
+	background-color: #b3b9cf;
+}
+.monthFooter td 
+{
+	border-top-color: #b3b9cf;
+	border-bottom-color: #b3b9cf;
+	background-color: #ffffff;
+}
+.monthHeader a:hover, 
+.monthViewDayHeight a:hover
+{
+	color: #4f638b;
+}
+.monthCalBodyTH th[scope=row], 
+.monthViewDayHeight td[scope=row] 
+{
+	background-color: #ebebeb;
+}
+.monthCalBodyTH th 
+{
+	background-color: #fafafa;
+	color: #444444;
+	border-color: #b3b9cf !important;
+}
+.monthViewDayHeight td
+{
+	border-color: #b3b9cf;
+    background-color: #fff;
+	color: #444444;
+}
+.monthViewDayHeight td[class=weekEnd]
+{
+	background-color: #f6f6f6;
+}
+.monthCalBodyDayItem 
+{
+	background-color: #ffffff;
+	border-top-color: #b3b9cf;
+	border-bottom-color: #ddd;
+}
+.monthCalBody td 
+{
+	background-color: #fff;
+	color: #444444;
+}
+.monthCalBody th a
+{
+	color: #000000;
+}
+.yearCalBody 
+{
+	border-top: 2px solid #fff;
+	background-color: #fff;
+}
+.yearCalBodyMonth 
+{
+	background-color: #b3b9cf !important;
+	border-top: 2px solid #7580a8;
+	border-bottom: 2px solid #fff;
+}
+.yearCalBody .monthHeader 
+{
+    border: none;
+}
+.yearCalBodyMonth #daily_cal_table 
+{
+	border-top: #b3b9cf;
+}
+.yearCalBodyMonth #daily_cal_table .monthCalBodyTHDay 
+{
+	border-color: #b3b9cf;
+}
+.yearCalBodyMonth > a
+{
+	color: #000000;
+}
+h5.calSharedUser 
+{
+	color: #444444;
+}
+.monthHeader 
+{
+    color: #444;
+    background-color: #fff;
+    border-color: #b3b9cf;
+    background-image: url(../../../../index.php?entryPoint=getImage&imageName=bgBlue.gif);
+}
+
+/* for subpanel tabs */
+.subpanelTabForm
+{
+    border-color: #b3b9cf;
+    color: #000000;
+    background-color: #ffffff;
+}
+ul.tablist, ul.subpanelTablist
+{
+    border-bottom-color: #b3b9cf;
+}
+ul.tablist li a:hover, 
+ul.subpanelTablist li a:hover
+{
+    background: #fafafa;
+    border-color: #b3b9cf;
+}
+ul.tablist li a, 
+ul.subpanelTablist li a
+{
+    background-color: #fff;
+    border-color: #dddddd;
+}
+ul.tablist li a:link, 
+ul.tablist li a:visited, 
+ul.subpanelTablist li a:link, 
+ul.subpanelTablist li a:visited 
+{ 
+    color: #444444;
+}
+ul.tablist li a:hover, 
+ul.subpanelTablist li a:hover
+{
+    background: #fafafa;
+}
+
+ul.subpanelTablist li a.current, 
+ul.subpanelTablist li a.current:hover
+{
+    color: #4f4f4f;
+	background: #fff;
+    border-right-color: #b3b9cf;
+    border-top-color: #b3b9cf;
+    border-bottom-color: #fff;
+}
+
+ul.tablist li a.current:link, ul.tablist li a.current:visited, ul.tablist li a.current:hover
+{
+    background: #f6f6f6;
+    border-bottom-color: #f6f6f6;
+    border-right-color: #b3b9cf;
+    border-top-color: #b3b9cf;
+}
+/* for overlib js library */
+.olCgClass td
+{
+    border-bottom-color: #b3b9cf;
+}
+.olBgClass 
+{
+	background-color: #b3b9cf;
+}
+
+/* sitemap */
+#sitemap .edit.view 
+{
+    border-color: #7580a8 !important;
+}
+
+/* for edit view like forms that need a smaller font size */
+.edit.view.small td
+{
+    color: #444;
+}
+
+/*
+ * Ext JS Library 2.0
+ * Copyright(c) 2006-2007, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://extjs.com/license
+ */
+.x-sqs-list
+{
+    border: 1px solid #B0B6CD;
+    background: #fdfdfd;
+}
+.x-sqs-list .x-sqs-selected
+{
+    border:1px dotted #f6f6f6 !important;
+    background:#B0B6CD;
+}
+/*
+* END Ext JS Library 2.0
+*/

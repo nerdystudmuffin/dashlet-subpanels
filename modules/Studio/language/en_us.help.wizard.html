@@ -1,0 +1,136 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>Studio Wizard</h1>
+
+<p>Use the Studio wizard to configure and edit modules.</p>
+
+<p>To edit a module, do the following:</p>
+<ol>
+<li>Click<span class="helpButton"> Edit a Module</span>.
+<li>Select the module that you want to reconfigure.
+<li>Select the action that you want to take. You can choose from the following:
+<ul>
+<li><span class="helpButton">Edit Layout</span>: Select this option to rearrange the fields and panels on the screens available in detail view or edit view. 
+<li><span class="helpButton">Edit Custom Fields</span>: Select this option to edit and create a custom field. You can also clean the custom field cache.
+<li><span class="helpButton">Edit Drop Downs</span>: Select this option to edit and create drop-down lists.
+<li><span class="helpButton">Edit Labels</span>: Select this option to edit field labels for a module. 
+</ul>
+</ol>
+<h3>Editing the Layout</h3>
+<p>To edit the layout, do the following:
+<ul>
+<li>Click <span class="helpButton">Edit Layout</span>. 
+<li>From the Layouts option at the top of the page, select the view to edit: DetailView, EditView, ListView, or Search Form.
+<li>To view fields of a specific type such as Custom or Varchar, select the type from the drop-down list in the Toolbox. The fields display below the drop-down list.
+<li>To add placeholders for additional fields, click <span class="helpButton">Add Rows</span>. You can then drag a field from the Toolbox into the new row.
+<li>To edit a field name, click within the field, select its name, and enter the new name.
+<li>To move a field to a different location, point the cursor at the field name, hold down the mouse button, and drag it to the desired location on the page.
+<li>To remove a field, drag it to the Delete area in the Toolbox located below Shortcuts. 
+<li>To revert to the previous revision, click <span class="helpButton">Undo</span>.
+<li>To redo the revision, click <span class="helpButton">Redo</span>.
+<li>To save your changes, click <span class="helpButton">Save</span>.
+<li>To save and publish the new layout, click <span class="helpButton">Save & Publish</span>.
+<li>To view a previous version, click <span class="helpButton">History</span>.
+</ul>
+<p>To change the order in which users tab from field to field in Edit View, do the following:
+<ol>
+<li>Select Edit View and click <span class="helpButton">Edit Tabbing Order</span>. The tabbing order for each field is represented by numbers such as 1, 2, and 3. 
+<li>Change one or more numbers to change the order in which users tab to those fields.
+</ol>
+<p>To edit a related sub-panel, select it from the SubPanels option located below the Layouts option and do the following:
+<ul>
+<li>To add a field in the sub-panel, select it from the Available list and drag it to the Default list.
+<li>To remove a field from the sub-panel, select it from the Default list and drag it to the Available list.
+<li>To save and display your changes in the module, click <span class="helpButton">Save & Publish</span>.
+</ul>
+<h3>Editing Custom Fields</h3>
+<p>To edit custom fields, do the following:
+<ul>
+<li>To view custom fields, click <span class="helpButton">View Custom Fields</span>.
+<li>To create custom fields, click <span class="helpButton">Add Custom Field</span> and enter the following information:
+<ul>
+<li><span class="helpButton">Data Type</span>. From the drop-down list, select the data type such as Text, Email, or DropDown.
+<li><span class="helpButton">Field Name</span>. Enter the field name that is stored in the database.
+<li><span class="helpButton">Field Label</span>. Enter a field name that displays in the Sugar Suite user interface.
+<li><span class="helpButton">Help Text</span>. Enter descriptive text for the field. This text displays when the user points the cursor at the field.
+<li><span class="helpButton">Default Value</span>. Enter a default value for the field, if necessary.
+<li><span class="helpButton">Max Size</span>. Enter the maximum number of characters that the field can contain.
+<li><span class="helpButton">Required Field</span>. Check this box to specify that users must enter a value for the field. 
+<li><span class="helpButton">Audit?</span> Check this box to display field values when a user clicks the View Audit Log link.
+<li><span class="helpButton">Duplicate Merge</span>. From the drop-down list, specify whether the functionality to merge duplicate records has been disabled, enabled, in filter, or default selected filter.
+</ul>
+<li>To save your changes, click <span class="helpButton">Save</span>.
+<li>To clear the custom fields cache, click <span class="helpButton">Clear Cache</span>. 
+<li>To repair a custom field, click <span class="helpButton">Repair Custom Fields</span>
+</ul>
+<h3>Creating and Editing Drop-down Lists</h3>
+<p>To edit a drop-down list, click <span class="helpButton">Edit Drop Downs</span> and do the following:
+<ul>
+<li>To edit a value, click the corresponding Edit icon in the Display Value column and make your changes.
+<li>To add a new value, enter the database key and a corresponding value, and click the + button.
+</ul>
+<p>To create a new drop-down list, click <span class="helpButton">Create a Drop Down</span> and enter the following information:</span>
+<ul>
+<li><span class="helpButton">Dropdown Name</span>. Enter a name for the drop-down list.
+<li><span class="helpButton">Dropdown Language</span>. Select the language to display the list. The languages that are available to you depends on the language packs that you installed.
+<li><span class="helpButton">Database Key</span>. Enter the name of the database table key to which you are mapping the drop-down list value.
+<li><span class="helpButton">Display Value</span>. Enter the value that you want to display in the drop-down list.
+<li>To create a new mapping, click the + button.
+<li>To remove a mapping, click the <span class="helpButton">Delete</span> icon.
+<li>To edit a mapping, click the <span class="helpButton">Edit</span> icon.
+<li>To undo a previous action, click <span class="helpButton">Undo</span>.
+<li>To repeat the previous action, click <span class="helpButton">Redo</span>.
+<li>To save the value, click <span class="helpButton">Save</span>.
+</ul>
+<h3>Editing Labels</h3>
+<p>To edit field lables, click <span class="helpButton">Edit Labels</span> and do the following:
+<ul>
+<li>Select the label that you want to edit and enter the new name.
+<li>Click <span class="helpButton">Save</span>.
+</ul>
+

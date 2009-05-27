@@ -1,0 +1,175 @@
+<!--
+/*
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ */
+-->
+
+<!-- BEGIN: main -->
+<script type="text/javascript">
+function prep_edit(the_form)
+{
+	the_form.return_module.value='ProjectTask';
+	the_form.return_action.value='DetailView';
+	the_form.return_id.value='{id}';
+	the_form.action.value='EditView';
+}
+
+function prep_duplicate(the_form)
+{
+	the_form.return_module.value='ProjectTask';
+	the_form.return_action.value='index';
+	the_form.isDuplicate.value='true';
+	the_form.action.value='EditView';
+}
+
+function prep_delete(the_form)
+{
+	the_form.return_module.value='ProjectTask';
+	the_form.return_action.value='ListView';
+	the_form.action.value='Delete';
+}
+</script>
+<form action="index.php" method="post" name="DetailView" id="form">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td>
+<input type="hidden" name="module" value="ProjectTask" />
+<input type="hidden" name="record" value="{id}" />
+<input type="hidden" name="isDuplicate" value="false" />
+<input type="hidden" name="action" />
+<input type="hidden" name="return_module" value="{return_module}" />
+<input type="hidden" name="return_action" value="{return_action}" />
+<input type="hidden" name="return_id" value="{return_id}" />
+
+<input type="submit" name="Edit" value="  {APP.LBL_EDIT_BUTTON}  "
+	title="{APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{APP.LBL_EDIT_BUTTON_KEY}"
+	class="button" onclick="prep_edit(this.form);" />
+
+<input type="submit" name="Duplicate" value="{APP.LBL_DUPLICATE_BUTTON}"
+	title="{APP.LBL_DUPLICATE_BUTTON_TITLE}" accessKey="{APP.LBL_DUPLICATE_BUTTON_KEY}"
+	class="button" onclick="prep_duplicate(this.form);" />
+
+<input type="submit" name="Delete" value="  {APP.LBL_DELETE_BUTTON} "
+	title="{APP.LBL_DELETE_BUTTON_TITLE}" accessKey="{APP.LBL_DELETE_BUTTON_KEY}"
+	class="button"
+	onclick="prep_delete(this.form); return confirm('{APP.NTC_DELETE_CONFIRMATION}');"
+/></td>
+
+<td align='right'>{ADMIN_EDIT}</td>
+</tr>
+</table>
+</form>
+
+<table width="100%" border="0" cellspacing="{GRIDLINE}" cellpadding="0"
+	class="detail view">
+{PAGINATION}
+<tr>
+<td width="15%"><span sugar='slot1'>{MOD.LBL_NAME}</span sugar='slot'></td>
+<td width="35%"><span sugar='slot1b'>{name}&nbsp;</span sugar='slot'></td>
+<td><span sugar='slot2'>{MOD.LBL_ASSIGNED_USER_ID}</span sugar='slot'></td>
+<td><span sugar='slot2b'>{assigned_user_name}&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot3'>{MOD.LBL_STATUS}</span sugar='slot'></td>
+<td><span sugar='slot3b'>{status}&nbsp;</span sugar='slot'></td>
+
+
+
+
+
+
+<!-- BEGIN: open_source -->
+<td><span sugar='slot5'>&nbsp;</span sugar='slot'></td>
+<td><span sugar='slot5b'>&nbsp;</span sugar='slot'></td>
+<!-- END: open_source -->
+</tr>
+
+<tr>
+<td><span sugar='slot6'>{MOD.LBL_TASK_NUMBER}</span sugar='slot'></td>
+<td><span sugar='slot6b'>{task_number}&nbsp;</span sugar='slot'></td>
+<td><span sugar='slot7'>{MOD.LBL_DEPENDS_ON_ID}</span sugar='slot'></td>
+<td><span sugar='slot7b'><{TAG.PARENT_TASK}
+	href="index.php?module=ProjectTask&action=DetailView&record={depends_on_id}"
+	>{depends_on_name}</{TAG.PARENT_TASK}>&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot8'>{MOD.LBL_PRIORITY}</span sugar='slot'></td>
+<td><span sugar='slot8b'>{priority}&nbsp;</span sugar='slot'></td>
+<td><span sugar='slot9'>{MOD.LBL_MILESTONE_FLAG}</span sugar='slot'></td>
+<td><span sugar='slot9b'><input type="checkbox" disabled="disabled"
+	{milestone_checked} /></span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot10'>{MOD.LBL_ORDER_NUMBER}</span sugar='slot'></td>
+<td><span sugar='slot10b'>{order_number}&nbsp;</span sugar='slot'></td>
+<td><span sugar='slot11'>{MOD.LBL_PARENT_ID}</span sugar='slot'></td>
+<td><span sugar='slot11b'><{TAG.PARENT}
+	href="index.php?module=Project&action=DetailView&record={parent_id}"
+	>{parent_name}</{TAG.PARENT}>&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot12'>{MOD.LBL_PERCENT_COMPLETE}</span sugar='slot'></td>
+<td><span sugar='slot12b'>{percent_complete}&nbsp;</span sugar='slot'></td>
+<td width="15%"><span sugar='slot13'>{MOD.LBL_UTILIZATION}</span sugar='slot'></td>
+<td width="35%"><span sugar='slot13b'>{utilization}&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot14'>{MOD.LBL_DATE_START}</span sugar='slot'></td>
+<td><span sugar='slot14b'>{date_start}&nbsp;{time_start}</span sugar='slot'></td>
+<td nowrap="nowrap"><span sugar='slot15'>{MOD.LBL_ESTIMATED_EFFORT}</span sugar='slot'></td>
+<td><span sugar='slot15b'>{estimated_effort}&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot16'>{MOD.LBL_DATE_DUE}</span sugar='slot'></td>
+<td><span sugar='slot16b'>{date_due}&nbsp;{time_due}</span sugar='slot'></td>
+<td><span sugar='slot17'>{MOD.LBL_ACTUAL_EFFORT}</span sugar='slot'></td>
+<td><span sugar='slot17b'>{actual_effort}&nbsp;</span sugar='slot'></td>
+</tr>
+
+<tr>
+<td><span sugar='slot18'>{MOD.LBL_DESCRIPTION}</span sugar='slot'></td>
+<td colspan="3"><span sugar='slot18b'>{description}&nbsp;</span sugar='slot'></td>
+</tr>
+
+</table>
+<!-- END: main -->
+<!-- BEGIN: subpanel -->
+<span sugar='slot19'>{SUBPANEL}</span sugar='slot'>
+<!-- END: subpanel -->

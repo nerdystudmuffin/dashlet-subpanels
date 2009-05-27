@@ -1,0 +1,836 @@
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+body,.body
+{
+	color:#444;
+	background-color:#fff;
+}
+
+table,td
+{
+	color:#444;
+}
+
+h1,h2
+{
+	color:#903;
+}
+
+h3,h4,h5,h5.listViewSubHeadS1,a.yearCalBodyMonth > a:link,a.yearCalBodyMonth > a:visited
+{
+	color:#000;
+}
+
+.h3Row,.monthHeader,.listViewButtons
+{
+	color:#000;
+	background-color:#edef5f;
+	border-color:#000;
+}
+
+a:link,a:visited,a.body:link,a.body:visited
+{
+	color:#000;
+}
+
+a:hover,a.body:hover
+{
+	color:#903;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]
+{
+	background-color:#edef5f;
+	color:#000;
+	border-color:silver #666 #666 silver;
+}
+
+.listViewButtons button, input[type=submit], input[type=reset], input[type=button]
+{
+	border-color:#fff #666 #666 #fff;
+}
+
+button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected],button, input[type=submit], input[type=reset], input[type=button]:hover,button, input[type=submit], input[type=reset], input[type=button]:focus,button[selected], input[type=submit][selected], input[type=reset][selected], input[type=button][selected]:focus
+{
+	background-color:#d9d;
+}
+
+button[disabled], input[disabled]
+{
+	background-color:#ddd;
+	border-color:#999;
+}
+
+input,select
+{
+	background-color:#fafafa;
+	border-color:#666;
+}
+
+input:focus,textarea:focus,select:focus
+{
+	background-color:#fff;
+	border-color:#903;
+}
+
+textarea
+{
+	background-color:#fafafa;
+	border-color:#666;
+}
+
+.teamNoticeBox
+{
+	background-color:#fafafa;
+	color:#444;
+	border-color:#9fb4c8;
+}
+
+#moduleList
+{
+	background-image:url(images/tabRowBg.gif);
+	border-color:#999;
+}
+
+.currentTabLeft,.currentTabRight,.currentTab
+{
+	background-image:url(images/currentTab.gif);
+	background-repeat:no-repeat;
+	border-color:#fff;
+}
+
+a#moduleList ul li a:link,a#moduleList ul li a:visited
+{
+	color:#903;
+}
+
+a#moduleList ul li a:hover
+{
+	color:#903;
+}
+
+.otherTabLeft,.otherTabRight,.otherTab
+{
+	color:#333;
+	background-image:url(images/otherTab.gif);
+	background-repeat:no-repeat;
+	border-color:#999;
+}
+
+a#moduleList ul li a:link,a#moduleList ul li a:visited
+{
+	color:#444;
+}
+
+a#moduleList ul li a:hover
+{
+	color:#903;
+}
+
+.subpanelTabSpace *
+{
+	display:none;
+}
+
+a.currentSubpanelTabLink:link,a.currentSubpanelTabLink:visited
+{
+	color:#903;
+}
+
+a.currentSubpanelTabLink:hover
+{
+	color:#903;
+}
+
+a.otherSubpanelTabLink:link,a.otherSubpanelTabLink:visited
+{
+	color:#444;
+}
+
+a.otherSubpanelTabLink:hover
+{
+	color:#903;
+}
+
+.moreHandle
+{
+	background:url(images/more.gif) no-repeat bottom left;
+}
+
+#subModuleList,#newRecord form
+{
+	color:#000;
+}
+
+ul#subModuleList li
+{
+	background-color:#f6f6f6;
+	border-color:#ddd;
+}
+
+ul#subModuleList li a:hover
+{
+	color:#903;
+	background-color:#fff;
+}
+
+#newRecord form,.hideShow
+{
+	background-color:#f6f6f6;
+}
+
+#main
+{
+	border-color:#ccc;
+}
+
+.leftColumnModuleName,table.list .view th,.list th, .list td[scope=col],.schedulerTopRow,.monthHeader,.detail .list table tr.pagination td .detail td[scope=row],.detail .list table tr.pagination td .detail td[scope=row] a
+{
+	color:#ccc;
+	background-color:#000;
+	border-color:#999;
+}
+
+.detail .list table tr.pagination td .detail td[scope=row] a:hover
+{
+	color:#ccc;
+}
+
+.moduleTitle
+{
+	border-color:#ccc;
+}
+
+.headerBg
+{
+	color:#000;
+	background-image:url(images/bgGrayHeader.gif);
+	border-color:#999;
+}
+
+#welcome,#globalLinks
+{
+	color:#444;
+	background-color:#f6f6f6;
+	border-right-color:#ddd;
+	border-bottom-color:#ccc;
+}
+
+#subtabs
+{
+	background-color:#edef5f;
+}
+
+ul.subTabs
+{
+	border-bottom-color:#000;
+}
+
+ul.subTabs li a
+{
+	background-color:#edef5f;
+	border-right-color:#000;
+}
+
+ul.subTabs li a:link
+{
+	color:#444;
+}
+
+ul.subTabs li a:visited
+{
+	color:#444;
+}
+
+ul.subTabs li a:hover
+{
+	color:#903;
+	background-color:#fff;
+	border-color:#ccc;
+}
+
+ul.tablist li #subModuleList span a:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+ul.subpanelTablist li #subModuleList span a:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+#search input[name=query_string]
+{
+	background-color:#eee;
+	border-color:#999;
+}
+
+#search
+{
+	color:#444;
+	background-color:#fafafa;
+	background-image:url(images/searchBg.gif);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+
+#search input[name=query_string]
+{
+	background-color:#fafafa;
+}
+
+#search input[name=query_string]:focus
+{
+	background-color:#fafafa;
+}
+
+.date
+{
+	color:#444;
+	background-color:#ddd;
+	border-bottom-color:#bbb;
+}
+
+#lastView
+{
+	color:#444;
+	border-top-color:#eee;
+	border-bottom-color:#999;
+	background-color:#000;
+}
+
+a#lastView a:link,a#lastView a:visited,#lastView a
+{
+	color:#444;
+	border-color:#ccc;
+}
+
+a#lastView a:hover
+{
+	background-color:#fff;
+	color:#903;
+}
+
+#newRecord form a:link,#newRecord form a:visited
+{
+	color:#666;
+}
+
+#newRecord form a:hover
+{
+	color:#444;
+}
+
+.list .view
+{
+	border-color:#999;
+}
+
+.listViewSubHeadS1
+{
+	background-color:#fff;
+}
+
+.list .view th a:link,.list .view th a:visited,a.listViewThLinkS1:link,a.listViewThLinkS1:visited
+{
+	color:#ccc;
+}
+
+.list .view th a:hover,a.listViewThLinkS1:hover
+{
+	color:#000;
+}
+
+a.list td a:link,a.list td a:visited
+{
+	color:#903;
+}
+
+a.list td a:hover
+{
+	color:#000;
+}
+
+.evenListRowS1
+{
+	color:#000;
+}
+
+.oddListRowS1
+{
+	color:#000;
+}
+
+.listViewHRS1
+{
+	background:#ccc;
+}
+
+.pageNumbers
+{
+	color:#444;
+}
+
+.list table tr.pagination td
+{
+	color:#444;
+	background-color:#ccc;
+	border-color:#999;
+}
+
+a.list tr.pagination a:link,a.list tr.pagination a:visited
+{
+	color:#444;
+}
+
+a.list tr.pagination a:hover
+{
+	color:#903;
+}
+
+a.utilsLink:link,a.utilsLink:visited,a.monthFooter a, .monthHeader a:link,a.monthFooter a, .monthHeader a:visited
+{
+	color:#903;
+}
+
+.chartBox
+{
+	background-color:#fff;
+	border-color:#999;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#444;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#903;
+}
+
+table.edit .view
+{
+	background-color:#efefef;
+	border-color:#999;
+}
+
+table.edit .view td
+{
+	background-color:#efefef;
+}
+
+.edit
+{
+	border-top-color:#999;
+	border-bottom-color:#000;
+	color:#000;
+	background-color:#edef5f;
+	background-image:url(images/bgGrayForm.gif);
+}
+
+.subpanelTabForm
+{
+	border-top-color:#999;
+	border-bottom-color:#000;
+	color:#000;
+	background-color:#edef5f;
+	background-image:url(images/bgGrayForm.gif);
+}
+
+table.subpanelTabForm td
+{
+	color:#000;
+}
+
+h4.edit td[scope=row]
+{
+	color:#000;
+}
+
+table.edit td
+{
+	color:#000;
+}
+
+h5.edit td[scope=row]
+{
+	color:#000;
+}
+
+a.tabFormAdvLink:link,a.tabFormAdvLink:visited
+{
+	color:#444;
+}
+
+a.tabFormAdvLink:hover
+{
+	color:#903;
+}
+
+.detail
+{
+	background-color:#ccc;
+	border-color:#666;
+}
+
+.detail .list table tr.pagination td .list tr.pagination a:hover,.detail .list table tr.pagination td .detail td a:hover
+{
+	color:#000;
+}
+
+.detail .list table tr.pagination td .detail td a
+{
+	color:#000;
+}
+
+.detail td[scope=row],.monthCalBody th,.monthViewDayHeight td[scope=row]
+{
+	color:#000;
+	background-color:#eee;
+	border-color:#ddd;
+}
+
+h4.detail td[scope=row]
+{
+	color:#000;
+}
+
+.detail td
+{
+	color:#000;
+	background-color:#f9f9f9;
+	border-color:#ddd;
+}
+
+a.detail td a:link,a.detail td a:visited
+{
+	color:#000;
+}
+
+a.detail td a:hover
+{
+	color:#903;
+}
+
+.other
+{
+	background-color:#ccc;
+	border-color:#999;
+}
+
+.other td[scope=row]
+{
+	color:#000;
+	border-top-color:#fff;
+	background-color:#fafafa;
+}
+
+.other td
+{
+	color:#444;
+	background-color:#eee;
+	border-left-color:#dfdfdf;
+}
+
+a.other td[scope=row] a:link,a.other td[scope=row] a:visited
+{
+	color:#444;
+}
+
+a.other td[scope=row] a:hover
+{
+	color:#903;
+}
+
+.monthCalBody
+{
+	background-color:#ddd;
+}
+
+.monthFooter td,.monthFooter td
+{
+	border-top-color:#ccc;
+	border-bottom-color:#999;
+	background-color:#eee;
+}
+
+a.monthViewDayHeight td[scope=row] a:link,a.monthViewDayHeight td[scope=row] a:visited,a.monthViewDayHeight td a:link,a.monthViewDayHeight td a:visited
+{
+	color:#444;
+}
+
+a.monthFooter a, .monthHeader a:hover,a.monthViewDayHeight td[scope=row] a:hover,a.monthViewDayHeight td a:hover,a.monthViewDayHeight td[class=weekend] a:hover,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekDay a.monthViewDayHeight td a:visited,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:link,.monthCalBodyTodayWeekEnd a.monthViewDayHeight td a:visited
+{
+	color:#903;
+}
+
+.monthCalBodyTH th[scope=row]
+{
+	background-color:#f6f6f6;
+	color:#444;
+}
+
+.monthCalBodyTH th
+{
+	background-color:#eee;
+	color:#444;
+}
+
+.monthCalBodyTodayWeekDay,.monthCalBodyTodayWeekEnd
+{
+	background-color:#fff;
+	color:#444;
+	border-color:#903;
+}
+
+.monthViewDayHeight td
+{
+	background-color:#fff;
+	color:#444;
+}
+
+.monthViewDayHeight td[class=weekend]
+{
+	background-color:#f6f6f6;
+	color:#444;
+}
+
+.monthCalBodyDayItem
+{
+	background-color:#fff;
+	border-top-color:#ccc;
+	border-bottom-color:#ddd;
+}
+
+.monthCalBody td
+{
+	background-color:#fff;
+	color:#444;
+}
+
+a.monthCalBody th a:link,a.monthCalBody th a:visited
+{
+	color:#000;
+}
+
+.yearCalBody
+{
+	background-color:#999;
+}
+
+.yearCalBodyMonth
+{
+	background-color:#ddd;
+}
+
+.yearCalBodyMonth #daily_cal_table
+{
+	border-top:#eee;
+}
+
+.yearCalBodyMonth #daily_cal_table .monthCalBodyTH th
+{
+	border-color:#ccc;
+}
+
+a.yearCalBodyMonth > a:hover
+{
+	color:#903;
+}
+
+h5.calSharedUser
+{
+	color:#444;
+	background-color:#eee;
+	border-top-color:#999;
+}
+
+.footer,.underFooter
+{
+	color:#999;
+	background-color:#f6f6f6;
+	border-top-color:#999;
+	border-bottom-color:#ccc;
+}
+
+a.footerLink:hover
+{
+	color:#903;
+}
+
+.footerHR
+{
+	color:#666;
+}
+
+.aboveFooter
+{
+	background-color:#fff;
+}
+
+ul.tablist
+{
+	border-bottom-color:#999;
+}
+
+ul.tablist li a:hover
+{
+	background-image:url(images/bgGray.gif);
+	color:#903;
+	background:#fafafa;
+	border-color:#999;
+}
+
+ul.tablist li a
+{
+	background-color:#fff;
+	background-image:url(images/bgGray.gif);
+	border-color:#ccc;
+}
+
+ul.tablist li a:link
+{
+	color:#444;
+}
+
+ul.tablist li a:visited
+{
+	color:#444;
+}
+
+ul.tablist li a.current
+{
+	background-image:url(images/bgGray.gif);
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+ul.tablist li a.current:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+ul.subpanelTablist
+{
+	border-bottom-color:#999;
+}
+
+ul.subpanelTablist li a:hover
+{
+	background-image:url(images/bgGray.gif);
+	color:#903;
+	background:#fafafa;
+	border-color:#999;
+}
+
+ul.subpanelTablist li a
+{
+	background-color:#fff;
+	background-image:url(images/bgGray.gif);
+	border-color:#ccc;
+}
+
+ul.subpanelTablist li a:link
+{
+	color:#444;
+}
+
+ul.subpanelTablist li a:visited
+{
+	color:#444;
+}
+
+ul.subpanelTablist li a.current
+{
+	background-image:url(images/bgGray.gif);
+	border-bottom-color:#ddd;
+	border-right-color:#999;
+}
+
+ul.subpanelTablist li a.current:hover
+{
+	border-bottom-color:#ddd;
+	color:#903;
+}
+
+.sqsFloater td
+{
+	background-color:#fdfdfd;
+	border:1px inset #999;
+	color:#000;
+}
+
+.sqsSelectedSmartInputItem
+{
+	background-color:#DEEFFF;
+}
+
+.olCapFontClass
+{
+	color:#222;
+	background-color:#dfdfdf;
+}
+
+.olCapFontClass A
+{
+	color:#dfdfdf;
+}
+
+.olFgClass td
+{
+	background-color:#f9f9f9;
+}
+
+.olCgClass td
+{
+	border-top-color:#f1f1f1;
+	border-bottom-color:#aaa;
+	background-color:#dfdfdf;
+}
+
+.olBgClass
+{
+	background-color:#999;
+}
+
+.olCloseFontClass
+{
+	background-color:#dfdfdf;
+}

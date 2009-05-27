@@ -1,0 +1,84 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>Inbound Email Setup</h1>
+Create a Group mail account to view inbound emails. Additionally, you can set up an action to create a case or to store bounced campaign emails.
+
+</p>To create a new Group mail account, enter the following information:</p>
+<ul>
+<li><span class="helpButton">Name</span>. Enter a name for the Group mail account.
+<li><span class="helpButton">Mail Server Address</span>. Enter the address of the mail server where the emails you want to view are located.
+<li><span class="helpButton">Mail Server Protocol</span>. From the drop-down list, select either the IMAP or the POP3 protocol. When you select IMAP, additional fields display on the screen to select a Monitored folder, a Trash folder, and a Sent folder. When you select POP3, users can view only the Inbox.
+<li><span class="helpButton">Mail Server Port</span>. Enter the port number for the mail server.
+<li><span class="helpButton">Status</span>. This value indicates whether the Group mail account is active or inactive. You cannot view emails in an inactive Group mail account. To change the status, select the appropriate value from the drop-down list. 
+<li><span class="helpButton">User Name</span>. Enter the username to access the mail server.
+<li><span class="helpButton">Password</span>. Enter the user's password.
+<li><span class="helpButton">Monitored Folder</span>. This field displays when you select the IMAP protocol. Click <span class="helpButton">Select</span> to choose one or more folders that you want users to view from the Emails module. By default, users can view the Inbox. To select multiple folders, hold down the Shift key or the Ctrl key and select them from the Select Subscribed Folders window. 
+<li><span class="helpButton">Use SSL</span>. Select this box to use Secure Socket Layer (SSL) when connecting to the mail server.
+</ul>
+In the Email Handling Options sub-panel, enter information for the following fields:
+<ul>
+
+
+
+<li><span class="helpButton">Assign To Group Folder</span>. To import emails into Sugar, automatically generate cases, and assign them to users, select an existing Group folder to associate with the Group mail account from the drop-down list, or click <span class="helpButton">Create</span> to create new folder for the account.
+<li><span class="helpButton">Possible Actions</span>. To generate cases, select <span class="helpButton">Create Case</span>. To store bounced campaign emails, select <span class="helpButton">Bounce Handling</span>.
+<li><span class="helpButton">Distribution Method</span>. This field displays only when you select the Create Case action. Use it to specify how to assign cases to users. Select <span class="helpButton">Round-Robin</span> to distribute cases evenly amongst all users; select <span class="helpButton">Least-Busy</span> to distribute cases to the least busy user.
+<li><span class="helpButton">Create Case Reply Template</span>. This field displays only when you select the Create Case action.  Optionally, you can use the Create Case Reply template to set up an automated response to notify email senders that a case has been created to resolve their issue. The response contains the system-generated case number in the Subject line of the email. 
+<li><span class="helpButton">Auto-Reply Template</span>. Optionally, use this template to set up an automated response notifying email senders that you received their email. From the drop-down list, select an existing template, or click <span class="helpButton">Create</span> to create a new one.
+<br>If both templates are selected, Sugar will respond to the sender with the Create Case Reply template instead of the Auto-Reply template.
+<li><span class="helpButton">From Name</span>. Enter the name of the user who is sending out the email.
+<li><span class="helpButton">From Address</span>. Enter the email address of the user.
+<li><span class="helpButton">Reply-to Name</span>. Enter a name to receive bounced emails.
+<li><span class="helpButton">Reply-to Address</span>. Enter an email address for bounced emails.
+<li><span class="helpButton">No Auto-reply to Domain</span>. To exclude a domain from receiving the automatic email response, enter the domain name.
+</ul>
+<p>To ensure that the email settings are correct and to view existing folders that you can monitor, click <span class="helpButton">Test Settings</span>.
+<br>To save the settings, click <span class="helpButton">Save</span>.
+<br>To exit the page without saving your changes, click <span class="helpButton">Cancel</span>.
+
+

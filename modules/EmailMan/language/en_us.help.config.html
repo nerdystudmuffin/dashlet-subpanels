@@ -1,0 +1,83 @@
+<!--
+
+/*********************************************************************************
+ * SugarCRM is a customer relationship management program developed by
+ * SugarCRM, Inc. Copyright (C) 2004 - 2009 SugarCRM Inc.
+ * 
+ * This program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License version 3 as published by the
+ * Free Software Foundation with the addition of the following permission added
+ * to Section 15 as permitted in Section 7(a): FOR ANY PART OF THE COVERED WORK
+ * IN WHICH THE COPYRIGHT IS OWNED BY SUGARCRM, SUGARCRM DISCLAIMS THE WARRANTY
+ * OF NON INFRINGEMENT OF THIRD PARTY RIGHTS.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program; if not, see http://www.gnu.org/licenses or write to the Free
+ * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301 USA.
+ * 
+ * You can contact SugarCRM, Inc. headquarters at 10050 North Wolfe Road,
+ * SW2-130, Cupertino, CA 95014, USA. or at email address contact@sugarcrm.com.
+ * 
+ * The interactive user interfaces in modified source and object code versions
+ * of this program must display Appropriate Legal Notices, as required under
+ * Section 5 of the GNU General Public License version 3.
+ * 
+ * In accordance with Section 7(b) of the GNU General Public License version 3,
+ * these Appropriate Legal Notices must retain the display of the "Powered by
+ * SugarCRM" logo. If the display of the logo is not reasonably feasible for
+ * technical reasons, the Appropriate Legal Notices must display the words
+ * "Powered by SugarCRM".
+ ********************************************************************************/
+
+/*********************************************************************************
+
+ ********************************************************************************/
+
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<h1>Email Settings</h1>
+
+<p>Use this page to configure email settings for your organization. For email campaigns, you must configure tracker URLs and specify the number of emails sent out in a batch.</p>
+<p>In the Email Notification Options sub-panel, enter information for the following fields:</p>
+<ul>
+<li><span class="helpButton">From Name</span>. Enter the name of the sender.
+<li><span class="helpButton">From Address</span>. Enter the sender's address.
+<li><span class="helpButton">Notifications on?</span> Select this option to send email notifications to users when a record is assigned to them.
+<li><span class="helpButton">Send Notifications by default for new users? </span>Select this option to send an email notification to new users when you create their record in the User Management page.
+<li><span class="helpButton">Send Notifications from assigning user's email address?</span> Select this option to send notifications from the email address of the user when responding to an assigned task.
+<li><span class="helpButton">Save Outbound Raw Emails</span>. Select <span class="helpButton">Yes</span> to preserve the email source in the database, or else select <span class="helpButton">No</span>.
+<li><span class="helpButton">Mail Transfer Agent</span>. From the drop-down list, select either Sendmail or SMTP as the Mail Transfer Agent for your outbound emails. <br>
+If you select SMTP, specify values for the following fields that display on the page:
+<li><span class="helpButton">SMTP Server</span>. Enter the SMTP mail server’s address.
+<li><span class="helpButton">SMTP Port</span>. Enter the mail server’s port number.
+<li><span class="helpButton">Use SMTP Authentication</span>? Select this option if the mail server requires authentication to send out the email; enter your username and password for the email account in the SMTP Username and the SMTP Password fields respectively.
+<li><span class="helpButton">Enable SMTP over SSL</span>. Select this option if you are using the POP3 protocol and the mail server requires SSL.
+<li><span class="helpButton">Prefill Gmail Defaults</span>. Click this link to add Gmail server's default values for SMTP. The system fills in the SMTP Server and SMTP Port fields with the Gmail server address and port number respectively. 
+</ul>
+<p>In the User Email Defaults sub-panel, specify the following information:</p>
+<ul>
+<li><span class="helpButton">Compose email messages in this format</span>. From the drop-down list, select either <span class="helpButton">HTML format</span> or <span class="helpButton">Plain Text format</span>.
+<li><span class="helpButton">Compose email using this client</span>. From the drop-down list, select either the SugarCRM mail client, which is the default, or an external mail client such as Microsoft Outlook.
+<li><span class="helpButton">Compose email messages in this character set</span>. Select the appropriate character set from the drop-down list. The default character set is ISO-8859-1. 
+<li><span class="helpButton">Delete related Notes & attachment files with deleted Emails</span>. Select this box to delete notes and attachments that are related to the deleted emails.
+</ul>
+
+<p>In the Email Security Settings sub-panel, specify the following information:</p>
+<ul>
+<li><span class="helpButton">Preserve Raw Email Source</span>. Select this option to preserve raw messages in the database but prevent unfiltered content through the Sugar User Interface.
+<li><span class="helpButton">Toggle all options</span>. Check this box to strip all the listed tags from inbound emails. To strip some of the listed tags, you can uncheck this box and then select individual tags.
+<li><span class="helpButton">Select Outlook Default Minimum Security Precautions</span>. Select this option if you do not want to strip the Style tag, which is used by Outlook.
+</ul>
+<p>To save your email settings, click <span class="helpButton">Save</span>; click <span class="helpButton">Cancel</span> to exit the page without saving your changes.
+
+
